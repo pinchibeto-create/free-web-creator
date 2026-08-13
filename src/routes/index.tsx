@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import logoAsset from "@/assets/branding/logo.asset.json";
 import heroAsset from "@/assets/hero/hero_main.asset.json";
+import sketchToSmileAsset from "@/assets/concepts/sketch_to_smile.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -121,6 +122,7 @@ function Index() {
           ))}
         </div>
       </section>
+
       <section className="py-24 px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
           <div className="flex-1 space-y-8">
@@ -136,9 +138,9 @@ function Index() {
             </div>
           </div>
           <div className="flex-1 relative">
-            <motion.img 
-              src="/src/assets/concepts/sketch_to_smile.asset.json" // Note: need to import, but for structure just showing the path usage
-              // In production, import the JSON and use `.url`
+            <img 
+              src={sketchToSmileAsset.url} 
+              alt="De boceto a sonrisa"
               className="w-full shadow-2xl"
             />
           </div>
