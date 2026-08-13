@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import logoAsset from "@/assets/branding/logo.asset.json";
 import heroAsset from "@/assets/hero/hero_main.asset.json";
 import sketchToSmileAsset from "@/assets/concepts/sketch_to_smile.asset.json";
+import veneerMockupAsset from "@/assets/extras/veneer_mockup.asset.json";
+import beforeAfterLateralAsset from "@/assets/extras/before_after_lateral.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
