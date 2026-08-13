@@ -150,17 +150,81 @@ function Index() {
             />
           </div>
         </div>
-        <section className="py-24 px-12 bg-secondary/20">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
+        <section className="py-24 px-12 bg-secondary/20 overflow-hidden">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative">
+            <div className="space-y-6 z-10">
               <h2 className="font-serif text-5xl">Precisión antes de transformación.</h2>
-              <p className="text-muted-foreground leading-relaxed">La estética comienza con observar. Analizamos proporciones, simetría, líneas dentales y relación con el rostro para planear un resultado armónico y personalizado.</p>
+              <p className="text-muted-foreground leading-relaxed italic font-light">"La estética comienza con observar."</p>
+              <p className="text-muted-foreground leading-relaxed">Analizamos proporciones, simetría, líneas dentales y relación con el rostro para planear un resultado armónico y personalizado. Nuestro flujo Digital Smile Design permite visualizar el final antes de empezar.</p>
+              <div className="pt-8">
+                <img 
+                  src={dsdInfographicAsset.url} 
+                  alt="Digital Smile Design Infographic" 
+                  className="w-full shadow-lg rounded-sm brightness-105"
+                />
+              </div>
             </div>
-            <div className="relative">
-              <img src="/src/assets/concepts/blueprint.asset.json" alt="Blueprint" className="w-full" />
+            <div className="relative group">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="relative z-10"
+              >
+                <img 
+                  src="/src/assets/concepts/blueprint.asset.json" 
+                  alt="Blueprint de sonrisa" 
+                  className="w-full mix-blend-multiply opacity-90 group-hover:opacity-100 transition-opacity duration-700" 
+                />
+              </motion.div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 animate-pulse" />
             </div>
           </div>
         </section>
+
+        <section className="py-24 px-12 bg-background overflow-hidden">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex-1 order-2 md:order-1"
+            >
+              <div className="relative inline-block">
+                <img 
+                  src={doctoraSillonAsset.url} 
+                  alt="Doctora Nisado Baani" 
+                  className="max-h-[600px] w-auto relative z-10 grayscale-[30%] hover:grayscale-0 transition-all duration-700" 
+                />
+                <div className="absolute -bottom-6 -left-6 w-full h-full border border-primary/20 -z-10" />
+              </div>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex-1 space-y-8 order-1 md:order-2"
+            >
+              <p className="text-primary tracking-widest text-xs uppercase font-bold">Experiencia Nisado Baani</p>
+              <h2 className="font-serif text-6xl leading-[1.1]">Manos expertas, visión artística.</h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p className="leading-relaxed">En Nisado Baani, cada paciente es un lienzo. Nuestra filosofía combina la tecnología más avanzada con un ojo clínico entrenado en la armonía facial.</p>
+                <p className="leading-relaxed font-serif text-xl text-foreground italic">"Buscamos que tu sonrisa sea el reflejo más auténtico de tu personalidad."</p>
+              </div>
+              <div className="grid grid-cols-2 gap-8 pt-4">
+                <div>
+                  <h4 className="font-serif text-2xl mb-1 text-primary">Tecnología</h4>
+                  <p className="text-[10px] uppercase tracking-widest text-muted-foreground">Escaneo intraoral & DSD</p>
+                </div>
+                <div>
+                  <h4 className="font-serif text-2xl mb-1 text-primary">Biomimética</h4>
+                  <p className="text-[10px] uppercase tracking-widest text-muted-foreground">Resultados que parecen tuyos</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
 
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4">
