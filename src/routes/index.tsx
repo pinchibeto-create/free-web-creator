@@ -226,7 +226,7 @@ function Index() {
           </div>
         </section>
 
-        <section className="py-24 px-12 bg-[#FCFAF7]">
+        <section className="py-24 px-12 bg-background">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 space-y-4">
               <h2 className="font-serif text-5xl">Todo empieza con una valoración.</h2>
