@@ -275,7 +275,7 @@ function Index() {
 
 
 
-      <footer className="py-24 px-12 bg-[#202020] text-[#FCFAF7]">
+      <footer className="py-24 px-12 bg-[#202020] text-[#FCFAF7] border-t border-[#FCFAF7]/5">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
           <div className="space-y-8">
             <img src={logoAsset.url} alt="Nisado Baani" className="h-10 brightness-0 invert" />
