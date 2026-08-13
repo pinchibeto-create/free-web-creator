@@ -14,7 +14,7 @@ function Index() {
       {/* Navigation */}
       <nav className="fixed w-full z-50 px-8 py-6 flex items-center justify-between bg-ivory/80 backdrop-blur-md border-b border-line">
         <img src={nisadoAssets.branding.logo} alt="Nisado Baani" className="h-10" />
-        <div className="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.3em] font-medium font-serif">
+        <div className="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.3em] font-medium">
           {navItems.map((item) => (
             <a key={item} href={`#${item.toLowerCase().replace(/ /g, "-")}`} className="hover:text-champagne transition-colors duration-500">
               {item}
