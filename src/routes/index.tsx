@@ -182,7 +182,7 @@ function Index() {
           </div>
         </section>
 
-        <section className="py-24 px-12 bg-[#F7F2EA] overflow-hidden">
+        <section className="py-24 px-12 bg-secondary overflow-hidden">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
