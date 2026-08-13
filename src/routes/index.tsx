@@ -171,11 +171,8 @@ function Index() {
                 viewport={{ once: true }}
                 className="relative z-10"
               >
-                <img 
-                  src="/src/assets/concepts/blueprint.asset.json" 
-                  alt="Blueprint de sonrisa" 
-                  className="w-full mix-blend-multiply opacity-90 group-hover:opacity-100 transition-opacity duration-700" 
-                />
+              <img src="/src/assets/concepts/blueprint.asset.json" alt="Blueprint de sonrisa" className="w-full mix-blend-multiply opacity-90 group-hover:opacity-100 transition-opacity duration-700" />
+
               </motion.div>
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 animate-pulse" />
             </div>
