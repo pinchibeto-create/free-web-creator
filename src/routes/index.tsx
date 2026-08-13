@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
+    <div className="min-h-screen bg-[#F7F2EA] text-foreground font-sans">
       <nav className="fixed w-full z-50 px-6 py-4 flex items-center justify-between bg-background/80 backdrop-blur-md">
         <img src={logoAsset.url} alt="Nisado Baani" className="h-10" />
         <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium">
