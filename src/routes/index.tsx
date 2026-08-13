@@ -147,7 +147,18 @@ function Index() {
             />
           </div>
         </div>
-      </section>
+        <section className="py-24 px-12 bg-secondary/20">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div className="space-y-6">
+              <h2 className="font-serif text-5xl">Precisión antes de transformación.</h2>
+              <p className="text-muted-foreground leading-relaxed">La estética comienza con observar. Analizamos proporciones, simetría, líneas dentales y relación con el rostro para planear un resultado armónico y personalizado.</p>
+            </div>
+            <div className="relative">
+              <img src="/src/assets/concepts/blueprint.asset.json" alt="Blueprint" className="w-full" />
+            </div>
+          </div>
+        </section>
+
       <section className="py-24 px-12 bg-background border-t border-border/40">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4">
