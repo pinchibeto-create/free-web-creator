@@ -257,6 +257,22 @@ function Index() {
             </div>
           </div>
         </section>
+        <section className="py-24 px-12 bg-[#202020] text-[#FCFAF7]">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+             <div className="space-y-6">
+               <h2 className="font-serif text-5xl">Análisis Geométrico</h2>
+               <p className="text-[#FCFAF7]/60 leading-relaxed">Cada rasgo de tu rostro dicta las proporciones de tu nueva sonrisa. Utilizamos análisis matemático y estético para asegurar que cada ángulo sea perfecto.</p>
+             </div>
+             <div className="relative rounded-sm overflow-hidden shadow-2xl">
+                <img 
+                  src="/src/assets/comparisons/geometric_analysis.asset.json" 
+                  alt="Análisis Geométrico" 
+                  className="w-full opacity-80 hover:opacity-100 transition-opacity duration-700" 
+                />
+             </div>
+          </div>
+        </section>
+
 
 
       <footer className="py-24 px-12 bg-[#202020] text-[#FCFAF7]">
