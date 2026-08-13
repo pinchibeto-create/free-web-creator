@@ -150,6 +150,8 @@ function Index() {
             />
           </div>
         </div>
+      </section>
+
         <section className="py-24 px-12 bg-secondary/20 overflow-hidden">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative">
             <div className="space-y-6 z-10">
