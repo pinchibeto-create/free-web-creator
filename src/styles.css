@@ -1,6 +1,11 @@
-@import "tailwindcss" source(none);
+@import "tailwindcss";
 @source "../src";
 @import "tw-animate-css";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Manrope", sans-serif;
+}
 
 @custom-variant dark (&:is(.dark *));
 
