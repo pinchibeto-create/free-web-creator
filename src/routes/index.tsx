@@ -223,27 +223,39 @@ function Index() {
           </div>
         </section>
 
+        <section className="py-24 px-12 bg-background">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16 space-y-4">
+              <h2 className="font-serif text-5xl">Todo empieza con una valoración.</h2>
+              <p className="text-muted-foreground uppercase tracking-widest text-xs">Cada sonrisa necesita algo diferente. Diseñamos el tratamiento alrededor de ti.</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {[
+                { title: "Diseño de Sonrisa", img: veneerMockupAsset.url, desc: "Planeación estética integral" },
+                { title: "Odontología Estética", img: beforeAfterLateralAsset.url, desc: "Restauración natural de alta gama" },
+                { title: "Resultados Reales", img: "/src/assets/comparisons/whitening_before_after.asset.json", desc: "Evidencia de transformación" }
+              ].map((t) => (
+                <motion.div 
+                  key={t.title} 
+                  whileHover={{ y: -10 }}
+                  className="group cursor-pointer"
+                >
+                  <div className="overflow-hidden mb-6 aspect-[4/5] relative">
+                    <img 
+                      src={t.img} 
+                      className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" 
+                      alt={t.title} 
+                    />
+                    <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors" />
+                  </div>
+                  <h3 className="font-serif text-3xl group-hover:text-primary transition-colors">{t.title}</h3>
+                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mt-2">{t.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="font-serif text-5xl">Todo empieza con una valoración.</h2>
-            <p className="text-muted-foreground uppercase tracking-widest text-xs">Cada sonrisa necesita algo diferente. Diseñamos el tratamiento alrededor de ti.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-12">
-            {[
-              { title: "Diseño de Sonrisa", img: veneerMockupAsset.url },
-              { title: "Odontología Estética", img: beforeAfterLateralAsset.url }
-            ].map((t) => (
-              <div key={t.title} className="group cursor-pointer">
-                <div className="overflow-hidden mb-6 aspect-[4/3]">
-                  <img src={t.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={t.title} />
-                </div>
-                <h3 className="font-serif text-3xl group-hover:text-primary transition-colors">{t.title}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       <footer className="py-24 px-12 bg-[#202020] text-[#FCFAF7]">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
           <div className="space-y-8">
