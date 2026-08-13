@@ -256,6 +256,8 @@ function Index() {
               ))}
             </div>
           </div>
+        </section>
+
 
       <footer className="py-24 px-12 bg-[#202020] text-[#FCFAF7]">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
