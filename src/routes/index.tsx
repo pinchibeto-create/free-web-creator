@@ -1,8 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { motion } from "framer-motion";
-import logoAsset from "@/assets/branding/logo.asset.json";
-import heroAsset from "@/assets/hero/hero_main.asset.json";
-
 export const Route = createFileRoute("/")({
   component: Index,
 });
