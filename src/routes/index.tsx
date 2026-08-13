@@ -21,7 +21,7 @@ function Index() {
             </a>
           ))}
         </div>
-        <button className="bg-soft-black text-ivory px-8 py-3 rounded-none text-[10px] uppercase tracking-[0.3em] font-serif hover:bg-champagne transition-all duration-500">
+        <button className="bg-soft-black text-ivory px-8 py-3 rounded-none text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-champagne transition-all duration-500">
           Agenda tu valoración
         </button>
       </nav>
