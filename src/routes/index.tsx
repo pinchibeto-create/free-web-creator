@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-secondary text-foreground font-sans">
-      <nav className="fixed w-full z-50 px-6 py-4 flex items-center justify-between bg-[#F7F2EA]/80 backdrop-blur-md border-b border-primary/5">
+      <nav className="fixed w-full z-50 px-6 py-4 flex items-center justify-between bg-secondary/80 backdrop-blur-md border-b border-primary/5">
         <img src={logoAsset.url} alt="Nisado Baani" className="h-10" />
         <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium">
           {["Inicio", "Diseño de sonrisa", "Tratamientos", "Resultados", "Nosotros", "Ubicaciones"].map((item) => (
