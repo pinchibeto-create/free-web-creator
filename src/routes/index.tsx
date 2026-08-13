@@ -128,7 +128,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="py-24 px-12">
+      <section className="py-24 px-12 bg-[#FCFAF7]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
           <div className="flex-1 space-y-8">
             <h2 className="font-serif text-5xl leading-tight">Una sonrisa no se improvisa.<br />Se diseña.</h2>
