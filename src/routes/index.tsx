@@ -233,7 +233,7 @@ function Index() {
               { 
                 num: "03",
                 title: "Invisalign & Alineación", 
-                img: nisadoAssets.references.symmetry, 
+                img: nisadoAssets.comparisons.geometricAnalysis, 
                 desc: "Ortodoncia invisible planificada digitalmente para una oclusión perfecta y estética." 
               }
             ].map((t) => (
