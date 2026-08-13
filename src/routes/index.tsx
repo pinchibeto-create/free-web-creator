@@ -146,6 +146,27 @@ function Index() {
           </div>
         </div>
       </section>
+      <section className="py-24 px-12 bg-background border-t border-border/40">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="font-serif text-5xl">Todo empieza con una valoración.</h2>
+            <p className="text-muted-foreground uppercase tracking-widest text-xs">Cada sonrisa necesita algo diferente. Diseñamos el tratamiento alrededor de ti.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12">
+            {[
+              { title: "Diseño de Sonrisa", img: veneerMockupAsset.url },
+              { title: "Odontología Estética", img: beforeAfterLateralAsset.url }
+            ].map((t) => (
+              <div key={t.title} className="group cursor-pointer">
+                <div className="overflow-hidden mb-6 aspect-[4/3]">
+                  <img src={t.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={t.title} />
+                </div>
+                <h3 className="font-serif text-3xl group-hover:text-primary transition-colors">{t.title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
