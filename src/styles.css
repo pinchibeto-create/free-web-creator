@@ -3,25 +3,12 @@
 @import "tw-animate-css";
 
 @theme {
-  --font-serif: "Cormorant Garamond", serif;
+  --font-serif: "Bodoni Moda", "Cormorant Garamond", serif;
   --font-sans: "Manrope", sans-serif;
+  --font-script: "Parisienne", "Allura", cursive;
 }
 
 @custom-variant dark (&:is(.dark *));
-
-/*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
- */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -64,33 +51,43 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Nisado Baani Custom Colors */
+  --color-ivory: #F7F2EA;
+  --color-warm-white: #FCFAF7;
+  --color-champagne: #C6A15B;
+  --color-muted-gold: #B6914A;
+  --color-charcoal: #22201E;
+  --color-soft-black: #151515;
+  --color-blush: #E6C9C0;
+  --color-warm-gray: #7B756F;
+  --color-line: rgba(182,145,74,.25);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(0.984 0.003 247.858); /* #FCFAF7 - Marfil/Blanco cálido */
-  --foreground: oklch(0.208 0.042 265.755); /* #202020 - Negro carbón */
-  --card: oklch(0.984 0.003 247.858);
+  --radius: 0.25rem;
+  --background: oklch(0.968 0.007 247.896); /* #F7F2EA - Ivory as main bg */
+  --foreground: oklch(0.208 0.042 265.755); /* #151515 - Soft Black */
+  --card: oklch(0.984 0.003 247.858); /* #FCFAF7 - Warm White */
   --card-foreground: oklch(0.208 0.042 265.755);
   --popover: oklch(0.984 0.003 247.858);
   --popover-foreground: oklch(0.208 0.042 265.755);
-  --primary: oklch(0.672 0.101 64.12); /* #B89145 - Dorado mate */
+  --primary: oklch(0.672 0.101 64.12); /* #B6914A - Muted Gold */
   --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896); /* #F7F2EA - Marfil cálido */
+  --secondary: oklch(0.984 0.003 247.858); /* #FCFAF7 - Warm White */
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417); /* #77726C - Gris cálido */
-  --accent: oklch(0.85 0.05 45); /* #E6C6BC - Rosa nude tenue */
+  --muted-foreground: oklch(0.554 0.046 257.417); /* #7B756F - Warm Gray */
+  --accent: oklch(0.85 0.05 45); /* #E6C6BC - Blush */
   --accent-foreground: oklch(0.208 0.042 265.755);
   --border: oklch(0.929 0.013 255.508);
   --input: oklch(0.929 0.013 255.508);
   --ring: oklch(0.672 0.101 64.12);
-  /* ... resto Chart colors ... */
 }
+
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  /* ... resto Dark theme ... */
+  --background: oklch(0.129 0.042 264.695); /* #151515 */
+  --foreground: oklch(0.984 0.003 247.858); /* #FCFAF7 */
 }
 
 @layer base {
@@ -102,4 +99,29 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
 }
+
+@layer utilities {
+  .smile-arc {
+    border-bottom: 1px solid var(--color-champagne);
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+  }
+  
+  .design-line {
+    position: relative;
+  }
+  
+  .design-line::after {
+    content: "";
+    position: absolute;
+    background: var(--color-champagne);
+    opacity: 0.4;
+  }
+}
+
