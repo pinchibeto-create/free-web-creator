@@ -1,3 +1,8 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import logoAsset from "@/assets/branding/logo.asset.json";
+import heroAsset from "@/assets/hero/hero_main.asset.json";
+
 export const Route = createFileRoute("/")({
   component: Index,
 });
@@ -19,31 +24,102 @@ function Index() {
         </button>
       </nav>
 
-      <header className="relative h-screen flex items-center pt-20 px-12">
-        <div className="flex-1 max-w-2xl">
-          <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase mb-6">NISADO BAANI · LUXURY DENTAL</p>
-          <h1 className="text-7xl font-light font-serif mb-6 leading-[0.9]">
+      <header className="relative h-screen flex items-center pt-20 px-12 overflow-hidden">
+        <div className="flex-1 max-w-2xl z-10">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-sm tracking-[0.2em] text-muted-foreground uppercase mb-6"
+          >
+            NISADO BAANI · LUXURY DENTAL
+          </motion.p>
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-8xl font-light font-serif mb-6 leading-[0.85] tracking-tight"
+          >
             Tu sonrisa,<br />diseñada para ti.
-          </h1>
-          <p className="text-xl text-muted-foreground mb-10 max-w-lg">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl text-muted-foreground mb-10 max-w-lg leading-relaxed"
+          >
             Diseño de sonrisa y odontología estética con atención personalizada en Ciudad de México.
-          </p>
-          <div className="flex gap-4">
-            <button className="bg-primary text-primary-foreground px-8 py-4 uppercase tracking-widest text-sm">Agenda tu valoración</button>
-            <button className="border border-input px-8 py-4 uppercase tracking-widest text-sm">Ver resultados</button>
-          </div>
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex gap-4 items-center"
+          >
+            <button className="bg-primary text-primary-foreground px-10 py-5 uppercase tracking-widest text-xs font-semibold hover:bg-primary/90 transition-all">
+              Agenda tu valoración
+            </button>
+            <button className="border border-input px-10 py-5 uppercase tracking-widest text-xs font-semibold hover:bg-accent transition-all">
+              Ver resultados
+            </button>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="mt-12 flex gap-6 text-[10px] uppercase tracking-[0.3em] text-muted-foreground/60"
+          >
+            <span>Estética</span>
+            <span>·</span>
+            <span>Precisión</span>
+            <span>·</span>
+            <span>Tecnología</span>
+            <span>·</span>
+            <span>Naturalidad</span>
+          </motion.div>
         </div>
-        <div className="flex-1 h-full relative">
-          <img src={heroAsset.url} alt="Consultorio Premium" className="w-full h-full object-cover" />
+        
+        <motion.div 
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
+          className="absolute right-0 top-0 w-1/2 h-full"
+        >
+          <img 
+            src={heroAsset.url} 
+            alt="Consultorio Premium Nisado Baani" 
+            className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background to-transparent w-32" />
+        </motion.div>
+
+        <div className="absolute bottom-12 left-12 flex gap-8 text-[10px] uppercase tracking-widest font-bold text-muted-foreground/80">
+          <span>Polanco</span>
+          <span>Del Valle</span>
+          <span>Roma Sur</span>
         </div>
       </header>
 
-      <section className="py-20 px-12 grid grid-cols-4 border-b border-border/50">
-        {["Diseño personalizado", "Resultados naturales", "Tecnología digital", "Atención en 3 ubicaciones"].map((item) => (
-          <div key={item} className="px-8 border-l border-border first:border-l-0 text-center">
-            <p className="font-serif text-2xl">{item}</p>
-          </div>
-        ))}
+      <section className="py-24 px-12 border-b border-border/40 bg-secondary/30">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-0">
+          {[
+            { title: "Diseño personalizado", desc: "Adaptado a tu fisionomía" },
+            { title: "Resultados naturales", desc: "Armonía estética perfecta" },
+            { title: "Tecnología digital", desc: "Planeación de alta precisión" },
+            { title: "3 Ubicaciones", desc: "CDMX: Polanco, Del Valle, Roma" }
+          ].map((item, i) => (
+            <motion.div 
+              key={item.title} 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="px-12 md:border-l border-border first:border-l-0 text-center flex flex-col items-center"
+            >
+              <h3 className="font-serif text-2xl mb-2 text-foreground/90">{item.title}</h3>
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
       </section>
     </div>
   );
