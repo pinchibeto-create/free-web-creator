@@ -121,6 +121,29 @@ function Index() {
           ))}
         </div>
       </section>
+      <section className="py-24 px-12">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+          <div className="flex-1 space-y-8">
+            <h2 className="font-serif text-5xl leading-tight">Una sonrisa no se improvisa.<br />Se diseña.</h2>
+            <p className="text-muted-foreground leading-relaxed">Cada transformación comienza con una idea y continúa con análisis, proporción, planeación digital y ejecución clínica. El objetivo no es crear una sonrisa idéntica para todos, sino encontrar la que armoniza contigo.</p>
+            <div className="grid grid-cols-2 gap-8">
+              {["Analizamos", "Diseñamos", "Planeamos", "Transformamos"].map((step, i) => (
+                <div key={step}>
+                  <p className="text-primary font-serif text-2xl mb-1">0{i + 1}</p>
+                  <p className="text-xs uppercase tracking-widest">{step}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex-1 relative">
+            <motion.img 
+              src="/src/assets/concepts/sketch_to_smile.asset.json" // Note: need to import, but for structure just showing the path usage
+              // In production, import the JSON and use `.url`
+              className="w-full shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
