@@ -43,28 +43,54 @@ function Index() {
       </nav>
 
       {/* Editorial Hero */}
-      <header className="relative min-h-screen flex items-center px-8 lg:px-24 pt-32 lg:pt-0">
-        <div className="grid lg:grid-cols-12 gap-12 w-full items-center">
-          <div className="lg:col-span-6 flex flex-col justify-center space-y-12">
-            <div className="space-y-4">
+      <header ref={heroRef} className="relative min-h-[100svh] w-full overflow-hidden flex items-center justify-center">
+        {/* Background Image Container */}
+        <motion.div 
+          style={{ 
+            filter: imgBlur,
+            scale: imgScale
+          }}
+          className="absolute inset-0 w-full h-full z-0"
+        >
+          <img 
+            src={nisadoAssets.cutouts.doctoraSillon} 
+            className="w-full h-full object-cover" 
+            alt="Nisado Baani Studio" 
+          />
+          {/* Subtle Overlay to guarantee readability */}
+          <div className="absolute inset-0 bg-soft-black/10 mix-blend-multiply pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ivory/20 via-transparent to-ivory/40 pointer-events-none" />
+        </motion.div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 w-full max-w-7xl px-8 text-center">
+          <motion.div
+            style={{ 
+              y: textY,
+              opacity: textOpacity
+            }}
+            className="flex flex-col items-center justify-center space-y-8"
+          >
+            <div className="space-y-6">
                <motion.p 
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="text-[9px] tracking-[0.5em] text-champagne uppercase font-bold"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-[10px] tracking-[0.6em] text-champagne uppercase font-bold"
                >
                  Luxury Dental · Studio
                </motion.p>
+               
                <motion.h1 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                 className="text-7xl lg:text-9xl font-serif leading-[0.8] text-soft-black flex flex-col"
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-6xl md:text-7xl lg:text-9xl font-serif leading-[0.85] text-soft-black flex flex-col items-center"
                >
-                <span className="block">Diseñamos</span>
-                <span className="font-script text-champagne block lg:ml-20 -my-2 lg:-my-4">sonrisas</span>
+                <span className="block">Diseñamos sonrisas</span>
+                <span className="font-script text-champagne block -my-2 lg:-my-4">hechas</span>
                 <span className="italic relative block">
-                  hechas para ti.
-                  <div className="absolute -bottom-2 left-0 w-full h-[1px] bg-champagne/30" />
+                  para ti.
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-champagne/40" />
                 </span>
                </motion.h1>
             </div>
@@ -73,37 +99,16 @@ function Index() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-8 items-start sm:items-center"
+              className="flex flex-col sm:flex-row gap-8 items-center pt-12"
             >
               <div className="flex gap-4">
                 {["Polanco", "Del Valle", "Roma Sur"].map(loc => (
-                  <button key={loc} className="border border-soft-black/5 px-5 py-2 text-[9px] uppercase tracking-[0.3em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-700 rounded-full">
+                  <button key={loc} className="border border-soft-black/10 px-6 py-2.5 text-[9px] uppercase tracking-[0.3em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm">
                     {loc}
                   </button>
                 ))}
               </div>
-              <a href="#atelier" className="text-[9px] uppercase tracking-[0.4em] font-bold border-b border-soft-black/10 pb-1 hover:border-champagne transition-all">
-                Ver el proceso →
-              </a>
             </motion.div>
-          </div>
-          
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="lg:col-span-6 h-[60vh] lg:h-[80vh] relative group"
-          >
-            <div className="absolute inset-0 border border-champagne/20 m-6 pointer-events-none z-10" />
-            <img 
-              src={nisadoAssets.hero.main} 
-              className="w-full h-full object-cover rounded-[40px] shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000" 
-              alt="Nisado Baani Studio" 
-            />
-            <div className="absolute -bottom-6 -left-6 bg-ivory p-8 shadow-xl hidden lg:block">
-              <p className="text-[9px] tracking-[0.4em] font-bold uppercase opacity-40">Establecido en México</p>
-              <p className="font-serif text-2xl mt-2">2026</p>
-            </div>
           </motion.div>
         </div>
       </header>
