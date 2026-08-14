@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 import { nisadoAssets } from "@/data/nisadoAssets";
 
@@ -10,6 +10,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   const heroRef = useRef(null);
   const manifestoRef = useRef(null);
+  const shouldReduceMotion = useReducedMotion();
   
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -21,10 +22,14 @@ function Index() {
     offset: ["start end", "end start"]
   });
 
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-80px"]);
+  // Responsive values
+  const textYValue = typeof window !== 'undefined' && window.innerWidth < 768 ? "-50px" : "-80px";
+  const blurValue = typeof window !== 'undefined' && window.innerWidth < 768 ? "blur(6px)" : "blur(8px)";
+
+  const textY = useTransform(scrollYProgress, [0, 1], ["0px", shouldReduceMotion ? "0px" : textYValue]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const imgBlur = useTransform(scrollYProgress, [0, 0.5], ["blur(8px)", "blur(0px)"]);
-  const imgScale = useTransform(scrollYProgress, [0, 0.5], [1.03, 1]);
+  const imgBlur = useTransform(scrollYProgress, [0, 0.5], [shouldReduceMotion ? "blur(0px)" : blurValue, "blur(0px)"]);
+  const imgScale = useTransform(scrollYProgress, [0, 0.5], [shouldReduceMotion ? 1 : 1.03, 1]);
   const xPos = useTransform(manifestoScroll, [0, 1], [-100, 100]);
 
   return (
@@ -53,7 +58,7 @@ function Index() {
           className="absolute inset-0 w-full h-full z-0"
         >
           <img 
-            src={nisadoAssets.cutouts.doctoraSillon} 
+            src={nisadoAssets.hero.premiumDoctora} 
             className="w-full h-full object-cover" 
             alt="Nisado Baani Studio" 
           />
@@ -87,7 +92,6 @@ function Index() {
                 className="text-6xl md:text-7xl lg:text-9xl font-serif leading-[0.85] text-soft-black flex flex-col items-center"
                >
                 <span className="block">Diseñamos sonrisas</span>
-                <span className="font-script text-champagne block -my-2 lg:-my-4">hechas</span>
                 <span className="italic relative block">
                   para ti.
                   <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-champagne/40" />
