@@ -50,22 +50,23 @@ function Index() {
       {/* Editorial Hero */}
       <header ref={heroRef} className="relative h-[200vh] w-full">
         {/* Sticky Container for Image */}
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-screen w-full overflow-hidden bg-soft-black">
           <motion.div 
             style={{ 
               filter: imgBlur,
               scale: imgScale
             }}
-            className="absolute inset-0 w-full h-full z-0"
+            className="absolute inset-0 w-full h-full z-0 origin-center"
           >
             <img 
               src={nisadoAssets.hero.premiumDoctora} 
               className="w-full h-full object-cover" 
               alt="Nisado Baani Studio" 
+              loading="eager"
             />
             {/* Subtle Overlay to guarantee readability */}
-            <div className="absolute inset-0 bg-soft-black/10 mix-blend-multiply pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-b from-ivory/20 via-transparent to-ivory/40 pointer-events-none" />
+            <div className="absolute inset-0 bg-soft-black/20 mix-blend-multiply pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-b from-soft-black/20 via-transparent to-soft-black/40 pointer-events-none" />
           </motion.div>
         </div>
 
