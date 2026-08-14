@@ -8,13 +8,24 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const heroRef = useRef(null);
   const manifestoRef = useRef(null);
+  
   const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+
+  const { scrollYProgress: manifestoScroll } = useScroll({
     target: manifestoRef,
     offset: ["start end", "end start"]
   });
 
-  const xPos = useTransform(scrollYProgress, [0, 1], [-100, 100]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-80px"]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const imgBlur = useTransform(scrollYProgress, [0, 0.5], ["blur(8px)", "blur(0px)"]);
+  const imgScale = useTransform(scrollYProgress, [0, 0.5], [1.03, 1]);
+  const xPos = useTransform(manifestoScroll, [0, 1], [-100, 100]);
 
   return (
     <div className="min-h-screen bg-ivory text-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden">
