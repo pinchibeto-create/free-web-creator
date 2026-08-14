@@ -52,7 +52,7 @@ function Index() {
                 Diseñamos<br />
                 <span className="font-script text-champagne block lg:inline-block lg:ml-20">sonrisas</span><br />
                 <span className="italic relative">
-                  atemporales.
+                  hechas para ti.
                   <div className="absolute -bottom-2 left-0 w-full h-[1px] bg-champagne/30" />
                 </span>
                </motion.h1>
