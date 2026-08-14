@@ -29,7 +29,7 @@ function Index() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0px", shouldReduceMotion ? "0px" : textYValue]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   const imgBlur = useTransform(scrollYProgress, [0, 0.3], [shouldReduceMotion ? "blur(0px)" : blurValue, "blur(0px)"]);
-  const imgScale = useTransform(scrollYProgress, [0, 0.5], [shouldReduceMotion ? 1 : 1.03, 1]);
+  const imgScale = useTransform(scrollYProgress, [0, 0.3], [shouldReduceMotion ? 1 : 1.03, 1]);
   const xPos = useTransform(manifestoScroll, [0, 1], [-100, 100]);
 
   return (
