@@ -47,11 +47,11 @@ function Index() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-7xl lg:text-9xl font-serif leading-[0.85] text-soft-black"
+                 className="text-7xl lg:text-9xl font-serif leading-[0.8] text-soft-black flex flex-col"
                >
-                Diseñamos<br />
-                <span className="font-script text-champagne block lg:inline-block lg:ml-20">sonrisas</span><br />
-                <span className="italic relative">
+                <span className="block">Diseñamos</span>
+                <span className="font-script text-champagne block lg:ml-20 -my-2 lg:-my-4">sonrisas</span>
+                <span className="italic relative block">
                   hechas para ti.
                   <div className="absolute -bottom-2 left-0 w-full h-[1px] bg-champagne/30" />
                 </span>
