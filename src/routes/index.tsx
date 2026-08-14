@@ -26,7 +26,7 @@ function Index() {
   const textYValue = typeof window !== 'undefined' && window.innerWidth < 768 ? "-50px" : "-80px";
   const blurValue = typeof window !== 'undefined' && window.innerWidth < 768 ? "blur(6px)" : "blur(8px)";
 
-  const textY = useTransform(scrollYProgress, [0, 1], ["0px", shouldReduceMotion ? "0px" : textYValue]);
+  const textY = useTransform(scrollYProgress, [0, 0.3], ["0px", shouldReduceMotion ? "0px" : textYValue]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   const imgBlur = useTransform(scrollYProgress, [0, 0.3], [shouldReduceMotion ? "blur(0px)" : blurValue, "blur(0px)"]);
   const imgScale = useTransform(scrollYProgress, [0, 0.3], [shouldReduceMotion ? 1 : 1.03, 1]);
