@@ -23,7 +23,7 @@ function Index() {
       </nav>
 
       {/* Editorial Hero */}
-      <header className="relative min-h-screen flex items-center px-8 lg:px-24">
+      <header className="relative min-h-screen flex items-center px-8 lg:px-24 pt-32">
         <div className="grid lg:grid-cols-12 gap-12 w-full">
           <div className="lg:col-span-5 flex flex-col justify-center">
             <motion.h1 
@@ -43,7 +43,7 @@ function Index() {
               className="mt-12 flex gap-6"
             >
               {["Polanco", "Del Valle", "Roma Sur"].map(loc => (
-                <button key={loc} className="border border-soft-black/10 px-6 py-2 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-champagne hover:text-ivory transition-colors">
+                <button key={loc} className="border border-soft-black/10 px-6 py-2 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-champagne hover:text-ivory transition-all duration-500">
                   {loc}
                 </button>
               ))}
@@ -52,16 +52,16 @@ function Index() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="lg:col-span-7 h-[70vh] bg-charcoal relative"
+            className="lg:col-span-7 h-[70vh] relative"
           >
-            <img src={nisadoAssets.hero.main} className="w-full h-full object-cover opacity-90" alt="Nisado Baani" />
+            <img src={nisadoAssets.hero.main} className="w-full h-full object-cover opacity-90 rounded-[32px]" alt="Nisado Baani" />
           </motion.div>
         </div>
       </header>
 
       {/* Manifiesto Editorial */}
-      <section className="py-32 px-8 lg:px-24 relative">
-        <div className="absolute top-24 left-24 opacity-[0.03] text-[20vw] font-serif leading-none">NB</div>
+      <section className="py-32 px-8 lg:px-24 relative bg-warm-white">
+        <div className="absolute top-24 left-24 opacity-[0.03] text-[20vw] font-serif leading-none select-none">NB</div>
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <p className="font-serif text-3xl italic text-soft-black/80 leading-relaxed">
             "La belleza no es un estándar, es una interpretación única de la identidad."
@@ -75,11 +75,11 @@ function Index() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8">
             <h2 className="text-6xl font-serif">Artesanía & Precisión</h2>
-            <p className="text-ivory/60 leading-relaxed">Combinamos la meticulosa escultura manual con la tecnología de vanguardia para garantizar una armonía absoluta.</p>
+            <p className="text-ivory/60 leading-relaxed font-light">Combinamos la meticulosa escultura manual con la tecnología de vanguardia para garantizar una armonía absoluta en cada detalle de tu nueva sonrisa.</p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <img src={nisadoAssets.craftsmanship.pulido} className="aspect-square object-cover" alt="Pulido" />
-            <img src={nisadoAssets.technology.computadora} className="aspect-square object-cover" alt="Tecnología" />
+            <img src={nisadoAssets.craftsmanship.pulido} className="aspect-square object-cover rounded-md" alt="Pulido" />
+            <img src={nisadoAssets.technology.computadora} className="aspect-square object-cover rounded-md" alt="Tecnología" />
           </div>
         </div>
       </section>
