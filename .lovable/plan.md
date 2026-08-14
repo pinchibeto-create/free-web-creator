@@ -4,18 +4,22 @@ description: Fix for hero text not disappearing correctly on scroll and image bl
 type: feature
 ---
 
-# Hero Scroll Fix
+# Rediseño de Animación Hero y Fix de Scroll
 
-## Issue
-The user reported an error with the hero scroll animation. In the previous iteration, I reduced the range of `scrollYProgress` to `[0, 0.3]` for the text disappearance and image nitidez, but since the container is `200vh` and the image is `sticky` for the entire height, the `scrollYProgress` of the target `heroRef` (the `200vh` header) might be behaving differently than expected or the content might be getting stuck/showing white space because the content container didn't have enough room to scroll past the viewport effectively while staying sticky.
+Se corregirá la animación del Hero para que el texto desaparezca de forma fluida y la imagen gane nitidez total, eliminando cualquier glitch visual (espacios en blanco) durante la transición.
 
-## Proposed Changes
-- Ensure the hero text fully fades to `opacity: 0` and translates out of view.
-- Ensure the image blur fully resolves to `0px`.
-- Adjust the sticky/absolute positioning to ensure smooth transition without visual artifacts.
-- Extend the animation range slightly if needed to make it feel more natural.
+## Problemas Detectados
+1. **Rango de Animación:** El texto y el blur no están respondiendo con la sensibilidad adecuada al scroll.
+2. **Glitch de Scroll:** Aparece un fondo color marfil (ivory) en la parte inferior durante el scroll sticky, rompiendo la inmersión.
+3. **Persistencia del Texto:** El texto no se oculta completamente antes de que la imagen sea totalmente nítida.
 
-## Technical Details
-- `useScroll` with `target: heroRef` on a `200vh` header.
-- `textOpacity` should reach 0 before the next section appears.
-- `imgBlur` should reach 0px.
+## Cambios Propuestos
+- **Ajuste de sticky:** Asegurar que el contenedor de la imagen ocupe el 100% del viewport y no deje ver el fondo del padre.
+- **Sincronización:** Ajustar los rangos de `useTransform` para que la transición sea más rápida y dramática (desaparición total en los primeros px de scroll).
+- **Limpieza Visual:** Eliminar márgenes o paddings que puedan estar causando el espacio en blanco inferior.
+
+## Detalles Técnicos
+- Modificar `src/routes/index.tsx`.
+- Usar un rango más agresivo para `textOpacity` (ej: `[0, 0.2]`).
+- Asegurar que el contenedor sticky tenga un `z-index` y fondo adecuados para evitar sangrado de color.
+
