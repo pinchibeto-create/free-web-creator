@@ -419,7 +419,7 @@ function Index() {
       </section>
 
       {/* Footer Boutique */}
-      <footer className="bg-soft-black text-ivory pt-48 pb-24 px-8 lg:px-24">
+      <footer id="footer" className="bg-soft-black text-ivory pt-48 pb-24 px-8 lg:px-24 scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-24">
           <div className="lg:col-span-5 space-y-16">
             <img src={nisadoAssets.branding.logoPng} className="h-8 opacity-80" alt="Nisado Baani" />
@@ -507,6 +507,7 @@ function Index() {
 
         {/* Agendar Button */}
         <motion.button 
+          id="agendar"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-champagne text-ivory px-10 py-5 rounded-full text-[10px] uppercase tracking-[0.4em] font-bold shadow-2xl hover:bg-muted-gold transition-colors"
