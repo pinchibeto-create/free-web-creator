@@ -30,7 +30,7 @@ export function ResultsSlider({ images }: ResultsSliderProps) {
           >
             <motion.img 
               src={img} 
-              alt={`Resultado clínico ${index + 1}`}
+              alt={`Antes y después de diseño de sonrisa Nisado Baani - Caso 0${index + 1}`}
               className="w-full h-full object-cover transition-all duration-700"
               style={{ filter: "grayscale(100%)" }}
               whileHover={{ 
