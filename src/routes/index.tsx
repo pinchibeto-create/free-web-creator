@@ -124,7 +124,7 @@ function Index() {
       </header>
 
       {/* Manifiesto Editorial */}
-      <section ref={manifestoRef} className="py-48 px-8 lg:px-24 relative overflow-hidden bg-warm-white">
+      <section ref={manifestoRef} className="py-48 px-8 lg:px-24 relative overflow-hidden bg-ivory">
         <motion.div 
           style={{ x: xPos }}
           className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] text-[40vw] font-serif leading-none select-none whitespace-nowrap pointer-events-none"
