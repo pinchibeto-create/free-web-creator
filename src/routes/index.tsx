@@ -249,7 +249,7 @@ function Index() {
       </section>
 
       {/* 01 / DISEÑO - Tecnología que Planifica */}
-      <section id="tecnologia" className="pt-12 pb-48 px-8 lg:px-24 bg-ivory overflow-hidden">
+      <section id="tecnologia" className="pt-12 pb-48 px-8 lg:px-24 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-24 items-center">
             <div className="lg:w-1/2 space-y-12">
