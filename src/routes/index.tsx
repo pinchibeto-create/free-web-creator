@@ -139,7 +139,7 @@ function Index() {
 
 
       {/* Editorial Hero */}
-      <header ref={heroRef} className="relative h-[110vh] w-full">
+      <header ref={heroRef} className="relative h-[110vh] w-full scroll-mt-24 md:scroll-mt-32">
         {/* Sticky Container for Image */}
         <div className="sticky top-0 h-screen w-full overflow-hidden bg-soft-black">
           <motion.div 
