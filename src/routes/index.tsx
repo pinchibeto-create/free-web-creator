@@ -14,7 +14,7 @@ function Index() {
   
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start start", "end end"]
+    offset: ["start start", "center start"]
   });
 
   const { scrollYProgress: manifestoScroll } = useScroll({
