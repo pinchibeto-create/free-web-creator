@@ -513,7 +513,7 @@ function Index() {
           </div>
         </div>
         
-        <div className="max-w-7xl mx-auto mt-48 pt-12 border-t border-ivory/5 flex flex-col md:flex-row justify-between text-[8px] tracking-[0.4em] text-ivory/20 font-bold uppercase gap-6">
+        <div className="max-w-7xl mx-auto mt-48 pt-12 border-t border-ivory/5 flex flex-col md:flex-row justify-between text-[8px] tracking-[0.08em] text-ivory/20 font-brand uppercase gap-6">
           <div className="flex flex-col gap-2">
             <p>© 2026 Nisado Baani Luxury Dental Studio</p>
             <p className="text-champagne/40">creado por Mi Vitrina Digital</p>
