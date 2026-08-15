@@ -56,17 +56,17 @@ function Index() {
     <div className="min-h-screen bg-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden scroll-smooth">
       {/* Editorial Navigation */}
       <nav 
-        className={`fixed w-full z-50 px-8 flex items-center justify-between transition-all duration-500 h-[70px] md:h-[85px] ${
+        className={`fixed w-full z-50 px-8 flex items-center justify-between transition-all duration-500 h-[70px] md:h-[85px] backdrop-blur-[14px] ${
           isScrolled 
-            ? "bg-ivory/70 backdrop-blur-[14px] border-b border-soft-black/5 shadow-sm" 
-            : "bg-transparent"
+            ? "bg-ivory/80 border-b border-soft-black/5 shadow-sm" 
+            : "bg-ivory/20"
         }`}
       >
         <div className="flex items-center">
           <img 
             src={nisadoAssets.branding.logoPng} 
             alt="Nisado Baani" 
-            className={`h-12 md:h-16 transition-all duration-500 object-contain ${isScrolled ? "opacity-100" : "opacity-80 invert"}`} 
+            className="h-12 md:h-16 transition-all duration-500 object-contain" 
           />
         </div>
 
@@ -75,15 +75,15 @@ function Index() {
           className={`relative z-[60] flex flex-col items-center justify-center w-8 h-8 focus:outline-none group`}
           aria-label="Menú"
         >
-          <span className={`block w-6 h-[1.5px] transition-all duration-300 ease-out ${
+          <span className={`block w-6 h-[1.5px] bg-soft-black transition-all duration-300 ease-out ${
             isMenuOpen ? "rotate-45 translate-y-[1.5px]" : "-translate-y-1"
-          } ${isScrolled || isMenuOpen ? "bg-soft-black" : "bg-ivory"}`} />
-          <span className={`block w-6 h-[1.5px] transition-all duration-300 ease-out ${
+          }`} />
+          <span className={`block w-6 h-[1.5px] bg-soft-black transition-all duration-300 ease-out ${
             isMenuOpen ? "opacity-0" : "opacity-100"
-          } ${isScrolled || isMenuOpen ? "bg-soft-black" : "bg-ivory"}`} />
-          <span className={`block w-6 h-[1.5px] transition-all duration-300 ease-out ${
+          }`} />
+          <span className={`block w-6 h-[1.5px] bg-soft-black transition-all duration-300 ease-out ${
             isMenuOpen ? "-rotate-45 -translate-y-[1.5px]" : "translate-y-1"
-          } ${isScrolled || isMenuOpen ? "bg-soft-black" : "bg-ivory"}`} />
+          }`} />
         </button>
 
         {/* Side Menu Overlay */}
