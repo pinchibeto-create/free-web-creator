@@ -472,7 +472,7 @@ function Index() {
           
           <div className="lg:col-span-7 grid md:grid-cols-2 gap-16">
             <div className="space-y-10">
-              <h4 className="text-[10px] uppercase tracking-[0.4em] text-champagne font-bold">Ubicaciones</h4>
+              <h4 className="text-[10px] uppercase tracking-[0.08em] text-champagne font-brand">Ubicaciones</h4>
               <ul className="space-y-10 text-sm text-ivory/40 font-light">
                 {[
                   { 
