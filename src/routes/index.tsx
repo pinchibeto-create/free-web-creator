@@ -5,6 +5,75 @@ import { nisadoAssets } from "@/data/nisadoAssets";
 import { ResultsSlider } from "@/components/ResultsSlider";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Nisado Baani | Diseño de Sonrisa y Odontología Estética de Lujo CDMX" },
+      { name: "description", content: "Expertos en diseño de sonrisa, carillas de porcelana y odontología estética premium en Polanco, Del Valle y Roma Sur. Tecnología avanzada y precisión artística para una sonrisa natural." },
+      { property: "og:title", content: "Nisado Baani | Luxury Dental & Smile Design CDMX" },
+      { property: "og:description", content: "Transformamos sonrisas con precisión tecnológica y alma artesanal. Visítanos en nuestras clínicas boutique en la Ciudad de México." },
+      { property: "og:image", content: "https://budget-web-studio.lovable.app/og-image.png" },
+      { name: "twitter:title", content: "Nisado Baani | Diseño de Sonrisa de Lujo" },
+      { name: "twitter:description", content: "Odontología estética de alta precisión en CDMX. Diseño de sonrisa personalizado con tecnología 3D." },
+      { name: "twitter:image", content: "https://budget-web-studio.lovable.app/og-image.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://budget-web-studio.lovable.app/" }
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Dentist",
+          "name": "Nisado Baani",
+          "image": "https://budget-web-studio.lovable.app/logo.png",
+          "@id": "https://budget-web-studio.lovable.app/",
+          "url": "https://budget-web-studio.lovable.app/",
+          "telephone": "+525500000000",
+          "address": [
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Polanco",
+              "addressLocality": "Ciudad de México",
+              "addressRegion": "CDMX",
+              "addressCountry": "MX"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Del Valle",
+              "addressLocality": "Ciudad de México",
+              "addressRegion": "CDMX",
+              "addressCountry": "MX"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Roma Sur",
+              "addressLocality": "Ciudad de México",
+              "addressRegion": "CDMX",
+              "addressCountry": "MX"
+            }
+          ],
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "19:00"
+          },
+          "sameAs": [
+            "https://www.instagram.com/nisadobaani/",
+            "https://www.facebook.com/nisadobaani/"
+          ]
+        })
+      }
+    ]
+  }),
   component: Index,
 });
 
