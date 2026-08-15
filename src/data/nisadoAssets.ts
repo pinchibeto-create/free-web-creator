@@ -1,85 +1,83 @@
-import logoAsset from "@/assets/branding/logo.asset.json";
-import logoPngAsset from "@/assets/branding/logo_final_oro_v3.png.asset.json";
-import logoPrincipalAsset from "@/assets/branding/logo_final_oro_v3.png.asset.json";
-import heroMainAsset from "@/assets/hero/hero_main.asset.json";
-import heroPremiumDoctoraAsset from "@/assets/hero/a02_consultorio_premium_con_doctora.asset.json";
-import doctoraSillonAsset from "@/assets/cutouts/doctora_sillon.asset.json";
-import procedureVioletAsset from "@/assets/cutouts/procedure_violet.asset.json";
-import procedureClinicalAsset from "@/assets/cutouts/procedure_clinical.asset.json";
-import sketchToSmileAsset from "@/assets/concepts/sketch_to_smile.asset.json";
-import blueprintAsset from "@/assets/concepts/blueprint.asset.json";
-import whiteningAsset from "@/assets/comparisons/whitening_before_after.asset.json";
-import labialGeometryAsset from "@/assets/comparisons/labial_geometry.asset.json";
-import geometricAnalysisAsset from "@/assets/comparisons/geometric_analysis.asset.json";
-import overlayTechnicalAsset from "@/assets/comparisons/overlay_technical.asset.json";
-import dsdInfographicAsset from "@/assets/references/dsd_infographic.asset.json";
-import veneerMockupAsset from "@/assets/extras/veneer_mockup.asset.json";
-import beforeAfterLateralAsset from "@/assets/extras/before_after_lateral.asset.json";
-import craftsmanshipPulidoAsset from "@/assets/craftsmanship/a23_pulido_artesanal_de_carillas.asset.json";
-import craftsmanshipEsculturaAsset from "@/assets/craftsmanship/a24_escultura_artesanal_sobre_modelo_dental.asset.json";
-import craftsmanshipDetalladoAsset from "@/assets/craftsmanship/a25_detallado_con_pincel_sobre_protesis_ceramica.asset.json";
-import technologyComputadoraAsset from "@/assets/technology/laptop_tech_1.webp.asset.json";
-import referenceTabletaAsset from "@/assets/technology/laptop_tech_2.webp.asset.json";
-import referenceManualAsset from "@/assets/references_new/a28_referencia_de_trabajo_manual_con_pieza_dental.asset.json";
-import doctoraSentadaAsset from "@/assets/extras/doctora_sentada.asset.json";
-import intraoralArcadaAsset from "@/assets/extras/intraoral_arcada.asset.json";
-import labiosAntesDespuesAsset from "@/assets/extras/labios_antes_despues.asset.json";
-import result1Asset from "@/assets/results/result_1.asset.json";
-import result2Asset from "@/assets/results/result_2.asset.json";
-import result3Asset from "@/assets/results/result_3.asset.json";
-import result4Asset from "@/assets/results/result_4.asset.json";
-import result5Asset from "@/assets/results/result_5.asset.json";
+import logoPng from "@/assets/branding/logo_final_oro_v3.png";
+import logoPrincipal from "@/assets/branding/logo_final_oro_v3.png";
+import heroMain from "@/assets/hero/hero_main.webp";
+import heroPremiumDoctora from "@/assets/hero/a02_consultorio_premium_con_doctora.webp";
+import doctoraSillon from "@/assets/cutouts/doctora_sillon.webp";
+import procedureViolet from "@/assets/cutouts/procedure_violet.webp";
+import procedureClinical from "@/assets/cutouts/procedure_clinical.webp";
+import sketchToSmile from "@/assets/concepts/sketch_to_smile.webp";
+import blueprint from "@/assets/concepts/blueprint.webp";
+import whitening from "@/assets/comparisons/whitening_before_after.webp";
+import labialGeometry from "@/assets/comparisons/labial_geometry.webp";
+import geometricAnalysis from "@/assets/comparisons/geometric_analysis.webp";
+import overlayTechnical from "@/assets/comparisons/overlay_technical.webp";
+import dsdInfographic from "@/assets/references/dsd_infographic.webp";
+import veneerMockup from "@/assets/extras/veneer_mockup.webp";
+import beforeAfterLateral from "@/assets/extras/before_after_lateral.webp";
+import craftsmanshipPulido from "@/assets/craftsmanship/a23_pulido_artesanal_de_carillas.webp";
+import craftsmanshipEscultura from "@/assets/craftsmanship/a24_escultura_artesanal_sobre_modelo_dental.webp";
+import craftsmanshipDetallado from "@/assets/craftsmanship/a25_detallado_con_pincel_sobre_protesis_ceramica.webp";
+import technologyComputadora from "@/assets/technology/laptop_tech_1.webp";
+import referenceTableta from "@/assets/technology/laptop_tech_2.webp";
+import referenceManual from "@/assets/references_new/a28_referencia_de_trabajo_manual_con_pieza_dental.webp";
+import doctoraSentada from "@/assets/extras/doctora_sentada.webp";
+import intraoralArcada from "@/assets/extras/intraoral_arcada.webp";
+import labiosAntesDespues from "@/assets/extras/labios_antes_despues.webp";
+import result1 from "@/assets/results/result_1.jpg";
+import result2 from "@/assets/results/result_2.jpg";
+import result3 from "@/assets/results/result_3.jpg";
+import result4 from "@/assets/results/result_4.jpg";
+import result5 from "@/assets/results/result_5.jpg";
 
 export const nisadoAssets = {
   branding: {
-    logo: logoAsset.url,
-    logoPng: logoPngAsset.url,
-    logoPrincipal: logoPrincipalAsset.url,
+    logoPng: logoPng,
+    logoPrincipal: logoPrincipal,
   },
   hero: {
-    main: heroMainAsset.url,
-    premiumDoctora: heroPremiumDoctoraAsset.url,
+    main: heroMain,
+    premiumDoctora: heroPremiumDoctora,
   },
   cutouts: {
-    doctoraSillon: doctoraSillonAsset.url,
-    procedimientoVioleta: procedureVioletAsset.url,
-    procedimientoClinico: procedureClinicalAsset.url,
+    doctoraSillon: doctoraSillon,
+    procedimientoVioleta: procedureViolet,
+    procedimientoClinico: procedureClinical,
   },
   concepts: {
-    bocetoSonrisa: sketchToSmileAsset.url,
-    blueprint: blueprintAsset.url,
+    bocetoSonrisa: sketchToSmile,
+    blueprint: blueprint,
   },
   comparisons: {
-    whitening: whiteningAsset.url,
-    labialGeometry: labialGeometryAsset.url,
-    geometricAnalysis: geometricAnalysisAsset.url,
-    technicalOverlay: overlayTechnicalAsset.url,
-    labiosAntesDespues: labiosAntesDespuesAsset.url,
+    whitening: whitening,
+    labialGeometry: labialGeometry,
+    geometricAnalysis: geometricAnalysis,
+    technicalOverlay: overlayTechnical,
+    labiosAntesDespues: labiosAntesDespues,
   },
   references: {
-    dsdModern: dsdInfographicAsset.url,
-    tableta: referenceTabletaAsset.url,
-    manual: referenceManualAsset.url,
+    dsdModern: dsdInfographic,
+    tableta: referenceTableta,
+    manual: referenceManual,
   },
   craftsmanship: {
-    pulido: craftsmanshipPulidoAsset.url,
-    escultura: craftsmanshipEsculturaAsset.url,
-    detallado: craftsmanshipDetalladoAsset.url,
+    pulido: craftsmanshipPulido,
+    escultura: craftsmanshipEscultura,
+    detallado: craftsmanshipDetallado,
   },
   technology: {
-    computadora: technologyComputadoraAsset.url,
+    computadora: technologyComputadora,
   },
   extras: {
-    veneerMockup: veneerMockupAsset.url,
-    lateralBeforeAfter: beforeAfterLateralAsset.url,
-    doctoraSentada: doctoraSentadaAsset.url,
-    intraoralArcada: intraoralArcadaAsset.url,
+    veneerMockup: veneerMockup,
+    lateralBeforeAfter: beforeAfterLateral,
+    doctoraSentada: doctoraSentada,
+    intraoralArcada: intraoralArcada,
   },
   results: [
-    result1Asset.url,
-    result2Asset.url,
-    result3Asset.url,
-    result4Asset.url,
-    result5Asset.url,
+    result1,
+    result2,
+    result3,
+    result4,
+    result5,
   ]
 };
