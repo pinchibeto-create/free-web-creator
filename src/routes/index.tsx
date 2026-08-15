@@ -122,6 +122,23 @@ function Index() {
           </div>
         </div>
       </header>
+      
+      {/* Seccción de Marca Post-Hero */}
+      <section className="bg-soft-black py-48 px-8 flex items-center justify-center overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-4xl w-full"
+        >
+          <img 
+            src={nisadoAssets.branding.logoPrincipal} 
+            alt="Nisado Baani Luxury Dental" 
+            className="w-full h-auto opacity-90 brightness-0 invert"
+          />
+        </motion.div>
+      </section>
 
       {/* Manifiesto Editorial */}
       <section ref={manifestoRef} className="py-48 px-8 lg:px-24 relative overflow-hidden bg-ivory">
