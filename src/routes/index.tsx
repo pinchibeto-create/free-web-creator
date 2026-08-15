@@ -48,7 +48,7 @@ function Index() {
       </nav>
 
       {/* Editorial Hero */}
-      <header ref={heroRef} className="relative h-[200vh] w-full">
+      <header ref={heroRef} className="relative h-[160vh] w-full">
         {/* Sticky Container for Image */}
         <div className="sticky top-0 h-screen w-full overflow-hidden bg-soft-black">
           <motion.div 
@@ -124,7 +124,7 @@ function Index() {
       </header>
       
       {/* Seccción de Marca Post-Hero */}
-      <section className="bg-soft-black py-48 px-8 flex items-center justify-center overflow-hidden">
+      <section className="bg-soft-black pt-12 pb-32 px-8 flex items-center justify-center overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
