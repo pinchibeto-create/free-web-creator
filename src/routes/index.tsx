@@ -339,9 +339,9 @@ function Index() {
       <section id="atelier" className="py-48 px-8 lg:px-24 bg-soft-black text-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-32 space-y-6">
-            <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">02 / ARTESANÍA</p>
-            <h2 className="text-6xl lg:text-8xl font-serif">El arte detrás de tu sonrisa</h2>
-            <p className="text-champagne font-serif text-2xl italic opacity-80">Tecnología para diseñarla. Manos para perfeccionarla.</p>
+            <p className="text-[10px] uppercase tracking-[0.08em] text-champagne font-brand">02 / ARTESANÍA</p>
+            <h2 className="text-6xl lg:text-8xl font-brand tracking-[0.04em]">El arte detrás de tu sonrisa</h2>
+            <p className="font-script text-3xl opacity-80 text-champagne">Tecnología para diseñarla. Manos para perfeccionarla.</p>
           </div>
 
           <div className="grid grid-cols-3 gap-2 md:gap-8">
