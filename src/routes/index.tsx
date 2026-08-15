@@ -53,7 +53,7 @@ function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden scroll-smooth selection:text-soft-black">
+    <div className="min-h-screen bg-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden scroll-smooth">
       {/* Editorial Navigation */}
       <nav 
         className={`fixed w-full z-50 px-8 flex items-center justify-between transition-all duration-500 h-[70px] md:h-[85px] backdrop-blur-[14px] ${
@@ -105,7 +105,7 @@ function Index() {
                 className="fixed top-0 right-0 h-full w-full md:w-[45%] bg-ivory z-[58] shadow-2xl flex flex-col p-12 md:p-24"
               >
                 <div className="flex-1 flex flex-col justify-center space-y-8 md:space-y-12">
-                  <p className="text-[10px] uppercase tracking-[0.08em] text-champagne font-brand">Navegación</p>
+                  <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Navegación</p>
                   <nav className="flex flex-col space-y-6 md:space-y-8">
                     {menuItems.map((item, index) => (
                       <motion.a
@@ -115,7 +115,7 @@ function Index() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.1 + index * 0.05 }}
-                        className="text-3xl md:text-5xl font-brand text-soft-black hover:text-champagne transition-colors duration-300 w-fit tracking-[0.08em]"
+                        className="text-3xl md:text-5xl font-serif text-soft-black hover:text-champagne transition-colors duration-300 w-fit"
                       >
                         {item.name}
                       </motion.a>
@@ -124,10 +124,10 @@ function Index() {
                 </div>
                 
                 <div className="pt-12 border-t border-soft-black/5">
-                  <p className="text-[10px] uppercase tracking-[0.08em] text-soft-black/40 font-brand mb-6">Redes sociales</p>
+                  <p className="text-[10px] uppercase tracking-[0.4em] text-soft-black/40 font-bold mb-6">Redes sociales</p>
                   <div className="flex gap-8">
                     {["IG", "FB", "LN"].map(social => (
-                      <a key={social} href="#" className="text-[10px] uppercase tracking-[0.08em] font-brand text-soft-black hover:text-champagne transition-colors">{social}</a>
+                      <a key={social} href="#" className="text-[10px] uppercase tracking-[0.4em] font-bold text-soft-black hover:text-champagne transition-colors">{social}</a>
                     ))}
                   </div>
                 </div>
@@ -173,26 +173,26 @@ function Index() {
               className="flex flex-col items-center justify-center space-y-8"
             >
               <div className="space-y-6">
-                  <motion.p 
-                   initial={{ opacity: 0, y: 10 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   className="text-[10px] tracking-[0.12em] text-champagne uppercase font-brand"
-                  >
-                    Luxury Dental · Studio
-                  </motion.p>
-                  
-                  <motion.h1 
-                   initial={{ opacity: 0, y: 30 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ duration: 0.8, ease: "easeOut" }}
-                   className="text-6xl md:text-7xl lg:text-9xl font-brand leading-[1.1] text-soft-black flex flex-col items-center tracking-[0.04em]"
-                  >
-                   <span className="block">Diseñamos sonrisas</span>
-                   <span className="relative block">
-                     para ti.
-                     <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-champagne/40" />
-                   </span>
-                  </motion.h1>
+                 <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-[10px] tracking-[0.6em] text-champagne uppercase font-bold"
+                 >
+                   Luxury Dental · Studio
+                 </motion.p>
+                 
+                 <motion.h1 
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="text-6xl md:text-7xl lg:text-9xl font-serif leading-[0.85] text-soft-black flex flex-col items-center"
+                 >
+                  <span className="block">Diseñamos sonrisas</span>
+                  <span className="italic relative block">
+                    para ti.
+                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-champagne/40" />
+                  </span>
+                 </motion.h1>
               </div>
               
               <motion.div 
@@ -201,12 +201,12 @@ function Index() {
                 transition={{ delay: 0.6 }}
                 className="flex flex-col gap-6 items-center pt-12 w-full max-w-md"
               >
-                <button className="text-[10px] uppercase tracking-[0.08em] font-brand bg-soft-black text-ivory px-12 py-5 rounded-full hover:bg-champagne transition-all duration-500 shadow-xl">
+                <button className="text-[10px] uppercase tracking-[0.4em] font-bold bg-soft-black text-ivory px-12 py-5 rounded-full hover:bg-champagne transition-all duration-500 shadow-xl">
                   Reservar ahora
                 </button>
                 
                 <div className="flex flex-col items-center gap-4 w-full">
-                  <span className="text-[9px] uppercase tracking-[0.08em] text-soft-black/40 font-brand">Elige tu ubicación</span>
+                  <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
                   <div className="flex flex-row gap-2 w-full justify-center">
                     {[
                       { name: "Polanco", url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" },
@@ -218,7 +218,7 @@ function Index() {
                         href={loc.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 flex items-center justify-center border border-soft-black/10 px-2 py-3 text-[8px] md:text-[9px] uppercase tracking-[0.08em] font-brand hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm text-soft-black whitespace-nowrap"
+                        className="flex-1 flex items-center justify-center border border-soft-black/10 px-2 py-3 text-[8px] md:text-[9px] uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm text-soft-black whitespace-nowrap"
                       >
                         {loc.name}
                       </a>
@@ -263,20 +263,20 @@ function Index() {
           <div className="flex flex-col lg:flex-row gap-24 items-center">
             <div className="lg:w-1/2 space-y-12">
               <div className="space-y-4">
-                <p className="text-[10px] uppercase tracking-[0.08em] text-champagne font-brand">01 / DISEÑO</p>
-                <h2 className="text-5xl lg:text-7xl font-brand text-soft-black leading-tight tracking-[0.04em]">Tecnología que planifica</h2>
+                <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">01 / DISEÑO</p>
+                <h2 className="text-5xl lg:text-7xl font-serif text-soft-black leading-tight">Tecnología que planifica</h2>
               </div>
               <p className="text-warm-gray leading-relaxed text-lg font-light max-w-lg">
                 <strong>Cada sonrisa comienza con observación, análisis y planeación. Utilizamos herramientas digitales para estudiar proporciones, visualizar posibilidades y diseñar un tratamiento personalizado.</strong>
               </p>
               <div className="grid grid-cols-2 gap-8 pt-8 border-t border-soft-black/5">
                 <div className="space-y-2">
-                  <p className="text-champagne font-brand text-3xl tracking-[0.04em]">3D</p>
-                  <p className="text-[9px] uppercase tracking-[0.08em] font-brand text-soft-black/60">Análisis Facial</p>
+                  <p className="text-champagne font-serif text-3xl">3D</p>
+                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold text-soft-black/60">Análisis Facial</p>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-champagne font-brand text-3xl tracking-[0.04em]">0%</p>
-                  <p className="text-[9px] uppercase tracking-[0.08em] font-brand text-soft-black/60">Improvisación</p>
+                  <p className="text-champagne font-serif text-3xl">0%</p>
+                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold text-soft-black/60">Improvisación</p>
                 </div>
               </div>
             </div>
@@ -339,9 +339,9 @@ function Index() {
       <section id="atelier" className="py-48 px-8 lg:px-24 bg-soft-black text-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-32 space-y-6">
-            <p className="text-[10px] uppercase tracking-[0.08em] text-champagne font-brand">02 / ARTESANÍA</p>
-            <h2 className="text-6xl lg:text-8xl font-brand tracking-[0.04em]">El arte detrás de tu sonrisa</h2>
-            <p className="font-script text-3xl opacity-80 text-champagne">Tecnología para diseñarla. Manos para perfeccionarla.</p>
+            <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">02 / ARTESANÍA</p>
+            <h2 className="text-6xl lg:text-8xl font-serif">El arte detrás de tu sonrisa</h2>
+            <p className="text-champagne font-serif text-2xl italic opacity-80">Tecnología para diseñarla. Manos para perfeccionarla.</p>
           </div>
 
           <div className="grid grid-cols-3 gap-2 md:gap-8">
@@ -357,10 +357,10 @@ function Index() {
               </div>
               <div className="space-y-2 md:space-y-4">
                 <div className="flex items-center gap-2 md:gap-4">
-                  <span className="text-[6px] md:text-[10px] font-brand text-champagne tracking-[0.08em]">01 /</span>
-                  <h3 className="text-[10px] md:text-2xl font-brand tracking-[0.04em]">Esculpir</h3>
+                  <span className="text-[6px] md:text-[10px] font-bold text-champagne">01 /</span>
+                  <h3 className="text-[10px] md:text-2xl font-serif">Esculpir</h3>
                 </div>
-                <p className="hidden md:block text-[10px] uppercase tracking-[0.08em] text-ivory/40 font-brand">La forma se construye detalle a detalle.</p>
+                <p className="hidden md:block text-[10px] uppercase tracking-[0.3em] text-ivory/40">La forma se construye detalle a detalle.</p>
               </div>
             </motion.div>
 
@@ -378,10 +378,10 @@ function Index() {
               </div>
               <div className="space-y-2 md:space-y-4">
                 <div className="flex items-center gap-2 md:gap-4">
-                  <span className="text-[6px] md:text-[10px] font-brand text-champagne tracking-[0.08em]">02 /</span>
-                  <h3 className="text-[10px] md:text-2xl font-brand tracking-[0.04em]">Detallar</h3>
+                  <span className="text-[6px] md:text-[10px] font-bold text-champagne">02 /</span>
+                  <h3 className="text-[10px] md:text-2xl font-serif">Detallar</h3>
                 </div>
-                <p className="hidden md:block text-[10px] uppercase tracking-[0.08em] text-ivory/40 font-brand">Textura, proporción y acabado se trabajan de manera individual.</p>
+                <p className="hidden md:block text-[10px] uppercase tracking-[0.3em] text-ivory/40">Textura, proporción y acabado se trabajan de manera individual.</p>
               </div>
             </motion.div>
 
@@ -399,10 +399,10 @@ function Index() {
               </div>
               <div className="space-y-2 md:space-y-4">
                 <div className="flex items-center gap-2 md:gap-4">
-                  <span className="text-[6px] md:text-[10px] font-brand text-champagne tracking-[0.08em]">03 /</span>
-                  <h3 className="text-[10px] md:text-2xl font-brand tracking-[0.04em]">Pulir</h3>
+                  <span className="text-[6px] md:text-[10px] font-bold text-champagne">03 /</span>
+                  <h3 className="text-[10px] md:text-2xl font-serif">Pulir</h3>
                 </div>
-                <p className="hidden md:block text-[10px] uppercase tracking-[0.08em] text-ivory/40 font-brand">El resultado se perfecciona hasta el último detalle.</p>
+                <p className="hidden md:block text-[10px] uppercase tracking-[0.3em] text-ivory/40">El resultado se perfecciona hasta el último detalle.</p>
               </div>
             </motion.div>
           </div>
@@ -414,8 +414,8 @@ function Index() {
         <div className="max-w-7xl mx-auto px-8 lg:px-24">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
             <div className="space-y-6">
-              <p className="text-[10px] uppercase tracking-[0.08em] text-warm-gray font-brand">03 / RESULTADO</p>
-              <h2 className="text-6xl lg:text-7xl font-brand text-soft-black tracking-[0.04em]">Resultados que hablan<br/>por sí mismos</h2>
+              <p className="text-[10px] uppercase tracking-[0.6em] text-warm-gray font-bold">03 / RESULTADO</p>
+              <h2 className="text-6xl lg:text-7xl font-serif text-soft-black">Resultados que hablan<br/>por sí mismos</h2>
             </div>
             <p className="text-warm-gray leading-relaxed text-lg font-light max-w-sm">
               Cada caso es diferente. Cada transformación comienza con diagnóstico, planeación y un trabajo personalizado de alta precisión.
@@ -432,17 +432,15 @@ function Index() {
       <section ref={manifestoRef} className="pt-12 pb-48 px-8 lg:px-24 relative overflow-hidden bg-ivory">
         <motion.div 
           style={{ x: xPos }}
-          className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] text-[40vw] font-brand leading-none select-none whitespace-nowrap pointer-events-none text-soft-black"
+          className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] text-[40vw] font-serif leading-none select-none whitespace-nowrap pointer-events-none text-soft-black"
         >
           NB
         </motion.div>
         
         <div className="max-w-5xl mx-auto relative z-10 text-center space-y-16">
-          <p className="text-[10px] uppercase tracking-[0.08em] text-champagne font-brand">Nuestro Manifiesto</p>
-          <h2 className="text-4xl lg:text-6xl font-brand leading-[1.2] text-soft-black/90 max-w-3xl mx-auto tracking-[0.04em] relative">
-            <span className="font-script text-champagne text-5xl absolute -top-8 -left-4 opacity-40">"</span>
-            La odontología de alta gama no se trata de uniformidad, sino de la perfecta imperfección de lo natural.
-            <span className="font-script text-champagne text-5xl absolute -bottom-8 -right-4 opacity-40">"</span>
+          <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Nuestro Manifiesto</p>
+          <h2 className="text-4xl lg:text-6xl font-serif leading-tight text-soft-black/90 max-w-3xl mx-auto italic">
+            "La odontología de alta gama no se trata de uniformidad, sino de la perfecta imperfección de lo natural."
           </h2>
           <div className="grid lg:grid-cols-2 gap-12 text-left mt-24">
             <p className="text-warm-gray leading-relaxed text-lg font-light">
@@ -461,10 +459,10 @@ function Index() {
           <div className="lg:col-span-5 space-y-16">
             <img src={nisadoAssets.branding.logoPng} className="h-8 opacity-80" alt="Nisado Baani" />
             <div className="space-y-8">
-              <p className="text-2xl font-brand text-ivory/80 leading-relaxed tracking-[0.04em]">"Tu sonrisa merece el rigor de la ciencia y el alma del arte."</p>
+              <p className="text-2xl font-serif text-ivory/80 leading-relaxed italic">"Tu sonrisa merece el rigor de la ciencia y el alma del arte."</p>
               <div className="flex gap-12">
                 {["IG", "FB", "LN"].map(social => (
-                  <a key={social} href="#" className="text-[10px] uppercase tracking-[0.08em] font-brand hover:text-champagne transition-colors">{social}</a>
+                  <a key={social} href="#" className="text-[10px] uppercase tracking-[0.4em] font-bold hover:text-champagne transition-colors">{social}</a>
                 ))}
               </div>
             </div>
@@ -472,7 +470,7 @@ function Index() {
           
           <div className="lg:col-span-7 grid md:grid-cols-2 gap-16">
             <div className="space-y-10">
-              <h4 className="text-[10px] uppercase tracking-[0.08em] text-champagne font-brand">Ubicaciones</h4>
+              <h4 className="text-[10px] uppercase tracking-[0.4em] text-champagne font-bold">Ubicaciones</h4>
               <ul className="space-y-10 text-sm text-ivory/40 font-light">
                 {[
                   { 
@@ -492,13 +490,13 @@ function Index() {
                   }
                 ].map((loc) => (
                   <li key={loc.name} className="space-y-3">
-                    <p className="text-ivory uppercase tracking-[0.08em] text-[9px] font-brand">{loc.name}</p>
+                    <p className="text-ivory uppercase tracking-widest text-[9px] font-bold">{loc.name}</p>
                     <p className="max-w-[200px] leading-relaxed">{loc.address}</p>
                     <a 
                       href={loc.url} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="inline-block text-[9px] uppercase tracking-[0.08em] text-champagne hover:text-ivory transition-colors font-brand"
+                      className="inline-block text-[9px] uppercase tracking-[0.2em] text-champagne hover:text-ivory transition-colors font-bold"
                     >
                       Ver ubicación →
                     </a>
@@ -513,7 +511,7 @@ function Index() {
           </div>
         </div>
         
-        <div className="max-w-7xl mx-auto mt-48 pt-12 border-t border-ivory/5 flex flex-col md:flex-row justify-between text-[8px] tracking-[0.08em] text-ivory/20 font-brand uppercase gap-6">
+        <div className="max-w-7xl mx-auto mt-48 pt-12 border-t border-ivory/5 flex flex-col md:flex-row justify-between text-[8px] tracking-[0.4em] text-ivory/20 font-bold uppercase gap-6">
           <div className="flex flex-col gap-2">
             <p>© 2026 Nisado Baani Luxury Dental Studio</p>
             <p className="text-champagne/40">creado por Mi Vitrina Digital</p>
@@ -546,7 +544,7 @@ function Index() {
           id="agendar"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-champagne text-ivory px-10 py-5 rounded-full text-[10px] uppercase tracking-[0.08em] font-brand shadow-2xl hover:bg-muted-gold transition-colors scroll-mt-32"
+          className="bg-champagne text-ivory px-10 py-5 rounded-full text-[10px] uppercase tracking-[0.4em] font-bold shadow-2xl hover:bg-muted-gold transition-colors scroll-mt-32"
         >
           Agendar valoración
         </motion.button>
