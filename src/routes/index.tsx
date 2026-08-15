@@ -105,7 +105,7 @@ function Index() {
                 className="fixed top-0 right-0 h-full w-full md:w-[45%] bg-ivory z-[58] shadow-2xl flex flex-col p-12 md:p-24"
               >
                 <div className="flex-1 flex flex-col justify-center space-y-8 md:space-y-12">
-                  <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Navegación</p>
+                  <p className="text-[10px] uppercase tracking-[0.08em] text-champagne font-brand">Navegación</p>
                   <nav className="flex flex-col space-y-6 md:space-y-8">
                     {menuItems.map((item, index) => (
                       <motion.a
@@ -115,7 +115,7 @@ function Index() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.1 + index * 0.05 }}
-                        className="text-3xl md:text-5xl font-serif text-soft-black hover:text-champagne transition-colors duration-300 w-fit"
+                        className="text-3xl md:text-5xl font-brand text-soft-black hover:text-champagne transition-colors duration-300 w-fit tracking-[0.08em]"
                       >
                         {item.name}
                       </motion.a>
