@@ -135,7 +135,7 @@ function Index() {
           <img 
             src={nisadoAssets.branding.logoPrincipal} 
             alt="Nisado Baani Luxury Dental" 
-            className="w-full h-auto opacity-100 brightness-0 invert"
+            className="w-full h-auto opacity-100"
           />
         </motion.div>
       </section>
