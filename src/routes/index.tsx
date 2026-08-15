@@ -173,26 +173,26 @@ function Index() {
               className="flex flex-col items-center justify-center space-y-8"
             >
               <div className="space-y-6">
-                 <motion.p 
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-[10px] tracking-[0.6em] text-champagne uppercase font-bold"
-                 >
-                   Luxury Dental · Studio
-                 </motion.p>
-                 
-                 <motion.h1 
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="text-6xl md:text-7xl lg:text-9xl font-serif leading-[0.85] text-soft-black flex flex-col items-center"
-                 >
-                  <span className="block">Diseñamos sonrisas</span>
-                  <span className="italic relative block">
-                    para ti.
-                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-champagne/40" />
-                  </span>
-                 </motion.h1>
+                  <motion.p 
+                   initial={{ opacity: 0, y: 10 }}
+                   animate={{ opacity: 1, y: 0 }}
+                   className="text-[10px] tracking-[0.12em] text-champagne uppercase font-brand"
+                  >
+                    Luxury Dental · Studio
+                  </motion.p>
+                  
+                  <motion.h1 
+                   initial={{ opacity: 0, y: 30 }}
+                   animate={{ opacity: 1, y: 0 }}
+                   transition={{ duration: 0.8, ease: "easeOut" }}
+                   className="text-6xl md:text-7xl lg:text-9xl font-brand leading-[1.1] text-soft-black flex flex-col items-center tracking-[0.04em]"
+                  >
+                   <span className="block">Diseñamos sonrisas</span>
+                   <span className="relative block">
+                     para ti.
+                     <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-champagne/40" />
+                   </span>
+                  </motion.h1>
               </div>
               
               <motion.div 
