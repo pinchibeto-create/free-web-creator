@@ -24,6 +24,11 @@ import referenceManualAsset from "@/assets/references_new/a28_referencia_de_trab
 import doctoraSentadaAsset from "@/assets/extras/doctora_sentada.asset.json";
 import intraoralArcadaAsset from "@/assets/extras/intraoral_arcada.asset.json";
 import labiosAntesDespuesAsset from "@/assets/extras/labios_antes_despues.asset.json";
+import result1Asset from "@/assets/results/result_1.asset.json";
+import result2Asset from "@/assets/results/result_2.asset.json";
+import result3Asset from "@/assets/results/result_3.asset.json";
+import result4Asset from "@/assets/results/result_4.asset.json";
+import result5Asset from "@/assets/results/result_5.asset.json";
 
 export const nisadoAssets = {
   branding: {
@@ -69,5 +74,12 @@ export const nisadoAssets = {
     lateralBeforeAfter: beforeAfterLateralAsset.url,
     doctoraSentada: doctoraSentadaAsset.url,
     intraoralArcada: intraoralArcadaAsset.url,
-  }
+  },
+  results: [
+    result1Asset.url,
+    result2Asset.url,
+    result3Asset.url,
+    result4Asset.url,
+    result5Asset.url,
+  ]
 };
