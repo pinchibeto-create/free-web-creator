@@ -286,7 +286,7 @@ function Index() {
       </section>
 
       {/* 03 / RESULTADO - Resultados que hablan por sí mismos */}
-      <section id="resultados" className="py-48 bg-ivory overflow-hidden">
+      <section id="resultados" className="pt-48 pb-12 bg-ivory overflow-hidden">
         <div className="max-w-7xl mx-auto px-8 lg:px-24">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
             <div className="space-y-6">
@@ -305,7 +305,7 @@ function Index() {
       </section>
 
       {/* Manifiesto Editorial (Movido después de la narrativa principal) */}
-      <section ref={manifestoRef} className="py-48 px-8 lg:px-24 relative overflow-hidden bg-ivory">
+      <section ref={manifestoRef} className="pt-12 pb-48 px-8 lg:px-24 relative overflow-hidden bg-ivory">
         <motion.div 
           style={{ x: xPos }}
           className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] text-[40vw] font-serif leading-none select-none whitespace-nowrap pointer-events-none text-soft-black"
