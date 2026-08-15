@@ -1,5 +1,6 @@
 import logoAsset from "@/assets/branding/logo.asset.json";
 import logoPngAsset from "@/assets/branding/logo_png.asset.json";
+import logoPrincipalAsset from "@/assets/branding/a01_logo_transparente_principal.asset.json";
 import heroMainAsset from "@/assets/hero/hero_main.asset.json";
 import heroPremiumDoctoraAsset from "@/assets/hero/a02_consultorio_premium_con_doctora.asset.json";
 import doctoraSillonAsset from "@/assets/cutouts/doctora_sillon.asset.json";
@@ -28,6 +29,7 @@ export const nisadoAssets = {
   branding: {
     logo: logoAsset.url,
     logoPng: logoPngAsset.url,
+    logoPrincipal: logoPrincipalAsset.url,
   },
   hero: {
     main: heroMainAsset.url,
