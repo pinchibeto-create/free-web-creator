@@ -126,7 +126,7 @@ function Index() {
       </header>
       
       {/* Seccción de Marca Post-Hero */}
-      <section className="bg-soft-black pt-2 pb-8 px-8 flex items-center justify-center overflow-hidden">
+      <section className="bg-soft-black pt-2 pb-2 px-8 flex items-center justify-center overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -143,7 +143,7 @@ function Index() {
       </section>
 
       {/* 01 / DISEÑO - Tecnología que Planifica */}
-      <section id="tecnologia" className="pt-24 pb-48 px-8 lg:px-24 bg-ivory overflow-hidden">
+      <section id="tecnologia" className="pt-12 pb-48 px-8 lg:px-24 bg-ivory overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-24 items-center">
             <div className="lg:w-1/2 space-y-12">
