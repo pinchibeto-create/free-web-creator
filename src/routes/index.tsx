@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion
 import { useRef } from "react";
 import { nisadoAssets } from "@/data/nisadoAssets";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import { ResultsSlider } from "@/components/ResultsSlider";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -268,44 +269,40 @@ function Index() {
       </section>
 
       {/* 03 / RESULTADO - Resultados que hablan por sí mismos */}
-      <section id="resultados" className="py-48 px-8 lg:px-24 bg-ivory">
-        <div className="max-w-7xl mx-auto">
+      <section id="resultados" className="py-48 bg-ivory overflow-hidden">
+        <div className="max-w-7xl mx-auto px-8 lg:px-24">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
             <div className="space-y-6">
               <p className="text-[10px] uppercase tracking-[0.6em] text-warm-gray font-bold">03 / RESULTADO</p>
               <h2 className="text-6xl lg:text-7xl font-serif text-soft-black">Resultados que hablan<br/>por sí mismos</h2>
             </div>
             <p className="text-warm-gray leading-relaxed text-lg font-light max-w-sm">
-              Cada caso es diferente. Cada transformación comienza con diagnóstico, planeación y un trabajo personalizado.
+              Cada caso es diferente. Cada transformación comienza con diagnóstico, planeación y un trabajo personalizado de alta precisión.
             </p>
           </div>
+        </div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
+        {/* New Results Slider */}
+        <ResultsSlider images={nisadoAssets.results} />
+
+        <div className="max-w-7xl mx-auto px-8 lg:px-24 mt-24">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
             <div className="space-y-12">
               <div className="space-y-4">
-                <h3 className="text-sm uppercase tracking-[0.3em] font-bold text-soft-black/40">Diseño de Sonrisa & Carillas</h3>
+                <h3 className="text-sm uppercase tracking-[0.3em] font-bold text-soft-black/40">Análisis Comparativo</h3>
                 <BeforeAfterSlider 
                   beforeImage={nisadoAssets.comparisons.technicalOverlay} 
                   afterImage={nisadoAssets.comparisons.labialGeometry} 
                 />
               </div>
-              <div className="space-y-4">
-                <h3 className="text-sm uppercase tracking-[0.3em] font-bold text-soft-black/40">Blanqueamiento Clínico</h3>
-                <BeforeAfterSlider 
-                  beforeImage={nisadoAssets.comparisons.whitening} 
-                  afterImage={nisadoAssets.comparisons.whitening} 
-                />
-                <p className="text-[10px] text-warm-gray/60 italic">* Resultados reales de pacientes Nisado Baani.</p>
-              </div>
             </div>
-            <div className="space-y-12 lg:pt-24">
-               <div className="aspect-square relative overflow-hidden rounded-sm group shadow-xl">
-                 <img src={nisadoAssets.comparisons.geometricAnalysis} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Análisis Geométrico" />
-                 <div className="absolute inset-0 bg-soft-black/20" />
-                 <div className="absolute bottom-12 left-12 right-12 text-ivory">
-                    <p className="text-[10px] uppercase tracking-[0.4em] font-bold mb-4">Arquitectura Facial</p>
-                    <p className="text-3xl font-serif italic">"La armonía es el resultado de la precisión."</p>
-                 </div>
+            <div className="space-y-8">
+               <p className="text-warm-gray leading-relaxed text-lg font-light italic">
+                 "La estética dental contemporánea no busca dientes perfectos, busca la armonía absoluta entre la forma, la función y la personalidad del paciente."
+               </p>
+               <div className="flex items-center gap-6">
+                 <div className="h-[1px] w-12 bg-champagne" />
+                 <span className="text-[10px] uppercase tracking-[0.4em] font-bold">Nisado Baani · Philosophy</span>
                </div>
             </div>
           </div>
