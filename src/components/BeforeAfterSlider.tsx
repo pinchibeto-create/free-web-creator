@@ -21,8 +21,12 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
     <div 
       ref={containerRef}
       className="relative w-full aspect-[4/3] overflow-hidden rounded-sm cursor-col-resize select-none group"
-      onMouseMove={(e) => e.buttons === 1 && handleInteraction(e.clientX)}
-      onTouchMove={(e) => handleInteraction(e.touches[0].clientX)}
+      onMouseMove={(e) => {
+        if (e.buttons === 1) handleInteraction(e.clientX);
+      }}
+      onTouchMove={(e) => {
+        if (e.touches[0]) handleInteraction(e.touches[0].clientX);
+      }}
       onClick={(e) => handleInteraction(e.clientX)}
     >
       {/* After Image (Full) */}
