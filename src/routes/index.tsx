@@ -492,13 +492,13 @@ function Index() {
                   }
                 ].map((loc) => (
                   <li key={loc.name} className="space-y-3">
-                    <p className="text-ivory uppercase tracking-widest text-[9px] font-bold">{loc.name}</p>
+                    <p className="text-ivory uppercase tracking-[0.08em] text-[9px] font-brand">{loc.name}</p>
                     <p className="max-w-[200px] leading-relaxed">{loc.address}</p>
                     <a 
                       href={loc.url} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="inline-block text-[9px] uppercase tracking-[0.2em] text-champagne hover:text-ivory transition-colors font-bold"
+                      className="inline-block text-[9px] uppercase tracking-[0.08em] text-champagne hover:text-ivory transition-colors font-brand"
                     >
                       Ver ubicación →
                     </a>
