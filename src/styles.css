@@ -3,9 +3,10 @@
 @import "tw-animate-css";
 
 @theme {
-  --font-serif: "Bodoni Moda", "Cormorant Garamond", serif;
+  --font-brand: "Julius Sans One", sans-serif;
+  --font-serif: var(--font-brand);
   --font-sans: "Manrope", sans-serif;
-  --font-script: "Parisienne", "Allura", cursive;
+  --font-script: "Allura", cursive;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -101,8 +102,14 @@
   }
 
   h1, h2, h3, h4, .font-serif {
-    font-family: var(--font-serif);
-    letter-spacing: -0.02em;
+    font-family: var(--font-brand);
+    letter-spacing: 0.04em;
+    font-weight: 400;
+  }
+
+  p, .font-sans {
+    font-family: var(--font-sans);
+    letter-spacing: normal;
   }
 }
 
