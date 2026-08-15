@@ -207,7 +207,7 @@ function Index() {
                 
                 <div className="flex flex-col items-center gap-4 w-full">
                   <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
+                  <div className="flex flex-row gap-2 w-full justify-center">
                     {[
                       { name: "Polanco", url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" },
                       { name: "Del Valle", url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" },
@@ -218,7 +218,7 @@ function Index() {
                         href={loc.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center border border-soft-black/10 px-4 py-3 text-[9px] uppercase tracking-[0.2em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm text-soft-black"
+                        className="flex-1 flex items-center justify-center border border-soft-black/10 px-2 py-3 text-[8px] md:text-[9px] uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm text-soft-black whitespace-nowrap"
                       >
                         {loc.name}
                       </a>
