@@ -507,7 +507,7 @@ function Index() {
 
         {/* Agendar Button */}
         <motion.button 
-          id="agendar"
+          id="agendar" className="scroll-mt-32"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-champagne text-ivory px-10 py-5 rounded-full text-[10px] uppercase tracking-[0.4em] font-bold shadow-2xl hover:bg-muted-gold transition-colors"
