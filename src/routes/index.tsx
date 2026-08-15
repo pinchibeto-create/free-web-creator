@@ -313,13 +313,29 @@ function Index() {
       </section>
 
       {/* Manifiesto Editorial (Movido después de la narrativa principal) */}
-      <section ref={manifestoRef} className="py-48 px-8 lg:px-24 relative overflow-hidden bg-white">
+      <section ref={manifestoRef} className="py-48 px-8 lg:px-24 relative overflow-hidden bg-ivory">
         <motion.div 
           style={{ x: xPos }}
           className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] text-[40vw] font-serif leading-none select-none whitespace-nowrap pointer-events-none text-soft-black"
         >
           NB
         </motion.div>
+        
+        <div className="max-w-5xl mx-auto relative z-10 text-center space-y-16">
+          <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Nuestro Manifiesto</p>
+          <h2 className="text-4xl lg:text-6xl font-serif leading-tight text-soft-black/90 max-w-3xl mx-auto italic">
+            "La odontología de alta gama no se trata de uniformidad, sino de la perfecta imperfección de lo natural."
+          </h2>
+          <div className="grid lg:grid-cols-2 gap-12 text-left mt-24">
+            <p className="text-warm-gray leading-relaxed text-lg font-light">
+              En Nisado Baani, cada sonrisa es un proyecto arquitectónico único. Fusionamos la sensibilidad de un taller de arte con el rigor de un laboratorio de ingeniería biomédica.
+            </p>
+            <p className="text-warm-gray leading-relaxed text-lg font-light">
+              Entendemos que el verdadero lujo reside en los detalles que nadie nota, pero que todos sienten: la textura, la luz y la armonía con tu expresión más genuina.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Footer Boutique */}
       <footer className="bg-soft-black text-ivory pt-48 pb-24 px-8 lg:px-24">
