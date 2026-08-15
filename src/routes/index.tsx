@@ -201,7 +201,7 @@ function Index() {
                 transition={{ delay: 0.6 }}
                 className="flex flex-col gap-6 items-center pt-12 w-full max-w-md"
               >
-                <button className="text-[10px] uppercase tracking-[0.4em] font-bold bg-soft-black text-ivory px-12 py-5 rounded-full hover:bg-champagne transition-all duration-500 shadow-xl">
+                <button className="text-[10px] uppercase tracking-[0.08em] font-brand bg-soft-black text-ivory px-12 py-5 rounded-full hover:bg-champagne transition-all duration-500 shadow-xl">
                   Reservar ahora
                 </button>
                 
