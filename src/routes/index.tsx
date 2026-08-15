@@ -222,7 +222,7 @@ function Index() {
             <p className="text-champagne font-serif text-2xl italic opacity-80">Tecnología para diseñarla. Manos para perfeccionarla.</p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-16 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
             {/* 01 Esculpir */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
