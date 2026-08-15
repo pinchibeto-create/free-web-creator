@@ -268,7 +268,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="space-y-8 group lg:mt-48"
+              className="space-y-8 group md:mt-48"
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm bg-charcoal">
                 <img src={nisadoAssets.craftsmanship.pulido} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Pulir" />
