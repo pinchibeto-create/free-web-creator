@@ -5,6 +5,75 @@ import { nisadoAssets } from "@/data/nisadoAssets";
 import { ResultsSlider } from "@/components/ResultsSlider";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Nisado Baani | Diseño de Sonrisa y Odontología Estética de Lujo CDMX" },
+      { name: "description", content: "Expertos en diseño de sonrisa, carillas de porcelana y odontología estética premium en Polanco, Del Valle y Roma Sur. Tecnología avanzada y precisión artística para una sonrisa natural." },
+      { property: "og:title", content: "Nisado Baani | Luxury Dental & Smile Design CDMX" },
+      { property: "og:description", content: "Transformamos sonrisas con precisión tecnológica y alma artesanal. Visítanos en nuestras clínicas boutique en la Ciudad de México." },
+      { property: "og:image", content: "https://budget-web-studio.lovable.app/og-image.png" },
+      { name: "twitter:title", content: "Nisado Baani | Diseño de Sonrisa de Lujo" },
+      { name: "twitter:description", content: "Odontología estética de alta precisión en CDMX. Diseño de sonrisa personalizado con tecnología 3D." },
+      { name: "twitter:image", content: "https://budget-web-studio.lovable.app/og-image.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://budget-web-studio.lovable.app/" }
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Dentist",
+          "name": "Nisado Baani",
+          "image": "https://budget-web-studio.lovable.app/logo.png",
+          "@id": "https://budget-web-studio.lovable.app/",
+          "url": "https://budget-web-studio.lovable.app/",
+          "telephone": "+525500000000",
+          "address": [
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Polanco",
+              "addressLocality": "Ciudad de México",
+              "addressRegion": "CDMX",
+              "addressCountry": "MX"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Del Valle",
+              "addressLocality": "Ciudad de México",
+              "addressRegion": "CDMX",
+              "addressCountry": "MX"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Roma Sur",
+              "addressLocality": "Ciudad de México",
+              "addressRegion": "CDMX",
+              "addressCountry": "MX"
+            }
+          ],
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "19:00"
+          },
+          "sameAs": [
+            "https://www.instagram.com/nisadobaani/",
+            "https://www.facebook.com/nisadobaani/"
+          ]
+        })
+      }
+    ]
+  }),
   component: Index,
 });
 
@@ -264,7 +333,7 @@ function Index() {
             <div className="lg:w-1/2 space-y-12">
               <div className="space-y-4">
                 <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">01 / DISEÑO</p>
-                <h2 className="text-5xl lg:text-7xl font-serif text-soft-black leading-tight">Tecnología que planifica</h2>
+                <h2 className="text-5xl lg:text-7xl font-serif text-soft-black leading-tight">Tecnología dental que planifica tu sonrisa</h2>
               </div>
               <p className="text-warm-gray leading-relaxed text-lg font-light max-w-lg">
                 <strong>Cada sonrisa comienza con observación, análisis y planeación. Utilizamos herramientas digitales para estudiar proporciones, visualizar posibilidades y diseñar un tratamiento personalizado.</strong>
@@ -340,7 +409,7 @@ function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-32 space-y-6">
             <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">02 / ARTESANÍA</p>
-            <h2 className="text-6xl lg:text-8xl font-serif">El arte detrás de tu sonrisa</h2>
+            <h2 className="text-6xl lg:text-8xl font-serif">Artesanía dental: El arte detrás de tu sonrisa</h2>
             <p className="text-champagne font-serif text-2xl italic opacity-80">Tecnología para diseñarla. Manos para perfeccionarla.</p>
           </div>
 
@@ -353,7 +422,7 @@ function Index() {
               className="space-y-4 md:space-y-8 group"
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm bg-charcoal">
-                <img src={nisadoAssets.craftsmanship.escultura} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Esculpir" />
+                <img src={nisadoAssets.craftsmanship.escultura} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Escultura artesanal de carillas dentales" />
               </div>
               <div className="space-y-2 md:space-y-4">
                 <div className="flex items-center gap-2 md:gap-4">
@@ -374,7 +443,7 @@ function Index() {
 
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm bg-charcoal">
-                <img src={nisadoAssets.craftsmanship.detallado} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Detallar" />
+                <img src={nisadoAssets.craftsmanship.detallado} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Detallado manual de prótesis cerámica" />
               </div>
               <div className="space-y-2 md:space-y-4">
                 <div className="flex items-center gap-2 md:gap-4">
@@ -395,7 +464,7 @@ function Index() {
 
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm bg-charcoal">
-                <img src={nisadoAssets.craftsmanship.pulido} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Pulir" />
+                <img src={nisadoAssets.craftsmanship.pulido} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Pulido artesanal de carillas de porcelana" />
               </div>
               <div className="space-y-2 md:space-y-4">
                 <div className="flex items-center gap-2 md:gap-4">
@@ -415,7 +484,7 @@ function Index() {
           <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
             <div className="space-y-6">
               <p className="text-[10px] uppercase tracking-[0.6em] text-warm-gray font-bold">03 / RESULTADO</p>
-              <h2 className="text-6xl lg:text-7xl font-serif text-soft-black">Resultados que hablan<br/>por sí mismos</h2>
+              <h2 className="text-6xl lg:text-7xl font-serif text-soft-black">Resultados reales en diseño de sonrisa</h2>
             </div>
             <p className="text-warm-gray leading-relaxed text-lg font-light max-w-sm">
               Cada caso es diferente. Cada transformación comienza con diagnóstico, planeación y un trabajo personalizado de alta precisión.
