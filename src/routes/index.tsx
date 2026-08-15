@@ -218,7 +218,7 @@ function Index() {
                         href={loc.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center border border-soft-black/10 px-4 py-3 text-[9px] uppercase tracking-[0.2em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm text-soft-black"
+                        className="flex-1 flex items-center justify-center border border-soft-black/10 px-2 py-3 text-[8px] md:text-[9px] uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm text-soft-black whitespace-nowrap"
                       >
                         {loc.name}
                       </a>
