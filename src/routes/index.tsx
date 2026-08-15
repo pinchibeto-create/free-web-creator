@@ -232,19 +232,28 @@ function Index() {
       </header>
       
       {/* Seccción de Marca Post-Hero */}
-      <section className="bg-soft-black pt-2 pb-2 px-8 flex items-center justify-center overflow-hidden">
+      <section className="bg-soft-black pt-4 pb-12 px-8 flex items-center justify-center overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 30 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-4xl w-full"
+          initial={{ opacity: 0, scale: 0.94, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ 
+            duration: 1.2, 
+            ease: [0.22, 1, 0.36, 1] 
+          }}
+          className="max-w-4xl w-full flex flex-col items-center"
         >
-          <img 
-            src={nisadoAssets.branding.logoPrincipal} 
-            alt="Nisado Baani Luxury Dental" 
-            className="w-full h-auto opacity-90"
-          />
+          {/* Logo Animado con efecto de espaciado sutil */}
+          <div className="relative w-full">
+            <motion.img 
+              src={nisadoAssets.branding.logoPrincipal} 
+              alt="Nisado Baani Luxury Dental" 
+              className="w-full h-auto opacity-90"
+              initial={{ letterSpacing: "0.2em" }}
+              whileInView={{ letterSpacing: "normal" }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            />
+          </div>
         </motion.div>
       </section>
 
