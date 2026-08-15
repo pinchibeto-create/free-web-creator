@@ -110,14 +110,31 @@ function Index() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-8 items-center pt-12"
+                className="flex flex-col gap-6 items-center pt-12 w-full max-w-md"
               >
-                <div className="flex gap-4">
-                  {["Polanco", "Del Valle", "Roma Sur"].map(loc => (
-                    <button key={loc} className="border border-soft-black/10 px-6 py-2.5 text-[9px] uppercase tracking-[0.3em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm">
-                      {loc}
-                    </button>
-                  ))}
+                <button className="text-[10px] uppercase tracking-[0.4em] font-bold bg-soft-black text-ivory px-12 py-5 rounded-full hover:bg-champagne transition-all duration-500 shadow-xl">
+                  Reservar ahora
+                </button>
+                
+                <div className="flex flex-col items-center gap-4 w-full">
+                  <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
+                    {[
+                      { name: "Polanco", url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" },
+                      { name: "Del Valle", url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" },
+                      { name: "Roma Sur", url: "https://www.google.com/maps/search/?api=1&query=19.4076004%2C-99.1645355" }
+                    ].map(loc => (
+                      <a 
+                        key={loc.name} 
+                        href={loc.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 border border-soft-black/10 px-4 py-3 text-[9px] uppercase tracking-[0.2em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm text-soft-black"
+                      >
+                        <span className="text-[10px]">📍</span> {loc.name}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
@@ -330,15 +347,37 @@ function Index() {
           <div className="lg:col-span-7 grid md:grid-cols-2 gap-16">
             <div className="space-y-10">
               <h4 className="text-[10px] uppercase tracking-[0.4em] text-champagne font-bold">Ubicaciones</h4>
-              <ul className="space-y-8 text-sm text-ivory/40 font-light">
-                <li className="space-y-2">
-                  <p className="text-ivory uppercase tracking-widest text-[9px] font-bold">Polanco Studio</p>
-                  <p>Aristóteles 123, CDMX</p>
-                </li>
-                <li className="space-y-2">
-                  <p className="text-ivory uppercase tracking-widest text-[9px] font-bold">Roma Sur Gallery</p>
-                  <p>Tonalá 789, CDMX</p>
-                </li>
+              <ul className="space-y-10 text-sm text-ivory/40 font-light">
+                {[
+                  { 
+                    name: "Polanco Studio", 
+                    address: "Emerson 111, Polanco V Sección, Miguel Hidalgo, C.P. 11550, Ciudad de México", 
+                    url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" 
+                  },
+                  { 
+                    name: "Del Valle Studio", 
+                    address: "Av. Insurgentes Sur 1188, Tlacoquemécatl del Valle, Benito Juárez, C.P. 03200, Ciudad de México", 
+                    url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" 
+                  },
+                  { 
+                    name: "Roma Sur Gallery", 
+                    address: "Tlaxcala 84, Roma Sur, Cuauhtémoc, C.P. 06760, Ciudad de México", 
+                    url: "https://www.google.com/maps/search/?api=1&query=19.4076004%2C-99.1645355" 
+                  }
+                ].map((loc) => (
+                  <li key={loc.name} className="space-y-3">
+                    <p className="text-ivory uppercase tracking-widest text-[9px] font-bold">{loc.name}</p>
+                    <p className="max-w-[200px] leading-relaxed">{loc.address}</p>
+                    <a 
+                      href={loc.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-block text-[9px] uppercase tracking-[0.2em] text-champagne hover:text-ivory transition-colors font-bold"
+                    >
+                      Ver ubicación →
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
             
