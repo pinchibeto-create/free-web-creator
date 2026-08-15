@@ -14,7 +14,7 @@ function Index() {
   
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start start", "end end"]
+    offset: ["start start", "center center"]
   });
 
   const { scrollYProgress: manifestoScroll } = useScroll({
@@ -26,14 +26,14 @@ function Index() {
   const textYValue = typeof window !== 'undefined' && window.innerWidth < 768 ? "-50px" : "-80px";
   const blurValue = typeof window !== 'undefined' && window.innerWidth < 768 ? "blur(6px)" : "blur(8px)";
 
-  const textY = useTransform(scrollYProgress, [0, 0.3], ["0px", shouldReduceMotion ? "0px" : textYValue]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-  const imgBlur = useTransform(scrollYProgress, [0, 0.3], [shouldReduceMotion ? "blur(0px)" : blurValue, "blur(0px)"]);
-  const imgScale = useTransform(scrollYProgress, [0, 0.3], [shouldReduceMotion ? 1 : 1.03, 1]);
+  const textY = useTransform(scrollYProgress, [0, 0.8], ["0px", shouldReduceMotion ? "0px" : "-150px"]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const imgBlur = useTransform(scrollYProgress, [0, 0.8], [shouldReduceMotion ? "blur(0px)" : blurValue, "blur(0px)"]);
+  const imgScale = useTransform(scrollYProgress, [0, 0.8], [shouldReduceMotion ? 1 : 1.03, 1]);
   const xPos = useTransform(manifestoScroll, [0, 1], [-100, 100]);
 
   return (
-    <div className="min-h-screen bg-ivory text-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden">
+    <div className="min-h-screen bg-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden">
       {/* Editorial Navigation */}
       <nav className="fixed w-full z-50 px-8 py-8 flex items-center justify-between mix-blend-difference text-ivory">
         <img src={nisadoAssets.branding.logoPng} alt="Nisado Baani" className="h-6 opacity-80" />
@@ -50,22 +50,23 @@ function Index() {
       {/* Editorial Hero */}
       <header ref={heroRef} className="relative h-[200vh] w-full">
         {/* Sticky Container for Image */}
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-screen w-full overflow-hidden bg-soft-black">
           <motion.div 
             style={{ 
               filter: imgBlur,
               scale: imgScale
             }}
-            className="absolute inset-0 w-full h-full z-0"
+            className="absolute inset-0 w-full h-full z-0 origin-center"
           >
             <img 
               src={nisadoAssets.hero.premiumDoctora} 
               className="w-full h-full object-cover" 
               alt="Nisado Baani Studio" 
+              loading="eager"
             />
             {/* Subtle Overlay to guarantee readability */}
-            <div className="absolute inset-0 bg-soft-black/10 mix-blend-multiply pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-b from-ivory/20 via-transparent to-ivory/40 pointer-events-none" />
+            <div className="absolute inset-0 bg-soft-black/20 mix-blend-multiply pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-b from-soft-black/20 via-transparent to-soft-black/40 pointer-events-none" />
           </motion.div>
         </div>
 
@@ -123,7 +124,7 @@ function Index() {
       </header>
 
       {/* Manifiesto Editorial */}
-      <section ref={manifestoRef} className="py-48 px-8 lg:px-24 relative overflow-hidden bg-warm-white">
+      <section ref={manifestoRef} className="py-48 px-8 lg:px-24 relative overflow-hidden bg-ivory">
         <motion.div 
           style={{ x: xPos }}
           className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] text-[40vw] font-serif leading-none select-none whitespace-nowrap pointer-events-none"
@@ -213,7 +214,7 @@ function Index() {
       </section>
 
       {/* Resultados Galería */}
-      <section id="resultados" className="py-32 px-8 lg:px-24 bg-warm-white">
+      <section id="resultados" className="py-32 px-8 lg:px-24 bg-ivory">
         <div className="max-w-7xl mx-auto text-center mb-24 space-y-6">
            <p className="text-[10px] uppercase tracking-[0.6em] text-warm-gray font-bold">03 / RESULTADOS</p>
            <h2 className="text-6xl font-serif">Casos de Éxito.</h2>
