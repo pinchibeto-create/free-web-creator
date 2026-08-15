@@ -443,7 +443,7 @@ function Index() {
 
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm bg-charcoal">
-                <img src={nisadoAssets.craftsmanship.detallado} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Detallar" />
+                <img src={nisadoAssets.craftsmanship.detallado} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Detallado manual de prótesis cerámica" />
               </div>
               <div className="space-y-2 md:space-y-4">
                 <div className="flex items-center gap-2 md:gap-4">
