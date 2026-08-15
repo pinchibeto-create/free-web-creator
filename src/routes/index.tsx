@@ -214,7 +214,7 @@ function Index() {
       </section>
 
       {/* Resultados Galería */}
-      <section id="resultados" className="py-32 px-8 lg:px-24 bg-warm-white">
+      <section id="resultados" className="py-32 px-8 lg:px-24 bg-ivory">
         <div className="max-w-7xl mx-auto text-center mb-24 space-y-6">
            <p className="text-[10px] uppercase tracking-[0.6em] text-warm-gray font-bold">03 / RESULTADOS</p>
            <h2 className="text-6xl font-serif">Casos de Éxito.</h2>
