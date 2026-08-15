@@ -438,9 +438,11 @@ function Index() {
         </motion.div>
         
         <div className="max-w-5xl mx-auto relative z-10 text-center space-y-16">
-          <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Nuestro Manifiesto</p>
-          <h2 className="text-4xl lg:text-6xl font-serif leading-tight text-soft-black/90 max-w-3xl mx-auto italic">
-            "La odontología de alta gama no se trata de uniformidad, sino de la perfecta imperfección de lo natural."
+          <p className="text-[10px] uppercase tracking-[0.08em] text-champagne font-brand">Nuestro Manifiesto</p>
+          <h2 className="text-4xl lg:text-6xl font-brand leading-[1.2] text-soft-black/90 max-w-3xl mx-auto tracking-[0.04em] relative">
+            <span className="font-script text-champagne text-5xl absolute -top-8 -left-4 opacity-40">"</span>
+            La odontología de alta gama no se trata de uniformidad, sino de la perfecta imperfección de lo natural.
+            <span className="font-script text-champagne text-5xl absolute -bottom-8 -right-4 opacity-40">"</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-12 text-left mt-24">
             <p className="text-warm-gray leading-relaxed text-lg font-light">
