@@ -43,7 +43,7 @@ export function ResultsSlider({ images }: ResultsSliderProps) {
             />
             {/* Minimal label */}
             <div className="absolute bottom-6 left-6 z-10">
-              <span className="text-[9px] uppercase tracking-[0.3em] text-ivory/60 font-bold">
+              <span className="text-[9px] uppercase tracking-[0.08em] text-ivory/60 font-brand">
                 Caso 0{index + 1}
               </span>
             </div>
