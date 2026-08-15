@@ -49,7 +49,7 @@ function Index() {
       </nav>
 
       {/* Editorial Hero */}
-      <header ref={heroRef} className="relative h-[130vh] w-full">
+      <header ref={heroRef} className="relative h-[110vh] w-full">
         {/* Sticky Container for Image */}
         <div className="sticky top-0 h-screen w-full overflow-hidden bg-soft-black">
           <motion.div 
