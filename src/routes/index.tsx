@@ -33,7 +33,7 @@ function Index() {
   const xPos = useTransform(manifestoScroll, [0, 1], [-100, 100]);
 
   return (
-    <div className="min-h-screen bg-ivory text-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden">
+    <div className="min-h-screen bg-soft-black text-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden">
       {/* Editorial Navigation */}
       <nav className="fixed w-full z-50 px-8 py-8 flex items-center justify-between mix-blend-difference text-ivory">
         <img src={nisadoAssets.branding.logoPng} alt="Nisado Baani" className="h-6 opacity-80" />
