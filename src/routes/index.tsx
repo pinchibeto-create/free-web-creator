@@ -303,7 +303,7 @@ function Index() {
       </section>
 
       {/* 02 / ARTESANÍA - El Arte detrás de tu Sonrisa */}
-      <section id="atelier" className="py-48 px-8 lg:px-24 bg-soft-black text-ivory overflow-hidden">
+      <section id="atelier" className="py-48 px-8 lg:px-24 bg-soft-black text-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-32 space-y-6">
             <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">02 / ARTESANÍA</p>
