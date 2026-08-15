@@ -333,7 +333,7 @@ function Index() {
             <div className="lg:w-1/2 space-y-12">
               <div className="space-y-4">
                 <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">01 / DISEÑO</p>
-                <h2 className="text-5xl lg:text-7xl font-serif text-soft-black leading-tight">Tecnología que planifica</h2>
+                <h2 className="text-5xl lg:text-7xl font-serif text-soft-black leading-tight">Tecnología dental que planifica tu sonrisa</h2>
               </div>
               <p className="text-warm-gray leading-relaxed text-lg font-light max-w-lg">
                 <strong>Cada sonrisa comienza con observación, análisis y planeación. Utilizamos herramientas digitales para estudiar proporciones, visualizar posibilidades y diseñar un tratamiento personalizado.</strong>
