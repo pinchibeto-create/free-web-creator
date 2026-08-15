@@ -409,7 +409,7 @@ function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-32 space-y-6">
             <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">02 / ARTESANÍA</p>
-            <h2 className="text-6xl lg:text-8xl font-serif">El arte detrás de tu sonrisa</h2>
+            <h2 className="text-6xl lg:text-8xl font-serif">Artesanía dental: El arte detrás de tu sonrisa</h2>
             <p className="text-champagne font-serif text-2xl italic opacity-80">Tecnología para diseñarla. Manos para perfeccionarla.</p>
           </div>
 
