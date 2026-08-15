@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 import { nisadoAssets } from "@/data/nisadoAssets";
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+
 import { ResultsSlider } from "@/components/ResultsSlider";
 
 export const Route = createFileRoute("/")({
@@ -285,28 +285,6 @@ function Index() {
         {/* New Results Slider */}
         <ResultsSlider images={nisadoAssets.results} />
 
-        <div className="max-w-7xl mx-auto px-8 lg:px-24 mt-24">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
-            <div className="space-y-12">
-              <div className="space-y-4">
-                <h3 className="text-sm uppercase tracking-[0.3em] font-bold text-soft-black/40">Análisis Comparativo</h3>
-                <BeforeAfterSlider 
-                  beforeImage={nisadoAssets.comparisons.technicalOverlay} 
-                  afterImage={nisadoAssets.comparisons.labialGeometry} 
-                />
-              </div>
-            </div>
-            <div className="space-y-8">
-               <p className="text-warm-gray leading-relaxed text-lg font-light italic">
-                 "La estética dental contemporánea no busca dientes perfectos, busca la armonía absoluta entre la forma, la función y la personalidad del paciente."
-               </p>
-               <div className="flex items-center gap-6">
-                 <div className="h-[1px] w-12 bg-champagne" />
-                 <span className="text-[10px] uppercase tracking-[0.4em] font-bold">Nisado Baani · Philosophy</span>
-               </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Manifiesto Editorial (Movido después de la narrativa principal) */}
