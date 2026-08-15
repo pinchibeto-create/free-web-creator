@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { useRef } from "react";
+import { motion, useScroll, useTransform, useReducedMotion, AnimatePresence } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import { nisadoAssets } from "@/data/nisadoAssets";
-
 import { ResultsSlider } from "@/components/ResultsSlider";
 
 export const Route = createFileRoute("/")({
@@ -13,7 +12,17 @@ function Index() {
   const heroRef = useRef(null);
   const manifestoRef = useRef(null);
   const shouldReduceMotion = useReducedMotion();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   
+  const { scrollY } = useScroll();
+  
+  useEffect(() => {
+    return scrollY.onChange((latest) => {
+      setIsScrolled(latest > 50);
+    });
+  }, [scrollY]);
+
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "center center"]
@@ -34,23 +43,103 @@ function Index() {
   const imgScale = useTransform(scrollYProgress, [0, 0.8], [shouldReduceMotion ? 1 : 1.03, 1]);
   const xPos = useTransform(manifestoScroll, [0, 1], [-100, 100]);
 
+  const menuItems = [
+    { name: "Inicio", href: "#" },
+    { name: "Tecnología que planifica", href: "#tecnologia" },
+    { name: "El arte detrás de tu sonrisa", href: "#atelier" },
+    { name: "Resultados", href: "#resultados" },
+    { name: "Ubicaciones", href: "#footer" },
+    { name: "Agendar valoración", href: "#agendar" },
+  ];
+
   return (
-    <div className="min-h-screen bg-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden">
+    <div className="min-h-screen bg-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden scroll-smooth">
       {/* Editorial Navigation */}
-      <nav className="fixed w-full z-50 px-8 py-8 flex items-center justify-between mix-blend-difference text-ivory">
-        <img src={nisadoAssets.branding.logoPng} alt="Nisado Baani" className="h-6 opacity-80" />
-        <div className="hidden lg:flex gap-12 text-[10px] uppercase tracking-[0.4em] font-medium">
-          {["Inicio", "Atelier", "Tecnología", "Resultados", "Ubicaciones"].map((item) => (
-            <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-champagne transition-colors">{item}</a>
-          ))}
+      <nav 
+        className={`fixed w-full z-50 px-8 flex items-center justify-between transition-all duration-500 h-[70px] md:h-[85px] ${
+          isScrolled 
+            ? "bg-ivory/70 backdrop-blur-[14px] border-b border-soft-black/5 shadow-sm" 
+            : "bg-transparent"
+        }`}
+      >
+        <div className="flex items-center">
+          <img 
+            src={nisadoAssets.branding.logoPng} 
+            alt="Nisado Baani" 
+            className={`h-6 md:h-7 transition-all duration-500 ${isScrolled ? "opacity-100" : "opacity-80 invert"}`} 
+          />
         </div>
-        <button className="text-[10px] uppercase tracking-[0.4em] font-bold border-b border-ivory/20 pb-1 hover:border-champagne transition-all">
-          Reservar valoración
+
+        <button 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className={`relative z-[60] flex flex-col items-center justify-center w-8 h-8 focus:outline-none group`}
+          aria-label="Menú"
+        >
+          <span className={`block w-6 h-[1.5px] transition-all duration-300 ease-out ${
+            isMenuOpen ? "rotate-45 translate-y-[1.5px]" : "-translate-y-1"
+          } ${isScrolled || isMenuOpen ? "bg-soft-black" : "bg-ivory"}`} />
+          <span className={`block w-6 h-[1.5px] transition-all duration-300 ease-out ${
+            isMenuOpen ? "opacity-0" : "opacity-100"
+          } ${isScrolled || isMenuOpen ? "bg-soft-black" : "bg-ivory"}`} />
+          <span className={`block w-6 h-[1.5px] transition-all duration-300 ease-out ${
+            isMenuOpen ? "-rotate-45 -translate-y-[1.5px]" : "translate-y-1"
+          } ${isScrolled || isMenuOpen ? "bg-soft-black" : "bg-ivory"}`} />
         </button>
+
+        {/* Side Menu Overlay */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setIsMenuOpen(false)}
+                className="fixed inset-0 bg-soft-black/40 backdrop-blur-sm z-[55]"
+              />
+              <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                className="fixed top-0 right-0 h-full w-full md:w-[45%] bg-ivory z-[58] shadow-2xl flex flex-col p-12 md:p-24"
+              >
+                <div className="flex-1 flex flex-col justify-center space-y-8 md:space-y-12">
+                  <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Navegación</p>
+                  <nav className="flex flex-col space-y-6 md:space-y-8">
+                    {menuItems.map((item, index) => (
+                      <motion.a
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.1 + index * 0.05 }}
+                        className="text-3xl md:text-5xl font-serif text-soft-black hover:text-champagne transition-colors duration-300 w-fit"
+                      >
+                        {item.name}
+                      </motion.a>
+                    ))}
+                  </nav>
+                </div>
+                
+                <div className="pt-12 border-t border-soft-black/5">
+                  <p className="text-[10px] uppercase tracking-[0.4em] text-soft-black/40 font-bold mb-6">Redes sociales</p>
+                  <div className="flex gap-8">
+                    {["IG", "FB", "LN"].map(social => (
+                      <a key={social} href="#" className="text-[10px] uppercase tracking-[0.4em] font-bold text-soft-black hover:text-champagne transition-colors">{social}</a>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
       </nav>
 
+
       {/* Editorial Hero */}
-      <header ref={heroRef} className="relative h-[110vh] w-full">
+      <header ref={heroRef} className="relative h-[110vh] w-full scroll-mt-24 md:scroll-mt-32">
         {/* Sticky Container for Image */}
         <div className="sticky top-0 h-screen w-full overflow-hidden bg-soft-black">
           <motion.div 
@@ -160,7 +249,7 @@ function Index() {
       </section>
 
       {/* 01 / DISEÑO - Tecnología que Planifica */}
-      <section id="tecnologia" className="pt-12 pb-48 px-8 lg:px-24 bg-ivory overflow-hidden">
+      <section id="tecnologia" className="pt-12 pb-48 px-8 lg:px-24 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-24 items-center">
             <div className="lg:w-1/2 space-y-12">
@@ -214,7 +303,7 @@ function Index() {
       </section>
 
       {/* 02 / ARTESANÍA - El Arte detrás de tu Sonrisa */}
-      <section id="atelier" className="py-48 px-8 lg:px-24 bg-soft-black text-ivory overflow-hidden">
+      <section id="atelier" className="py-48 px-8 lg:px-24 bg-soft-black text-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-32 space-y-6">
             <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">02 / ARTESANÍA</p>
@@ -286,7 +375,7 @@ function Index() {
       </section>
 
       {/* 03 / RESULTADO - Resultados que hablan por sí mismos */}
-      <section id="resultados" className="pt-48 pb-12 bg-ivory overflow-hidden">
+      <section id="resultados" className="pt-48 pb-12 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto px-8 lg:px-24">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
             <div className="space-y-6">
@@ -330,7 +419,7 @@ function Index() {
       </section>
 
       {/* Footer Boutique */}
-      <footer className="bg-soft-black text-ivory pt-48 pb-24 px-8 lg:px-24">
+      <footer id="footer" className="bg-soft-black text-ivory pt-48 pb-24 px-8 lg:px-24 scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-24">
           <div className="lg:col-span-5 space-y-16">
             <img src={nisadoAssets.branding.logoPng} className="h-8 opacity-80" alt="Nisado Baani" />
@@ -418,9 +507,10 @@ function Index() {
 
         {/* Agendar Button */}
         <motion.button 
+          id="agendar"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-champagne text-ivory px-10 py-5 rounded-full text-[10px] uppercase tracking-[0.4em] font-bold shadow-2xl hover:bg-muted-gold transition-colors"
+          className="bg-champagne text-ivory px-10 py-5 rounded-full text-[10px] uppercase tracking-[0.4em] font-bold shadow-2xl hover:bg-muted-gold transition-colors scroll-mt-32"
         >
           Agendar valoración
         </motion.button>
