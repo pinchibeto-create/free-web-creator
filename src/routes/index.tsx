@@ -206,7 +206,7 @@ function Index() {
                 </button>
                 
                 <div className="flex flex-col items-center gap-4 w-full">
-                  <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
+                  <span className="text-[9px] uppercase tracking-[0.08em] text-soft-black/40 font-brand">Elige tu ubicación</span>
                   <div className="flex flex-row gap-2 w-full justify-center">
                     {[
                       { name: "Polanco", url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" },
