@@ -271,8 +271,8 @@ function Index() {
               </p>
               <div className="grid grid-cols-2 gap-8 pt-8 border-t border-soft-black/5">
                 <div className="space-y-2">
-                  <p className="text-champagne font-serif text-3xl">3D</p>
-                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold text-soft-black/60">Análisis Facial</p>
+                  <p className="text-champagne font-brand text-3xl tracking-[0.04em]">3D</p>
+                  <p className="text-[9px] uppercase tracking-[0.08em] font-brand text-soft-black/60">Análisis Facial</p>
                 </div>
                 <div className="space-y-2">
                   <p className="text-champagne font-serif text-3xl">0%</p>
