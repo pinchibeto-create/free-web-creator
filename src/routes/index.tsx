@@ -53,7 +53,7 @@ function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden scroll-smooth">
+    <div className="min-h-screen bg-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden scroll-smooth selection:text-soft-black">
       {/* Editorial Navigation */}
       <nav 
         className={`fixed w-full z-50 px-8 flex items-center justify-between transition-all duration-500 h-[70px] md:h-[85px] backdrop-blur-[14px] ${
