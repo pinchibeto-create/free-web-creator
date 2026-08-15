@@ -297,7 +297,7 @@ function Index() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, delay: 0.4 }}
-                  className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl"
+                  className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl -translate-x-4 md:-translate-x-8"
                 >
                   <img src={nisadoAssets.references.tableta} alt="Diseño en tableta" className="w-full h-full object-cover" />
                 </motion.div>
