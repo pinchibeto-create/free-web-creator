@@ -382,20 +382,16 @@ function Index() {
             </div>
             
             <div className="space-y-10">
-               <h4 className="text-[10px] uppercase tracking-[0.4em] text-champagne font-bold">Newsletter</h4>
-               <div className="space-y-8">
-                 <p className="text-sm text-ivory/40 font-light">Suscríbete para recibir tendencias en estética dental y diseño facial.</p>
-                 <div className="flex border-b border-ivory/20 pb-2">
-                   <input type="email" placeholder="Email" className="bg-transparent border-none text-[10px] uppercase tracking-[0.2em] w-full focus:outline-none placeholder:text-ivory/20" />
-                   <button className="text-[10px] font-bold text-champagne">JOIN</button>
-                 </div>
-               </div>
+               {/* Newsletter section removed */}
             </div>
           </div>
         </div>
         
-        <div className="max-w-7xl mx-auto mt-48 pt-12 border-t border-ivory/5 flex flex-col md:flex-row justify-between text-[8px] tracking-[0.4em] text-ivory/20 font-bold uppercase">
-          <p>© 2026 Nisado Baani Luxury Dental Studio</p>
+        <div className="max-w-7xl mx-auto mt-48 pt-12 border-t border-ivory/5 flex flex-col md:flex-row justify-between text-[8px] tracking-[0.4em] text-ivory/20 font-bold uppercase gap-6">
+          <div className="flex flex-col gap-2">
+            <p>© 2026 Nisado Baani Luxury Dental Studio</p>
+            <p className="text-champagne/40">creado por Mi Vitrina Digital</p>
+          </div>
           <div className="flex gap-8">
             <a href="#">Privacidad</a>
             <a href="#">Términos</a>
