@@ -414,8 +414,8 @@ function Index() {
         <div className="max-w-7xl mx-auto px-8 lg:px-24">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
             <div className="space-y-6">
-              <p className="text-[10px] uppercase tracking-[0.6em] text-warm-gray font-bold">03 / RESULTADO</p>
-              <h2 className="text-6xl lg:text-7xl font-serif text-soft-black">Resultados que hablan<br/>por sí mismos</h2>
+              <p className="text-[10px] uppercase tracking-[0.08em] text-warm-gray font-brand">03 / RESULTADO</p>
+              <h2 className="text-6xl lg:text-7xl font-brand text-soft-black tracking-[0.04em]">Resultados que hablan<br/>por sí mismos</h2>
             </div>
             <p className="text-warm-gray leading-relaxed text-lg font-light max-w-sm">
               Cada caso es diferente. Cada transformación comienza con diagnóstico, planeación y un trabajo personalizado de alta precisión.
