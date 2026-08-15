@@ -461,10 +461,10 @@ function Index() {
           <div className="lg:col-span-5 space-y-16">
             <img src={nisadoAssets.branding.logoPng} className="h-8 opacity-80" alt="Nisado Baani" />
             <div className="space-y-8">
-              <p className="text-2xl font-serif text-ivory/80 leading-relaxed italic">"Tu sonrisa merece el rigor de la ciencia y el alma del arte."</p>
+              <p className="text-2xl font-brand text-ivory/80 leading-relaxed tracking-[0.04em]">"Tu sonrisa merece el rigor de la ciencia y el alma del arte."</p>
               <div className="flex gap-12">
                 {["IG", "FB", "LN"].map(social => (
-                  <a key={social} href="#" className="text-[10px] uppercase tracking-[0.4em] font-bold hover:text-champagne transition-colors">{social}</a>
+                  <a key={social} href="#" className="text-[10px] uppercase tracking-[0.08em] font-brand hover:text-champagne transition-colors">{social}</a>
                 ))}
               </div>
             </div>
