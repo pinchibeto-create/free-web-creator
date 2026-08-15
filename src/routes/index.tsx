@@ -290,7 +290,15 @@ function Index() {
                   transition={{ duration: 1, delay: 0.2 }}
                   className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl translate-y-12"
                 >
-                  <img src={nisadoAssets.technology.computadora} alt="Planificación en computadora" className="w-full h-full object-cover" />
+                  <img 
+                    src={nisadoAssets.technology.computadora} 
+                    alt="Planificación en computadora" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    width={600}
+                    height={800}
+                  />
                 </motion.div>
                 <motion.div 
                   initial={{ opacity: 0, y: -40 }}
@@ -299,12 +307,28 @@ function Index() {
                   transition={{ duration: 1, delay: 0.4 }}
                   className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl -translate-x-4 md:-translate-x-8"
                 >
-                  <img src={nisadoAssets.references.tableta} alt="Diseño en tableta" className="w-full h-full object-cover" />
+                  <img 
+                    src={nisadoAssets.references.tableta} 
+                    alt="Diseño en tableta" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    width={600}
+                    height={800}
+                  />
                 </motion.div>
               </div>
               {/* Decorative Element */}
               <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-[0.03] pointer-events-none">
-                <img src={nisadoAssets.concepts.blueprint} className="w-full h-full object-contain" alt="" />
+                <img 
+                  src={nisadoAssets.concepts.blueprint} 
+                  className="w-full h-full object-contain" 
+                  alt="" 
+                  loading="lazy"
+                  decoding="async"
+                  width={1200}
+                  height={1200}
+                />
               </div>
             </div>
           </div>
