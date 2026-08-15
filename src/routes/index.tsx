@@ -207,7 +207,7 @@ function Index() {
                 
                 <div className="flex flex-col items-center gap-4 w-full">
                   <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
+                  <div className="flex flex-row gap-2 w-full justify-center">
                     {[
                       { name: "Polanco", url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" },
                       { name: "Del Valle", url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" },
