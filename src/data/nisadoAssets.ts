@@ -18,8 +18,8 @@ import beforeAfterLateralAsset from "@/assets/extras/before_after_lateral.asset.
 import craftsmanshipPulidoAsset from "@/assets/craftsmanship/a23_pulido_artesanal_de_carillas.asset.json";
 import craftsmanshipEsculturaAsset from "@/assets/craftsmanship/a24_escultura_artesanal_sobre_modelo_dental.asset.json";
 import craftsmanshipDetalladoAsset from "@/assets/craftsmanship/a25_detallado_con_pincel_sobre_protesis_ceramica.asset.json";
-import technologyComputadoraAsset from "@/assets/technology/a26_planificacion_dental_en_computadora.asset.json";
-import referenceTabletaAsset from "@/assets/references_new/a27_referencia_de_diseno_de_sonrisa_en_tableta.asset.json";
+import technologyComputadoraAsset from "@/assets/technology/laptop_tech_1.asset.json";
+import referenceTabletaAsset from "@/assets/technology/laptop_tech_2.asset.json";
 import referenceManualAsset from "@/assets/references_new/a28_referencia_de_trabajo_manual_con_pieza_dental.asset.json";
 import doctoraSentadaAsset from "@/assets/extras/doctora_sentada.asset.json";
 import intraoralArcadaAsset from "@/assets/extras/intraoral_arcada.asset.json";
