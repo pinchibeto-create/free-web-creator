@@ -422,7 +422,7 @@ function Index() {
               className="space-y-4 md:space-y-8 group"
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm bg-charcoal">
-                <img src={nisadoAssets.craftsmanship.escultura} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Esculpir" />
+                <img src={nisadoAssets.craftsmanship.escultura} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Escultura artesanal de carillas dentales" />
               </div>
               <div className="space-y-2 md:space-y-4">
                 <div className="flex items-center gap-2 md:gap-4">
