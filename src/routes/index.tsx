@@ -135,7 +135,7 @@ function Index() {
           <img 
             src={nisadoAssets.branding.logoPrincipal} 
             alt="Nisado Baani Luxury Dental" 
-            className="w-full h-auto opacity-90 brightness-0 invert"
+            className="w-full h-auto opacity-90"
           />
         </motion.div>
       </section>
@@ -257,7 +257,7 @@ function Index() {
       <footer className="bg-soft-black text-ivory pt-48 pb-24 px-8 lg:px-24">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-24">
           <div className="lg:col-span-5 space-y-16">
-            <img src={nisadoAssets.branding.logoPng} className="h-8 opacity-60 brightness-0 invert" alt="Nisado Baani" />
+            <img src={nisadoAssets.branding.logoPng} className="h-8 opacity-80" alt="Nisado Baani" />
             <div className="space-y-8">
               <p className="text-2xl font-serif text-ivory/80 leading-relaxed italic">"Tu sonrisa merece el rigor de la ciencia y el alma del arte."</p>
               <div className="flex gap-12">
