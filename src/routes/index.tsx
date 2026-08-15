@@ -66,7 +66,7 @@ function Index() {
           <img 
             src={nisadoAssets.branding.logoPng} 
             alt="Nisado Baani" 
-            className={`h-6 md:h-7 transition-all duration-500 ${isScrolled ? "opacity-100" : "opacity-80 invert"}`} 
+            className={`h-12 md:h-16 transition-all duration-500 object-contain ${isScrolled ? "opacity-100" : "opacity-80 invert"}`} 
           />
         </div>
 
