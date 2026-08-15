@@ -124,10 +124,10 @@ function Index() {
                 </div>
                 
                 <div className="pt-12 border-t border-soft-black/5">
-                  <p className="text-[10px] uppercase tracking-[0.4em] text-soft-black/40 font-bold mb-6">Redes sociales</p>
+                  <p className="text-[10px] uppercase tracking-[0.08em] text-soft-black/40 font-brand mb-6">Redes sociales</p>
                   <div className="flex gap-8">
                     {["IG", "FB", "LN"].map(social => (
-                      <a key={social} href="#" className="text-[10px] uppercase tracking-[0.4em] font-bold text-soft-black hover:text-champagne transition-colors">{social}</a>
+                      <a key={social} href="#" className="text-[10px] uppercase tracking-[0.08em] font-brand text-soft-black hover:text-champagne transition-colors">{social}</a>
                     ))}
                   </div>
                 </div>
