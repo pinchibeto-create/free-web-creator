@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 import { nisadoAssets } from "@/data/nisadoAssets";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -140,118 +141,185 @@ function Index() {
         </motion.div>
       </section>
 
-      {/* Manifiesto Editorial */}
-      <section ref={manifestoRef} className="py-48 px-8 lg:px-24 relative overflow-hidden bg-ivory">
-        <motion.div 
-          style={{ x: xPos }}
-          className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] text-[40vw] font-serif leading-none select-none whitespace-nowrap pointer-events-none"
-        >
-          NISADO BAANI
-        </motion.div>
-        
-        <div className="max-w-5xl mx-auto relative z-10 text-center space-y-16">
-          <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Nuestro Manifiesto</p>
-          <h2 className="text-4xl lg:text-6xl font-serif leading-tight text-soft-black/90 max-w-3xl mx-auto italic">
-            "La odontología de alta gama no se trata de uniformidad, sino de la perfecta imperfección de lo natural."
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-12 text-left mt-24">
-            <p className="text-warm-gray leading-relaxed text-lg font-light">
-              En Nisado Baani, cada sonrisa es un proyecto arquitectónico único. Fusionamos la sensibilidad de un taller de arte con el rigor de un laboratorio de ingeniería biomédica.
-            </p>
-            <p className="text-warm-gray leading-relaxed text-lg font-light">
-              Entendemos que el verdadero lujo reside en los detalles que nadie nota, pero que todos sienten: la textura, la luz y la armonía con tu expresión más genuina.
-            </p>
+      {/* 01 / DISEÑO - Tecnología que Planifica */}
+      <section id="tecnologia" className="py-48 px-8 lg:px-24 bg-ivory overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-24 items-center">
+            <div className="lg:w-1/2 space-y-12">
+              <div className="space-y-4">
+                <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">01 / DISEÑO</p>
+                <h2 className="text-5xl lg:text-7xl font-serif text-soft-black leading-tight">Tecnología que planifica</h2>
+              </div>
+              <p className="text-warm-gray leading-relaxed text-lg font-light max-w-lg">
+                <strong>Cada sonrisa comienza con observación, análisis y planeación. Utilizamos herramientas digitales para estudiar proporciones, visualizar posibilidades y diseñar un tratamiento personalizado.</strong>
+              </p>
+              <div className="grid grid-cols-2 gap-8 pt-8 border-t border-soft-black/5">
+                <div className="space-y-2">
+                  <p className="text-champagne font-serif text-3xl">3D</p>
+                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold text-soft-black/60">Análisis Facial</p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-champagne font-serif text-3xl">0%</p>
+                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold text-soft-black/60">Improvisación</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="lg:w-1/2 relative">
+              <div className="grid grid-cols-2 gap-4">
+                <motion.div 
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                  className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl translate-y-12"
+                >
+                  <img src={nisadoAssets.technology.computadora} alt="Planificación en computadora" className="w-full h-full object-cover" />
+                </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, y: -40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.4 }}
+                  className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl"
+                >
+                  <img src={nisadoAssets.references.tableta} alt="Diseño en tableta" className="w-full h-full object-cover" />
+                </motion.div>
+              </div>
+              {/* Decorative Element */}
+              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-[0.03] pointer-events-none">
+                <img src={nisadoAssets.concepts.blueprint} className="w-full h-full object-contain" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* El Atelier (Artesanía) */}
-      <section id="atelier" className="py-32 px-8 lg:px-24 bg-ivory">
+      {/* 02 / ARTESANÍA - El Arte detrás de tu Sonrisa */}
+      <section id="atelier" className="py-48 px-8 lg:px-24 bg-soft-black text-ivory overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-32 space-y-6">
+            <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">02 / ARTESANÍA</p>
+            <h2 className="text-6xl lg:text-8xl font-serif">El arte detrás de tu sonrisa</h2>
+            <p className="text-champagne font-serif text-2xl italic opacity-80">Tecnología para diseñarla. Manos para perfeccionarla.</p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-16 lg:gap-8">
+            {/* 01 Esculpir */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-8 group"
+            >
+              <div className="aspect-[4/5] overflow-hidden rounded-sm bg-charcoal">
+                <img src={nisadoAssets.craftsmanship.escultura} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Esculpir" />
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <span className="text-[10px] font-bold text-champagne">01 /</span>
+                  <h3 className="text-2xl font-serif">Esculpir</h3>
+                </div>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-ivory/40">La forma se construye detalle a detalle.</p>
+              </div>
+            </motion.div>
+
+            {/* 02 Detallar */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="space-y-8 group lg:mt-24"
+            >
+              <div className="aspect-[4/5] overflow-hidden rounded-sm bg-charcoal">
+                <img src={nisadoAssets.craftsmanship.detallado} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Detallar" />
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <span className="text-[10px] font-bold text-champagne">02 /</span>
+                  <h3 className="text-2xl font-serif">Detallar</h3>
+                </div>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-ivory/40">Textura, proporción y acabado se trabajan de manera individual.</p>
+              </div>
+            </motion.div>
+
+            {/* 03 Pulir */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="space-y-8 group lg:mt-48"
+            >
+              <div className="aspect-[4/5] overflow-hidden rounded-sm bg-charcoal">
+                <img src={nisadoAssets.craftsmanship.pulido} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Pulir" />
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <span className="text-[10px] font-bold text-champagne">03 /</span>
+                  <h3 className="text-2xl font-serif">Pulir</h3>
+                </div>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-ivory/40">El resultado se perfecciona hasta el último detalle.</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 03 / RESULTADO - Resultados que hablan por sí mismos */}
+      <section id="resultados" className="py-48 px-8 lg:px-24 bg-ivory">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
-            <div className="space-y-4">
-              <p className="text-[10px] uppercase tracking-[0.6em] text-warm-gray font-bold">01 / EL ATELIER</p>
-              <h2 className="text-6xl lg:text-8xl font-serif">Artesanía Pura.</h2>
+            <div className="space-y-6">
+              <p className="text-[10px] uppercase tracking-[0.6em] text-warm-gray font-bold">03 / RESULTADO</p>
+              <h2 className="text-6xl lg:text-7xl font-serif text-soft-black">Resultados que hablan<br/>por sí mismos</h2>
             </div>
-            <div className="max-w-xs space-y-6">
-              <p className="text-warm-gray text-sm leading-relaxed font-light">
-                Cada carilla es esculpida a mano, una por una, buscando la mimesis absoluta con la anatomía natural del diente.
-              </p>
-              <div className="h-[1px] w-full bg-champagne/20" />
-            </div>
+            <p className="text-warm-gray leading-relaxed text-lg font-light max-w-sm">
+              Cada caso es diferente. Cada transformación comienza con diagnóstico, planeación y un trabajo personalizado.
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-8 lg:h-[90vh]">
-            <div className="lg:col-span-8 h-full relative group overflow-hidden">
-               <img src={nisadoAssets.craftsmanship.escultura} className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="Escultura Dental" />
-               <div className="absolute inset-0 bg-gradient-to-t from-soft-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-12 flex items-end">
-                 <p className="text-ivory font-serif text-2xl italic">Modelado anatómico en cera.</p>
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div className="space-y-12">
+              <div className="space-y-4">
+                <h3 className="text-sm uppercase tracking-[0.3em] font-bold text-soft-black/40">Diseño de Sonrisa & Carillas</h3>
+                <BeforeAfterSlider 
+                  beforeImage={nisadoAssets.comparisons.technicalOverlay} 
+                  afterImage={nisadoAssets.comparisons.labialGeometry} 
+                />
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-sm uppercase tracking-[0.3em] font-bold text-soft-black/40">Blanqueamiento Clínico</h3>
+                <BeforeAfterSlider 
+                  beforeImage={nisadoAssets.comparisons.whitening} 
+                  afterImage={nisadoAssets.comparisons.whitening} 
+                />
+                <p className="text-[10px] text-warm-gray/60 italic">* Resultados reales de pacientes Nisado Baani.</p>
+              </div>
+            </div>
+            <div className="space-y-12 lg:pt-24">
+               <div className="aspect-square relative overflow-hidden rounded-sm group shadow-xl">
+                 <img src={nisadoAssets.comparisons.geometricAnalysis} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Análisis Geométrico" />
+                 <div className="absolute inset-0 bg-soft-black/20" />
+                 <div className="absolute bottom-12 left-12 right-12 text-ivory">
+                    <p className="text-[10px] uppercase tracking-[0.4em] font-bold mb-4">Arquitectura Facial</p>
+                    <p className="text-3xl font-serif italic">"La armonía es el resultado de la precisión."</p>
+                 </div>
                </div>
             </div>
-            <div className="lg:col-span-4 grid grid-rows-2 gap-8 h-full">
-              <div className="bg-charcoal overflow-hidden group">
-                 <img src={nisadoAssets.craftsmanship.pulido} className="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" alt="Pulido" />
-              </div>
-              <div className="bg-soft-black p-12 flex flex-col justify-end space-y-6">
-                 <p className="text-champagne font-serif text-4xl italic">Precisión.</p>
-                 <p className="text-[10px] uppercase tracking-[0.3em] text-ivory/40 leading-loose">El pulido artesanal garantiza que la luz se refleje de forma idéntica al esmalte natural.</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Ingeniería (Tecnología) */}
-      <section className="bg-soft-black text-ivory py-48 px-8 lg:px-24 relative">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-32 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="relative">
-              <img src={nisadoAssets.concepts.blueprint} className="w-full opacity-30 mix-blend-screen scale-110" alt="Blueprint" />
-              <img src={nisadoAssets.references.dsdModern} className="absolute inset-0 w-full h-full object-contain p-12" alt="DSD Modern" />
-            </div>
-          </div>
-          <div className="space-y-12 order-1 lg:order-2">
-            <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">02 / LA INGENIERÍA</p>
-            <h2 className="text-6xl font-serif">Diseño Facial Digital.</h2>
-            <div className="space-y-8 text-ivory/60 text-lg font-light leading-relaxed">
-              <p>Nada queda al azar. Utilizamos escaneo 3D y análisis cinemático para proyectar tu sonrisa en relación con el movimiento de tus labios y expresión facial.</p>
-              <div className="grid grid-cols-2 gap-8 pt-8 border-t border-ivory/10">
-                <div>
-                  <p className="text-champagne font-serif text-3xl">0%</p>
-                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold mt-2">Margen de Error</p>
-                </div>
-                <div>
-                  <p className="text-champagne font-serif text-3xl">3D</p>
-                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold mt-2">Planificación Total</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Resultados Galería */}
-      <section id="resultados" className="py-32 px-8 lg:px-24 bg-ivory">
-        <div className="max-w-7xl mx-auto text-center mb-24 space-y-6">
-           <p className="text-[10px] uppercase tracking-[0.6em] text-warm-gray font-bold">03 / RESULTADOS</p>
-           <h2 className="text-6xl font-serif">Casos de Éxito.</h2>
-        </div>
-        
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div className="space-y-6">
-            <div className="aspect-[4/3] overflow-hidden rounded-xl bg-ivory shadow-lg relative group">
-              <img src={nisadoAssets.comparisons.whitening} className="w-full h-full object-cover" alt="Blanqueamiento" />
-              <div className="absolute top-6 left-6 bg-soft-black/80 backdrop-blur-md px-4 py-2 text-[8px] text-ivory tracking-[0.3em] font-bold uppercase rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Blanqueamiento Clínico</div>
-            </div>
-          </div>
-          <div className="space-y-6 lg:mt-24">
-            <div className="aspect-[4/3] overflow-hidden rounded-xl bg-ivory shadow-lg relative group">
-              <img src={nisadoAssets.comparisons.labialGeometry} className="w-full h-full object-cover" alt="Geometría Labial" />
-              <div className="absolute top-6 left-6 bg-soft-black/80 backdrop-blur-md px-4 py-2 text-[8px] text-ivory tracking-[0.3em] font-bold uppercase rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Armonía Facial</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Manifiesto Editorial (Movido después de la narrativa principal) */}
+      <section ref={manifestoRef} className="py-48 px-8 lg:px-24 relative overflow-hidden bg-white">
+        <motion.div 
+          style={{ x: xPos }}
+          className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] text-[40vw] font-serif leading-none select-none whitespace-nowrap pointer-events-none text-soft-black"
+        >
+          NB
+        </motion.div>
 
       {/* Footer Boutique */}
       <footer className="bg-soft-black text-ivory pt-48 pb-24 px-8 lg:px-24">
