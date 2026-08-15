@@ -378,10 +378,10 @@ function Index() {
               </div>
               <div className="space-y-2 md:space-y-4">
                 <div className="flex items-center gap-2 md:gap-4">
-                  <span className="text-[6px] md:text-[10px] font-bold text-champagne">02 /</span>
-                  <h3 className="text-[10px] md:text-2xl font-serif">Detallar</h3>
+                  <span className="text-[6px] md:text-[10px] font-brand text-champagne tracking-[0.08em]">02 /</span>
+                  <h3 className="text-[10px] md:text-2xl font-brand tracking-[0.04em]">Detallar</h3>
                 </div>
-                <p className="hidden md:block text-[10px] uppercase tracking-[0.3em] text-ivory/40">Textura, proporción y acabado se trabajan de manera individual.</p>
+                <p className="hidden md:block text-[10px] uppercase tracking-[0.08em] text-ivory/40 font-brand">Textura, proporción y acabado se trabajan de manera individual.</p>
               </div>
             </motion.div>
 
