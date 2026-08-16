@@ -96,13 +96,11 @@ function Index() {
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "center center"],
-    layoutEffect: false
   });
 
   const { scrollYProgress: manifestoScroll } = useScroll({
     target: manifestoRef,
     offset: ["start end", "end start"],
-    layoutEffect: false
   });
 
   // Responsive values
