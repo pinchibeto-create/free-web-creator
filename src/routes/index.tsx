@@ -79,8 +79,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const heroRef = useRef(null);
-  const manifestoRef = useRef(null);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const manifestoRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -95,17 +95,25 @@ function Index() {
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start start", "center center"]
+    offset: ["start start", "center center"],
   });
 
   const { scrollYProgress: manifestoScroll } = useScroll({
     target: manifestoRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   // Responsive values
-  const textYValue = typeof window !== 'undefined' && window.innerWidth < 768 ? "-50px" : "-80px";
-  const blurValue = typeof window !== 'undefined' && window.innerWidth < 768 ? "blur(6px)" : "blur(8px)";
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const textYValue = isMobile ? "-50px" : "-80px";
+  const blurValue = isMobile ? "blur(6px)" : "blur(8px)";
 
   const textY = useTransform(scrollYProgress, [0, 0.8], ["0px", shouldReduceMotion ? "0px" : "-150px"]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
@@ -310,7 +318,7 @@ function Index() {
       </header>
       
       {/* Seccción de Marca Post-Hero */}
-      <section className="bg-soft-black pt-4 pb-12 px-8 flex items-center justify-center overflow-hidden">
+      <section ref={manifestoRef} className="bg-soft-black pt-4 pb-12 px-8 flex items-center justify-center overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.94, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
