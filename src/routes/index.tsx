@@ -115,6 +115,7 @@ function Index() {
   const menuItems = [
     { name: "Inicio", href: "#" },
     { name: "Nuestra esencia", href: "#esencia" },
+    { name: "La profundidad Detrás", href: "#profundidad" },
     { name: "El arte detrás de tu sonrisa", href: "#atelier" },
     { name: "Resultados", href: "#resultados" },
     { name: "Ubicaciones", href: "#footer" },
