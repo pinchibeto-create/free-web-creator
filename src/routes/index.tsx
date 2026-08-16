@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
           "image": "https://budget-web-studio.lovable.app/logo.png",
           "@id": "https://budget-web-studio.lovable.app/",
           "url": "https://budget-web-studio.lovable.app/",
-          "telephone": "+525500000000",
+          "telephone": "+525585265697",
           "address": [
             {
               "@type": "PostalAddress",
@@ -270,9 +270,14 @@ function Index() {
                 transition={{ delay: 0.6 }}
                 className="flex flex-col gap-6 items-center pt-12 w-full max-w-md"
               >
-                <button className="text-[10px] uppercase tracking-[0.4em] font-bold bg-soft-black text-ivory px-12 py-5 rounded-full hover:bg-champagne transition-all duration-500 shadow-xl">
-                  Reservar ahora
-                </button>
+                <a 
+                  href="https://wa.me/5215585265697"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[10px] text-center uppercase tracking-[0.4em] font-bold bg-soft-black text-ivory px-12 py-5 rounded-full hover:bg-champagne transition-all duration-500 shadow-xl"
+                >
+                  Agendar valoración
+                </a>
                 
                 <div className="flex flex-col items-center gap-4 w-full">
                   <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
@@ -596,7 +601,7 @@ function Index() {
       <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
         {/* WhatsApp Button */}
         <motion.a 
-          href="https://wa.me/5215500000000" // Replace with actual number
+          href="https://wa.me/5215585265697"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
@@ -609,14 +614,17 @@ function Index() {
         </motion.a>
 
         {/* Agendar Button */}
-        <motion.button 
+        <motion.a 
           id="agendar"
+          href="https://wa.me/5215585265697"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-champagne text-ivory px-10 py-5 rounded-full text-[10px] uppercase tracking-[0.4em] font-bold shadow-2xl hover:bg-muted-gold transition-colors scroll-mt-32"
+          className="bg-champagne text-ivory px-10 py-5 rounded-full text-[10px] uppercase tracking-[0.4em] font-bold shadow-2xl hover:bg-muted-gold transition-colors scroll-mt-32 text-center"
         >
           Agendar valoración
-        </motion.button>
+        </motion.a>
       </div>
     </div>
   );
