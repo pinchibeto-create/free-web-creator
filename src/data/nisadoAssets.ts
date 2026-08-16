@@ -21,6 +21,8 @@ import craftsmanshipDetallado from "@/assets/craftsmanship/a25_detallado_con_pin
 import technologyComputadora from "@/assets/technology/laptop_tech_1.webp";
 import referenceTableta from "@/assets/technology/laptop_tech_2.webp";
 import referenceManual from "@/assets/references_new/a28_referencia_de_trabajo_manual_con_pieza_dental.webp";
+import essenciaAsset from "@/assets/consultorio/doctora_paciente_consultorio.png.asset.json";
+const esenciaPrincipal = essenciaAsset.url;
 import doctoraSentada from "@/assets/extras/doctora_sentada.webp";
 import intraoralArcada from "@/assets/extras/intraoral_arcada.webp";
 import labiosAntesDespues from "@/assets/extras/labios_antes_despues.webp";
@@ -59,6 +61,7 @@ export const nisadoAssets = {
     dsdModern: dsdInfographic,
     tableta: referenceTableta,
     manual: referenceManual,
+    esenciaPrincipal: esenciaPrincipal,
   },
   craftsmanship: {
     pulido: craftsmanshipPulido,
