@@ -14,8 +14,5 @@ export default defineConfig({
   },
   nitro: {
     preset: "netlify",
-    output: {
-      dir: ".netlify"
-    }
   },
 });
