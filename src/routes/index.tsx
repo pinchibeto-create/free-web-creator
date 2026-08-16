@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
           "image": "https://budget-web-studio.lovable.app/logo.png",
           "@id": "https://budget-web-studio.lovable.app/",
           "url": "https://budget-web-studio.lovable.app/",
-          "telephone": "+525500000000",
+          "telephone": "+525585265697",
           "address": [
             {
               "@type": "PostalAddress",
