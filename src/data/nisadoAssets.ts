@@ -86,5 +86,10 @@ export const nisadoAssets = {
     result3,
     result4,
     result5,
-  ]
+  ],
+  icons: {
+    salud: iconSalud.url,
+    estetica: iconEstetica.url,
+    atencion: iconAtencion.url,
+  }
 };
