@@ -114,7 +114,7 @@ function Index() {
 
   const menuItems = [
     { name: "Inicio", href: "#" },
-    { name: "Tecnología que planifica", href: "#tecnologia" },
+    { name: "Nuestra esencia", href: "#esencia" },
     { name: "El arte detrás de tu sonrisa", href: "#atelier" },
     { name: "Resultados", href: "#resultados" },
     { name: "Ubicaciones", href: "#footer" },
@@ -331,59 +331,64 @@ function Index() {
         </motion.div>
       </section>
 
-      {/* 01 / DISEÑO - Tecnología que Planifica */}
-      <section id="tecnologia" className="pt-12 pb-48 px-8 lg:px-24 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
+      {/* 01 / INSTITUCIONAL - Nuestra Esencia */}
+      <section id="esencia" className="py-24 md:py-32 px-8 lg:px-24 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-24 items-center">
-            <div className="lg:w-1/2 space-y-12">
-              <div className="space-y-4">
-                <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">01 / DISEÑO</p>
-                <h2 className="text-5xl lg:text-7xl font-serif text-soft-black leading-tight">Tecnología dental que planifica tu sonrisa</h2>
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+            {/* Desktop: 55% Photo / 45% Text | Mobile: Order defined by flex direction and order classes */}
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="w-full lg:w-[55%] order-4 lg:order-1"
+            >
+              <div className="relative aspect-[4/3] md:aspect-auto md:h-[600px] w-full overflow-hidden rounded-[4px]">
+                <img 
+                  src={nisadoAssets.references.esenciaPrincipal} 
+                  alt="Atención personalizada en Nisado Baani" 
+                  className="w-full h-full object-cover object-[center_30%]"
+                  loading="eager"
+                />
               </div>
-              <p className="text-warm-gray leading-relaxed text-lg font-light max-w-lg">
-                <strong>Cada sonrisa comienza con observación, análisis y planeación. Utilizamos herramientas digitales para estudiar proporciones, visualizar posibilidades y diseñar un tratamiento personalizado.</strong>
-              </p>
-              <div className="grid grid-cols-2 gap-8 pt-8 border-t border-soft-black/5">
-                <div className="space-y-2">
-                  <p className="text-champagne font-serif text-3xl">3D</p>
-                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold text-soft-black/60">Análisis Facial</p>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-champagne font-serif text-3xl">0%</p>
-                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold text-soft-black/60">Improvisación</p>
-                </div>
+            </motion.div>
+
+            <div className="w-full lg:w-[45%] flex flex-col space-y-8 md:space-y-12 order-1 lg:order-2">
+              <div className="space-y-6">
+                <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="text-[10px] md:text-[11px] uppercase tracking-[0.6em] text-champagne font-bold font-[family-name:var(--font-julius)]"
+                >
+                  NUESTRA ESENCIA
+                </motion.p>
+                
+                <motion.h2 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-4xl md:text-5xl lg:text-6xl text-soft-black leading-[1.2] font-light font-[family-name:var(--font-julius)]"
+                >
+                  Donde la odontología se encuentra con la belleza natural.
+                </motion.h2>
               </div>
+
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-warm-gray leading-relaxed text-lg font-light max-w-lg font-sans"
+              >
+                Una sonrisa bonita comienza con una sonrisa sana, pero también debe reflejar quién eres. En Nisado Baani unimos salud, estética y atención personalizada para crear tratamientos pensados alrededor de cada persona.
+              </motion.p>
             </div>
-            
-            <div className="lg:w-1/2 relative">
-              <div className="grid grid-cols-2 gap-4">
-                <motion.div 
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                  className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl translate-y-12 bg-soft-black/5"
-                >
-                  <img 
-                    src={nisadoAssets.technology.computadora} 
-                    alt="Planificación en computadora" 
-                    className="w-full h-full object-cover"
-                    loading="eager"
-                    decoding="async"
-                    width={600}
-                    height={800}
-                  />
-                </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, y: -40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 1, delay: 0.4 }}
-                  className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl -translate-x-4 md:-translate-x-8 bg-soft-black/5"
-                >
-                  <img 
-                    src={nisadoAssets.references.tableta} 
-                    alt="Diseño en tableta" 
+          </div>
+        </div>
+      </section>
                     className="w-full h-full object-cover"
                     loading="eager"
                     decoding="async"

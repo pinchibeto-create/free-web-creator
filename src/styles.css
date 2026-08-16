@@ -6,6 +6,7 @@
   --font-serif: "Bodoni Moda", "Cormorant Garamond", serif;
   --font-sans: "Manrope", sans-serif;
   --font-script: "Parisienne", "Allura", cursive;
+  --font-julius: "Julius Sans One", sans-serif;
 }
 
 @custom-variant dark (&:is(.dark *));
