@@ -11,10 +11,11 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Expertos en diseño de sonrisa, carillas de porcelana y odontología estética premium en Polanco, Del Valle y Roma Sur. Tecnología avanzada y precisión artística para una sonrisa natural." },
       { property: "og:title", content: "Nisado Baani | Luxury Dental & Smile Design CDMX" },
       { property: "og:description", content: "Transformamos sonrisas con precisión tecnológica y alma artesanal. Visítanos en nuestras clínicas boutique en la Ciudad de México." },
-      { property: "og:image", content: "https://budget-web-studio.lovable.app/__l5e/assets-v1/9e97b836-7511-44f2-b9ba-b2e4058e2195/logo_final_oro_v4.png" },
+      { property: "og:image", content: "https://budget-web-studio.lovable.app/og-image.png" },
       { name: "twitter:title", content: "Nisado Baani | Diseño de Sonrisa de Lujo" },
       { name: "twitter:description", content: "Odontología estética de alta precisión en CDMX. Diseño de sonrisa personalizado con tecnología 3D." },
-      { name: "twitter:image", content: "https://budget-web-studio.lovable.app/__l5e/assets-v1/9e97b836-7511-44f2-b9ba-b2e4058e2195/logo_final_oro_v4.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://budget-web-studio.lovable.app/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://budget-web-studio.lovable.app/" }
@@ -26,7 +27,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Dentist",
           "name": "Nisado Baani",
-          "image": "https://budget-web-studio.lovable.app/__l5e/assets-v1/9e97b836-7511-44f2-b9ba-b2e4058e2195/logo_final_oro_v4.png",
+          "image": "https://budget-web-studio.lovable.app/og-image.png",
           "@id": "https://budget-web-studio.lovable.app/",
           "url": "https://budget-web-studio.lovable.app/",
           "telephone": "+525585265697",
