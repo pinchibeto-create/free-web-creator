@@ -487,27 +487,117 @@ function Index() {
 
       </section>
 
-      {/* Manifiesto Editorial (Movido después de la narrativa principal) */}
-      <section ref={manifestoRef} className="pt-12 pb-48 px-8 lg:px-24 relative overflow-hidden bg-ivory">
-        <motion.div 
-          style={{ x: xPos }}
-          className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] text-[40vw] font-serif leading-none select-none whitespace-nowrap pointer-events-none text-soft-black"
-        >
-          NB
-        </motion.div>
-        
-        <div className="max-w-5xl mx-auto relative z-10 text-center space-y-16">
-          <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Nuestro Manifiesto</p>
-          <h2 className="text-4xl lg:text-6xl font-serif leading-tight text-soft-black/90 max-w-3xl mx-auto italic">
-            "La odontología de alta gama no se trata de uniformidad, sino de la perfecta imperfección de lo natural."
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-12 text-left mt-24">
-            <p className="text-warm-gray leading-relaxed text-lg font-light">
-              En Nisado Baani, cada sonrisa es un proyecto arquitectónico único. Fusionamos la sensibilidad de un taller de arte con el rigor de un laboratorio de ingeniería biomédica.
-            </p>
-            <p className="text-warm-gray leading-relaxed text-lg font-light">
-              Entendemos que el verdadero lujo reside en los detalles que nadie nota, pero que todos sienten: la textura, la luz y la armonía con tu expresión más genuina.
-            </p>
+      {/* La profundidad detrás de una sonrisa (Nueva Sección Institucional) */}
+      <section id="profundidad" className="py-32 px-8 lg:px-24 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
+        <div className="max-w-7xl mx-auto">
+          {/* Cabecera de la sección */}
+          <div className="flex flex-col items-center text-center space-y-8 mb-24">
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-[10px] md:text-[11px] uppercase tracking-[0.6em] text-champagne font-bold font-[family-name:var(--font-julius)]"
+            >
+              NISADO BAANI
+            </motion.p>
+            
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="text-4xl md:text-5xl lg:text-7xl text-soft-black font-serif italic max-w-4xl"
+            >
+              La profundidad detrás de una sonrisa
+            </motion.h2>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="max-w-2xl space-y-6"
+            >
+              <p className="text-warm-gray leading-relaxed text-lg font-light font-sans">
+                En Nisado Baani creemos que una sonrisa bonita comienza con una sonrisa sana, pero también debe reflejar quién eres. Unimos salud, estética y atención personalizada para crear tratamientos pensados alrededor de cada persona.
+              </p>
+              <p className="text-warm-gray leading-relaxed text-lg font-light font-sans">
+                Estudiamos cada sonrisa desde su origen para lograr resultados estéticos, funcionales y naturales, siempre con un enfoque honesto, cuidadoso y responsable. Porque detrás de cada sonrisa hay más que un tratamiento: hay escucha, criterio y dedicación en cada detalle.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Tres Pilares */}
+          <div className="grid md:grid-cols-3 gap-12 lg:gap-0 relative">
+            {/* Pilar 01 - Salud Primero */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="flex flex-col items-center text-center space-y-6 px-4 lg:px-12"
+            >
+              <img 
+                src={nisadoAssets.icons.salud} 
+                alt="Salud primero" 
+                className="w-[70px] md:w-[80px] lg:w-[90px] h-auto object-contain"
+              />
+              <div className="space-y-4">
+                <h3 className="text-2xl font-serif text-soft-black">Salud primero</h3>
+                <p className="text-warm-gray text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
+                  La base de toda sonrisa hermosa es una sonrisa sana.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Divisor Desktop 1 */}
+            <div className="hidden md:block absolute left-1/3 top-1/2 -translate-y-1/2 w-[1px] h-24 bg-champagne/20" />
+
+            {/* Pilar 02 - Estética Natural */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.8 }}
+              className="flex flex-col items-center text-center space-y-6 px-4 lg:px-12"
+            >
+              <img 
+                src={nisadoAssets.icons.estetica} 
+                alt="Estética natural" 
+                className="w-[70px] md:w-[80px] lg:w-[90px] h-auto object-contain"
+              />
+              <div className="space-y-4">
+                <h3 className="text-2xl font-serif text-soft-black">Estética natural</h3>
+                <p className="text-warm-gray text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
+                  Buscamos resultados que respeten tu esencia y se vean auténticos.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Divisor Desktop 2 */}
+            <div className="hidden md:block absolute left-2/3 top-1/2 -translate-y-1/2 w-[1px] h-24 bg-champagne/20" />
+
+            {/* Pilar 03 - Atención Personalizada */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 1 }}
+              className="flex flex-col items-center text-center space-y-6 px-4 lg:px-12"
+            >
+              <img 
+                src={nisadoAssets.icons.atencion} 
+                alt="Atención personalizada" 
+                className="w-[70px] md:w-[80px] lg:w-[90px] h-auto object-contain"
+              />
+              <div className="space-y-4">
+                <h3 className="text-2xl font-serif text-soft-black">Atención personalizada</h3>
+                <p className="text-warm-gray text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
+                  Cada tratamiento se diseña de acuerdo con la historia, necesidades y objetivos de cada paciente.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
