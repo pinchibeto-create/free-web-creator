@@ -389,30 +389,7 @@ function Index() {
           </div>
         </div>
       </section>
-                    className="w-full h-full object-cover"
-                    loading="eager"
-                    decoding="async"
-                    width={600}
-                    height={800}
-                  />
-                </motion.div>
-              </div>
-              {/* Decorative Element */}
-              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-[0.03] pointer-events-none">
-                <img 
-                  src={nisadoAssets.concepts.blueprint} 
-                  className="w-full h-full object-contain" 
-                  alt="" 
-                  loading="eager"
-                  decoding="async"
-                  width={1200}
-                  height={1200}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* 02 / ARTESANÍA - El Arte detrás de tu Sonrisa */}
       <section id="atelier" className="py-48 px-8 lg:px-24 bg-soft-black text-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
