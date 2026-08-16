@@ -15,9 +15,12 @@ import overlayTechnical from "@/assets/comparisons/a11_overlay_tecnico_de_sonris
 import dsdInfographic from "@/assets/references/a12_infografia_moderna_de_digital_smile_design.webp";
 import veneerMockup from "@/assets/extras/a16_mockup_de_carillas_sonrisa_modelo.webp";
 import beforeAfterLateral from "@/assets/extras/a15_caso_extra_01_antes_despues_lateral.webp";
-import craftsmanshipPulido from "@/assets/comparisons/a11_overlay_tecnico_de_sonrisa_png_transparente.webp";
-import craftsmanshipEscultura from "@/assets/comparisons/a10_analisis_geometrico_editorial.webp";
-import craftsmanshipDetallado from "@/assets/comparisons/a09_antes_y_despues_con_geometria_labial.webp";
+
+// Crafted dental images from uploaded assets
+import craftsmanshipPulido from "@/assets/craftsmanship/a23_pulido_artesanal_de_carillas.jpg.asset.json";
+import craftsmanshipEscultura from "@/assets/craftsmanship/a24_escultura_artesanal_sobre_modelo_dental.jpg.asset.json";
+import craftsmanshipDetallado from "@/assets/craftsmanship/a25_detallado_con_pincel_sobre_protesis_ceramica.jpg.asset.json";
+
 import technologyComputadora from "@/assets/references/a12_infografia_moderna_de_digital_smile_design.webp";
 import referenceTableta from "@/assets/references/a13_referencia_tecnica_de_sonrisa_simetrica.webp";
 import referenceManual from "@/assets/references/a14_referencia_dsd_original.webp";
@@ -66,9 +69,9 @@ export const nisadoAssets = {
     esenciaPrincipal: esenciaPrincipal,
   },
   craftsmanship: {
-    pulido: craftsmanshipPulido,
-    escultura: craftsmanshipEscultura,
-    detallado: craftsmanshipDetallado,
+    pulido: craftsmanshipPulido.url,
+    escultura: craftsmanshipEscultura.url,
+    detallado: craftsmanshipDetallado.url,
   },
   technology: {
     computadora: technologyComputadora,
