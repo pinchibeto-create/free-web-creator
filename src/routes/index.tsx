@@ -79,8 +79,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const heroRef = useRef(null);
-  const manifestoRef = useRef(null);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const manifestoRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
