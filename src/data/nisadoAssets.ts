@@ -31,6 +31,9 @@ import result2 from "@/assets/results/result_2.jpg";
 import result3 from "@/assets/results/result_3.jpg";
 import result4 from "@/assets/results/result_4.jpg";
 import result5 from "@/assets/results/result_5.jpg";
+import iconSalud from "@/assets/icons/01_salud_primero.webp.asset.json";
+import iconEstetica from "@/assets/icons/02_estetica_natural.webp.asset.json";
+import iconAtencion from "@/assets/icons/03_atencion_personalizada.webp.asset.json";
 
 export const nisadoAssets = {
   branding: {
@@ -83,5 +86,10 @@ export const nisadoAssets = {
     result3,
     result4,
     result5,
-  ]
+  ],
+  icons: {
+    salud: iconSalud.url,
+    estetica: iconEstetica.url,
+    atencion: iconAtencion.url,
+  }
 };
