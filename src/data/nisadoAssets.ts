@@ -61,6 +61,7 @@ export const nisadoAssets = {
     dsdModern: dsdInfographic,
     tableta: referenceTableta,
     manual: referenceManual,
+    esenciaPrincipal: esenciaPrincipal,
   },
   craftsmanship: {
     pulido: craftsmanshipPulido,
