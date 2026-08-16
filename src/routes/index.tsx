@@ -318,7 +318,7 @@ function Index() {
       </header>
       
       {/* Seccción de Marca Post-Hero */}
-      <section className="bg-soft-black pt-4 pb-12 px-8 flex items-center justify-center overflow-hidden">
+      <section ref={manifestoRef} className="bg-soft-black pt-4 pb-12 px-8 flex items-center justify-center overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.94, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
