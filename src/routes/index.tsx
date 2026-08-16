@@ -596,7 +596,7 @@ function Index() {
       <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
         {/* WhatsApp Button */}
         <motion.a 
-          href="https://wa.me/5215500000000" // Replace with actual number
+          href="https://wa.me/5215585265697"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
