@@ -270,9 +270,14 @@ function Index() {
                 transition={{ delay: 0.6 }}
                 className="flex flex-col gap-6 items-center pt-12 w-full max-w-md"
               >
-                <button className="text-[10px] uppercase tracking-[0.4em] font-bold bg-soft-black text-ivory px-12 py-5 rounded-full hover:bg-champagne transition-all duration-500 shadow-xl">
-                  Reservar ahora
-                </button>
+                <a 
+                  href="https://wa.me/5215585265697"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[10px] text-center uppercase tracking-[0.4em] font-bold bg-soft-black text-ivory px-12 py-5 rounded-full hover:bg-champagne transition-all duration-500 shadow-xl"
+                >
+                  Agendar valoración
+                </a>
                 
                 <div className="flex flex-col items-center gap-4 w-full">
                   <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
