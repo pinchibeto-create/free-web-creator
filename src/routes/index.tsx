@@ -95,17 +95,27 @@ function Index() {
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start start", "center center"]
+    offset: ["start start", "center center"],
+    layoutEffect: false
   });
 
   const { scrollYProgress: manifestoScroll } = useScroll({
     target: manifestoRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
+    layoutEffect: false
   });
 
   // Responsive values
-  const textYValue = typeof window !== 'undefined' && window.innerWidth < 768 ? "-50px" : "-80px";
-  const blurValue = typeof window !== 'undefined' && window.innerWidth < 768 ? "blur(6px)" : "blur(8px)";
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const textYValue = isMobile ? "-50px" : "-80px";
+  const blurValue = isMobile ? "blur(6px)" : "blur(8px)";
 
   const textY = useTransform(scrollYProgress, [0, 0.8], ["0px", shouldReduceMotion ? "0px" : "-150px"]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
