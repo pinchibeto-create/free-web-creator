@@ -426,58 +426,58 @@ function Index() {
                 </AnimatePresence>
               </div>
 
-              {/* Imagen 01 (01_doctora_paciente_sillon.webp) */}
+              {/* Imagen 01 (Sillón) */}
               <motion.div
                 onMouseEnter={() => setActiveEssenceImage('sillon')}
+                onTouchStart={() => setActiveEssenceImage('sillon')}
                 animate={{
-                  scale: activeEssenceImage === 'sillon' ? 1.06 : 0.85,
-                  x: activeEssenceImage === 'sillon' ? -20 : -80,
-                  z: activeEssenceImage === 'sillon' ? 100 : 0,
-                  rotateY: activeEssenceImage === 'sillon' ? 0 : -4,
-                  opacity: activeEssenceImage === 'sillon' ? 1 : 0.7,
+                  scale: activeEssenceImage === 'sillon' ? 1.08 : 0.82,
+                  x: activeEssenceImage === 'sillon' ? -30 : -90,
+                  z: activeEssenceImage === 'sillon' ? 120 : 0,
+                  rotateY: activeEssenceImage === 'sillon' ? 0 : -5,
+                  opacity: activeEssenceImage === 'sillon' ? 1 : 0.65,
                   zIndex: activeEssenceImage === 'sillon' ? 20 : 10,
                   filter: activeEssenceImage === 'sillon' 
-                    ? 'drop-shadow(0 20px 40px rgba(0,0,0,0.12)) brightness(1.05)' 
-                    : 'drop-shadow(0 10px 20px rgba(0,0,0,0.05)) brightness(0.95)'
+                    ? 'drop-shadow(0 25px 50px rgba(0,0,0,0.18)) brightness(1.05) contrast(1.05)' 
+                    : 'drop-shadow(0 10px 20px rgba(0,0,0,0.05)) brightness(0.9) contrast(0.95)'
                 }}
                 transition={{
-                  transform: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
-                  opacity: { duration: 0.65, ease: "linear" },
-                  filter: { duration: 0.65, ease: "linear" }
+                  duration: 0.75,
+                  ease: [0.22, 1, 0.36, 1]
                 }}
-                className="absolute left-[10%] w-[55%] md:w-[50%] cursor-pointer"
+                className="absolute left-[8%] w-[55%] md:w-[50%] cursor-pointer"
               >
                 <img 
                   src={nisadoAssets.customDesign.sillon} 
-                  alt="Diseño de sonrisa en proceso" 
+                  alt="Construimos contigo" 
                   className="w-full h-auto"
                 />
               </motion.div>
 
-              {/* Imagen 02 (02_doctora_conversando_paciente.webp) */}
+              {/* Imagen 02 (Conversando) */}
               <motion.div
                 onMouseEnter={() => setActiveEssenceImage('conversando')}
+                onTouchStart={() => setActiveEssenceImage('conversando')}
                 animate={{
-                  scale: activeEssenceImage === 'conversando' ? 1.06 : 0.85,
-                  x: activeEssenceImage === 'conversando' ? 20 : 80,
-                  z: activeEssenceImage === 'conversando' ? 100 : 0,
-                  rotateY: activeEssenceImage === 'conversando' ? 0 : 4,
+                  scale: activeEssenceImage === 'conversando' ? 1.08 : 0.82,
+                  x: activeEssenceImage === 'conversando' ? 30 : 90,
+                  z: activeEssenceImage === 'conversando' ? 120 : 0,
+                  rotateY: activeEssenceImage === 'conversando' ? 0 : 5,
                   opacity: activeEssenceImage === 'conversando' ? 1 : 0.65,
                   zIndex: activeEssenceImage === 'conversando' ? 20 : 10,
                   filter: activeEssenceImage === 'conversando' 
-                    ? 'drop-shadow(0 20px 40px rgba(0,0,0,0.12)) brightness(1.05)' 
-                    : 'drop-shadow(0 10px 20px rgba(0,0,0,0.05)) brightness(0.95)'
+                    ? 'drop-shadow(0 25px 50px rgba(0,0,0,0.18)) brightness(1.05) contrast(1.05)' 
+                    : 'drop-shadow(0 10px 20px rgba(0,0,0,0.05)) brightness(0.9) contrast(0.95)'
                 }}
                 transition={{
-                  transform: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
-                  opacity: { duration: 0.65, ease: "linear" },
-                  filter: { duration: 0.65, ease: "linear" }
+                  duration: 0.75,
+                  ease: [0.22, 1, 0.36, 1]
                 }}
                 className="absolute right-[5%] w-[60%] md:w-[55%] cursor-pointer"
               >
                 <img 
                   src={nisadoAssets.customDesign.conversando} 
-                  alt="Consulta personalizada Nisado Baani" 
+                  alt="Escuchamos" 
                   className="w-full h-auto"
                 />
               </motion.div>
