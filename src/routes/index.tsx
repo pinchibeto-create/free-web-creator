@@ -983,12 +983,19 @@ function Index() {
       </footer>
 
       {/* Acciones Flotantes */}
-      <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+      <div className="fixed bottom-8 right-4 md:right-8 z-50 flex flex-col items-end gap-4">
         {/* WhatsApp Button */}
         <motion.a 
           href="https://wa.me/5215585265697"
           target="_blank"
           rel="noopener noreferrer"
+          initial={false}
+          animate={{
+            bottom: isMobile && isLocationsInView ? 165 : 92,
+            right: 0,
+            position: 'absolute'
+          }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="flex items-center justify-center w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 text-ivory rounded-full shadow-2xl hover:bg-white/20 transition-all duration-500 group"
