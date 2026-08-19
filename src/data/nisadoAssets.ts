@@ -28,11 +28,11 @@ import esenciaPrincipal from "@/assets/consultorio/doctora_paciente_consultorio.
 import doctoraSentada from "@/assets/extras/a18_doctora_sentada_en_consultorio.webp";
 import intraoralArcada from "@/assets/extras/a21_caso_extra_05_arcada_intraoral.webp";
 import labiosAntesDespues from "@/assets/extras/a20_caso_extra_04_labios_antes_despues.webp";
-import result1 from "@/assets/extras/a15_caso_extra_01_antes_despues_lateral.webp";
-import result2 from "@/assets/extras/a17_caso_extra_02_intraoral_antes_despues.webp";
-import result3 from "@/assets/extras/a19_caso_extra_03_sonrisa_lateral_con_rehabilitacion.webp";
-import result4 from "@/assets/extras/a22_caso_extra_06_caso_clinico_adicional.webp";
-import result5 from "@/assets/extras/a16_mockup_de_carillas_sonrisa_modelo.webp";
+import result1 from "@/assets/results/01_resultado_sonrisa.webp";
+import result2 from "@/assets/results/02_antes_despues_ortodoncia.webp";
+import result3 from "@/assets/results/03_antes_despues_sonrisa.webp";
+import result4 from "@/assets/results/04_antes_despues_sonrisa_masculina.webp";
+import result5 from "@/assets/results/05_antes_despues_estetica.webp";
 import iconSalud from "@/assets/icons/01_salud_primero.webp";
 import iconEstetica from "@/assets/icons/02_estetica_natural.webp";
 import iconAtencion from "@/assets/icons/03_atencion_personalizada.webp";
@@ -93,11 +93,11 @@ export const nisadoAssets = {
     intraoralArcada: intraoralArcada,
   },
   results: [
-    result1,
-    result2,
-    result3,
-    result4,
-    result5,
+    result1, // 01_resultado_sonrisa
+    result3, // 03_antes_despues_sonrisa
+    result5, // 05_antes_despues_estetica
+    result2, // 02_antes_despues_ortodoncia
+    result4, // 04_antes_despues_sonrisa_masculina
   ],
   icons: {
     salud: iconSalud,
