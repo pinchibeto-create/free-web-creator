@@ -575,23 +575,20 @@ function Index() {
               transition={{ delay: 0.2 }}
               className="col-span-1 md:col-span-4 flex flex-col space-y-3 md:space-y-6 group"
             >
-              <div className="relative aspect-square overflow-hidden rounded-[2px] bg-charcoal/5 border-l-4 border-champagne/10">
+              <div className="relative aspect-square overflow-hidden rounded-[2px] bg-charcoal/5">
                 <img 
                   src={nisadoAssets.services.mejorar} 
                   alt="Mejorar mi sonrisa" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute top-6 right-6">
-                  <span className="text-[8px] tracking-[0.4em] bg-champagne text-ivory px-3 py-1 rounded-full font-bold uppercase">Especialidad</span>
-                </div>
               </div>
               <div className="space-y-2 md:space-y-4">
-                <h3 className="text-sm md:text-3xl font-serif text-soft-black">Mejorar mi sonrisa</h3>
-                <p className="text-warm-gray text-[10px] md:text-base font-light max-w-sm italic">Armonía y naturalidad.</p>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 pt-4">
+                <h3 className="text-sm md:text-2xl font-serif text-soft-black">Mejorar mi sonrisa</h3>
+                <p className="text-warm-gray text-[10px] md:text-sm font-light max-w-sm">Armonía y naturalidad.</p>
+                <ul className="grid grid-cols-1 gap-2 pt-4">
                   {["Diseño de sonrisa", "Carillas de resina", "Carillas de porcelana / cerámica", "Blanqueamiento dental", "Rehabilitación estética"].map((item) => (
-                    <li key={item} className="text-[10px] uppercase tracking-widest text-soft-black/80 font-bold flex items-center gap-3">
-                      <span className="w-2 h-[1px] bg-champagne" /> {item}
+                    <li key={item} className="text-[10px] uppercase tracking-widest text-soft-black/60 flex items-center gap-3">
+                      <span className="w-1.5 h-[1px] bg-champagne" /> {item}
                     </li>
                   ))}
                 </ul>
