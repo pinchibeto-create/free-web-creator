@@ -514,14 +514,14 @@ function Index() {
           </div>
 
           {/* Grid de Categorías con Composición Editorial */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-12">
             
             {/* 1. Cuidar y Prevenir */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-6 flex flex-col space-y-6 group"
+              className="col-span-1 md:col-span-6 flex flex-col space-y-3 md:space-y-6 group"
             >
               <div className="relative aspect-[16/10] overflow-hidden rounded-[2px] bg-charcoal/5">
                 <img 
@@ -530,9 +530,9 @@ function Index() {
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
               </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-soft-black">Cuidar y prevenir</h3>
-                <p className="text-warm-gray text-sm font-light max-w-sm">Para quien quiere revisar su salud dental o mantenerla.</p>
+              <div className="space-y-2 md:space-y-4">
+                <h3 className="text-sm md:text-2xl font-serif text-soft-black">Cuidar y prevenir</h3>
+                <p className="text-warm-gray text-[10px] md:text-sm font-light max-w-sm">Para quien quiere revisar su salud dental.</p>
                 <ul className="grid grid-cols-1 gap-2 pt-4">
                   {["Valoración y diagnóstico dental", "Limpieza dental / profilaxis", "Odontología preventiva", "Periodoncia / tratamiento de encías"].map((item) => (
                     <li key={item} className="text-[10px] uppercase tracking-widest text-soft-black/60 flex items-center gap-3">
@@ -549,7 +549,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="md:col-span-6 flex flex-col space-y-6 group md:mt-12"
+              className="col-span-1 md:col-span-6 flex flex-col space-y-3 md:space-y-6 group md:mt-12"
             >
               <div className="relative aspect-[16/11] overflow-hidden rounded-[2px] bg-charcoal/5 border-l-4 border-champagne/10">
                 <img 
@@ -561,9 +561,9 @@ function Index() {
                   <span className="text-[8px] tracking-[0.4em] bg-champagne text-ivory px-3 py-1 rounded-full font-bold uppercase">Especialidad</span>
                 </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-soft-black">Mejorar mi sonrisa</h3>
-                <p className="text-warm-gray text-base font-light max-w-sm italic">Tratamientos enfocados en mejorar la armonía, apariencia y naturalidad de tu sonrisa.</p>
+              <div className="space-y-2 md:space-y-4">
+                <h3 className="text-sm md:text-3xl font-serif text-soft-black">Mejorar mi sonrisa</h3>
+                <p className="text-warm-gray text-[10px] md:text-base font-light max-w-sm italic">Armonía y naturalidad.</p>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 pt-4">
                   {["Diseño de sonrisa", "Carillas de resina", "Carillas de porcelana / cerámica", "Blanqueamiento dental", "Rehabilitación estética"].map((item) => (
                     <li key={item} className="text-[10px] uppercase tracking-widest text-soft-black/80 font-bold flex items-center gap-3">
@@ -579,7 +579,7 @@ function Index() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-4 flex flex-col space-y-6 group"
+              className="col-span-1 md:col-span-4 flex flex-col space-y-3 md:space-y-6 group"
             >
               <div className="relative aspect-square overflow-hidden rounded-[2px] bg-charcoal/5">
                 <img 
@@ -588,9 +588,9 @@ function Index() {
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
               </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-soft-black">Restaurar mis dientes</h3>
-                <p className="text-warm-gray text-sm font-light">Para recuperar dientes dañados o comprometidos.</p>
+              <div className="space-y-2 md:space-y-4">
+                <h3 className="text-sm md:text-2xl font-serif text-soft-black">Restaurar mis dientes</h3>
+                <p className="text-warm-gray text-[10px] md:text-sm font-light">Para recuperar dientes dañados.</p>
                 <ul className="space-y-2 pt-2">
                   {["Restauraciones dentales: resinas e incrustaciones", "Endodoncia", "Prótesis dentales: coronas y puentes", "Implantes dentales"].map((item) => (
                     <li key={item} className="text-[9px] uppercase tracking-widest text-soft-black/60 flex items-center gap-2">
@@ -607,7 +607,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="md:col-span-8 flex flex-col space-y-6 group"
+              className="col-span-1 md:col-span-8 flex flex-col space-y-3 md:space-y-6 group"
             >
               <div className="relative aspect-[21/9] overflow-hidden rounded-[2px] bg-charcoal/5">
                 <img 
@@ -616,9 +616,9 @@ function Index() {
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
               </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-soft-black">Alinear y mejorar mi mordida</h3>
-                <p className="text-warm-gray text-sm font-light max-w-xl">Soluciones para mejorar la posición dental, la mordida y el equilibrio funcional.</p>
+              <div className="space-y-2 md:space-y-4">
+                <h3 className="text-sm md:text-2xl font-serif text-soft-black">Alinear y mejorar</h3>
+                <p className="text-warm-gray text-[10px] md:text-sm font-light max-w-xl">Equilibrio funcional y estético.</p>
                 <ul className="grid grid-cols-2 md:grid-cols-3 gap-y-3 gap-x-8 pt-2">
                   {["Ortodoncia", "Alineadores transparentes", "Brackets", "Tratamiento de bruxismo", "Guardas", "Electroestimulación"].map((item) => (
                     <li key={item} className="text-[9px] uppercase tracking-widest text-soft-black/60 flex items-center gap-2">
@@ -634,7 +634,7 @@ function Index() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-7 flex flex-col space-y-6 group"
+              className="col-span-1 md:col-span-7 flex flex-col space-y-3 md:space-y-6 group"
             >
               <div className="relative aspect-[16/9] overflow-hidden rounded-[2px] bg-charcoal/5">
                 <img 
@@ -643,9 +643,9 @@ function Index() {
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
               </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-soft-black">Resolver una cirugía dental</h3>
-                <p className="text-warm-gray text-sm font-light">Atención quirúrgica cuando el tratamiento lo requiere.</p>
+              <div className="space-y-2 md:space-y-4">
+                <h3 className="text-sm md:text-2xl font-serif text-soft-black">Cirugía dental</h3>
+                <p className="text-warm-gray text-[10px] md:text-sm font-light">Atención quirúrgica especializada.</p>
                 <ul className="flex flex-wrap gap-x-8 gap-y-2 pt-2">
                   {["Extracciones dentales", "Cirugía de terceros molares", "Implantes dentales"].map((item) => (
                     <li key={item} className="text-[9px] uppercase tracking-widest text-soft-black/60 flex items-center gap-2">
@@ -662,7 +662,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="md:col-span-5 flex flex-col space-y-6 group"
+              className="col-span-1 md:col-span-5 flex flex-col space-y-3 md:space-y-6 group"
             >
               <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-[2px] bg-soft-black shadow-2xl">
                 <img 
@@ -670,16 +670,16 @@ function Index() {
                   alt="Urgencias dentales" 
                   className="w-full h-full object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-soft-black/40 backdrop-blur-[2px]">
-                  <span className="text-[10px] uppercase tracking-[0.4em] text-champagne font-bold mb-4">Soporte Inmediato</span>
-                  <h3 className="text-3xl font-serif text-ivory mb-6">Necesito atención ahora</h3>
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-8 text-center bg-soft-black/40 backdrop-blur-[2px]">
+                  <span className="text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] text-champagne font-bold mb-2 md:mb-4">Soporte</span>
+                  <h3 className="text-sm md:text-3xl font-serif text-ivory mb-4 md:mb-6">Atención ahora</h3>
                   <a 
                     href="https://wa.me/5215585265697" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[10px] uppercase tracking-[0.3em] font-bold border border-champagne/40 text-champagne px-8 py-4 rounded-full hover:bg-champagne hover:text-ivory transition-all duration-500"
+                    className="text-[8px] md:text-[10px] uppercase tracking-[0.1em] md:tracking-[0.3em] font-bold border border-champagne/40 text-champagne px-4 md:px-8 py-2 md:py-4 rounded-full hover:bg-champagne hover:text-ivory transition-all duration-500"
                   >
-                    Contactar Urgencias
+                    Urgencias
                   </a>
                 </div>
               </div>
