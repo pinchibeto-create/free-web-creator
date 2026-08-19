@@ -303,7 +303,7 @@ function Index() {
                   Agendar valoración
                 </a>
                 
-                <div className="flex flex-col items-center gap-4 w-full">
+                <div ref={locationsRef} className="flex flex-col items-center gap-4 w-full">
                   <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
                   <div className="flex flex-row gap-2 w-full justify-center">
                     {[
