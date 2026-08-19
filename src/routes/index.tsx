@@ -290,7 +290,7 @@ function Index() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="flex flex-col gap-6 items-center pt-12 w-full max-w-md"
+                className="flex flex-col gap-6 items-center pt-4 w-full max-w-md"
               >
                 <a 
                   href="https://wa.me/5215585265697"
