@@ -456,7 +456,7 @@ function Index() {
               <motion.div
                 onMouseEnter={() => setActiveEssenceImage('conversando')}
                 animate={{
-                  scale: activeEssenceImage === 'conversando' ? 1.03 : 0.82,
+                  scale: activeEssenceImage === 'conversando' ? 1.06 : 0.85,
                   x: activeEssenceImage === 'conversando' ? 20 : 80,
                   z: activeEssenceImage === 'conversando' ? 100 : 0,
                   rotateY: activeEssenceImage === 'conversando' ? 0 : 4,
