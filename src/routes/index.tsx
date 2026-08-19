@@ -874,8 +874,8 @@ function Index() {
                 className="w-[70px] md:w-[80px] lg:w-[90px] h-auto object-contain"
               />
               <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-soft-black">Estética natural</h3>
-                <p className="text-warm-gray text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
+                <h3 className="text-2xl font-serif">Estética natural</h3>
+                <p className="text-ivory/60 text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
                   Buscamos resultados que respeten tu esencia y se vean auténticos.
                 </p>
               </div>
