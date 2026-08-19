@@ -782,7 +782,7 @@ function Index() {
               <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">03 / RESULTADO</p>
               <h2 className="text-6xl lg:text-7xl font-serif">Resultados reales en diseño de sonrisa</h2>
             </div>
-            <p className="text-warm-gray leading-relaxed text-lg font-light max-w-sm">
+            <p className="text-ivory/60 leading-relaxed text-lg font-light max-w-sm">
               Cada caso es diferente. Cada transformación comienza con diagnóstico, planeación y un trabajo personalizado de alta precisión.
             </p>
           </div>
