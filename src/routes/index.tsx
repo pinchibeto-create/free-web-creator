@@ -825,10 +825,10 @@ function Index() {
               transition={{ duration: 1, delay: 0.4 }}
               className="max-w-2xl space-y-6"
             >
-              <p className="text-warm-gray leading-relaxed text-lg font-light font-sans">
+              <p className="text-ivory/60 leading-relaxed text-lg font-light font-sans">
                 En Nisado Baani creemos que una sonrisa bonita comienza con una sonrisa sana, pero también debe reflejar quién eres. Unimos salud, estética y atención personalizada para crear tratamientos pensados alrededor de cada persona.
               </p>
-              <p className="text-warm-gray leading-relaxed text-lg font-light font-sans">
+              <p className="text-ivory/60 leading-relaxed text-lg font-light font-sans">
                 Estudiamos cada sonrisa desde su origen para lograr resultados estéticos, funcionales y naturales, siempre con un enfoque honesto, cuidadoso y responsable. Porque detrás de cada sonrisa hay más que un tratamiento: hay escucha, criterio y dedicación en cada detalle.
               </p>
             </motion.div>
