@@ -7,18 +7,26 @@ import { ResultsSlider } from "@/components/ResultsSlider";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nisado Baani | Diseño de Sonrisa y Odontología Estética de Lujo CDMX" },
-      { name: "description", content: "Clínica dental premium en Polanco, Del Valle y Roma Sur. Especialistas en carillas de porcelana, diseño de sonrisa 3D y odontología estética de alta precisión en CDMX." },
-      { property: "og:title", content: "Nisado Baani | Luxury Dental & Smile Design CDMX" },
-      { property: "og:description", content: "Transformamos sonrisas con precisión tecnológica y alma artesanal. Visítanos en nuestras clínicas boutique en la Ciudad de México." },
-      { property: "og:image", content: "https://budget-web-studio.lovable.app/og-image.png" },
-      { name: "twitter:title", content: "Nisado Baani | Diseño de Sonrisa de Lujo en CDMX" },
-      { name: "twitter:description", content: "Odontología estética de alta precisión en Polanco, Del Valle y Roma Sur. Diseño de sonrisa personalizado con tecnología 3D." },
+      { title: "Nisado Baani | Odontología Estética y Diseño de Sonrisa CDMX" },
+      { name: "description", content: "Odontología estética y general en CDMX. Diseño de sonrisa, carillas, blanqueamiento, rehabilitación, ortodoncia y más. Atención en Polanco, Del Valle y Roma Sur." },
+      { name: "robots", content: "index, follow" },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: "Nisado Baani | Odontología Estética y Diseño de Sonrisa" },
+      { property: "og:description", content: "Diseño de sonrisa, carillas, blanqueamiento, odontología estética y tratamientos personalizados en CDMX. Polanco, Del Valle y Roma Sur." },
+      { property: "og:url", content: "https://odontologianisadobaani.com/" },
+      { property: "og:site_name", content: "Nisado Baani Luxury Dental" },
+      { property: "og:locale", content: "es_MX" },
+      { property: "og:image", content: "https://odontologianisadobaani.com/og-nisado-baani.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Nisado Baani Luxury Dental — Odontología estética y diseño de sonrisa en CDMX" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "https://budget-web-studio.lovable.app/og-image.png" },
+      { name: "twitter:title", content: "Nisado Baani | Odontología Estética y Diseño de Sonrisa" },
+      { name: "twitter:description", content: "Diseño de sonrisa, carillas y odontología estética premium en CDMX." },
+      { name: "twitter:image", content: "https://odontologianisadobaani.com/og-nisado-baani.jpg" },
     ],
     links: [
-      { rel: "canonical", href: "https://budget-web-studio.lovable.app/" }
+      { rel: "canonical", href: "https://odontologianisadobaani.com/" }
     ],
     scripts: [
       {
@@ -27,9 +35,9 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Dentist",
           "name": "Nisado Baani",
-          "image": "https://budget-web-studio.lovable.app/og-image.png",
-          "@id": "https://budget-web-studio.lovable.app/",
-          "url": "https://budget-web-studio.lovable.app/",
+          "image": "https://odontologianisadobaani.com/og-nisado-baani.jpg",
+          "@id": "https://odontologianisadobaani.com/",
+          "url": "https://odontologianisadobaani.com/",
           "telephone": "+525585265697",
           "address": [
             {
