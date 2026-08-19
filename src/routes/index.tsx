@@ -107,6 +107,12 @@ function Index() {
     offset: ["start end", "end start"],
   });
 
+  const logoOpacity = useTransform(manifestoScroll, [0, 0.45, 0.55, 1], [0, 1, 1, 0.82]);
+  const logoBlur = useTransform(manifestoScroll, [0, 0.45, 0.55, 1], ["blur(8px)", "blur(0px)", "blur(0px)", "blur(2px)"]);
+  const logoScale = useTransform(manifestoScroll, [0, 0.45, 0.5, 0.55, 1], [0.92, 1, 1.03, 1, 0.98]);
+  const logoIsotipoY = useTransform(manifestoScroll, [0, 0.45, 0.55, 1], ["35px", "0px", "0px", "-40px"]);
+  const logoTextY = useTransform(manifestoScroll, [0, 0.45, 0.55, 1], ["35px", "0px", "0px", "-28px"]);
+
   // Responsive values
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -321,27 +327,23 @@ function Index() {
         </div>
       </header>
       
-      {/* Seccción de Marca Post-Hero */}
-      <section ref={manifestoRef} className="bg-soft-black pt-4 pb-12 px-8 flex items-center justify-center overflow-hidden">
+      {/* Seccción de Marca Post-Hero - Luxury Breathing Reveal */}
+      <section ref={manifestoRef} className="bg-soft-black py-32 px-8 flex items-center justify-center overflow-hidden min-h-[60vh]">
         <motion.div
-          initial={{ opacity: 0, scale: 0.94, filter: "blur(8px)" }}
-          whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ 
-            duration: 1.2, 
-            ease: [0.22, 1, 0.36, 1] 
+          style={{
+            opacity: logoOpacity,
+            filter: logoBlur,
+            scale: logoScale,
           }}
           className="max-w-4xl w-full flex flex-col items-center"
         >
-          {/* Logo Animado con efecto de espaciado sutil */}
-          <div className="relative w-full">
+          {/* Logo Animado con Microparallax */}
+          <div className="relative w-full flex flex-col items-center">
             <motion.img 
               src={nisadoAssets.branding.logoPrincipal} 
               alt="Nisado Baani Luxury Dental" 
-              className="w-full h-auto opacity-90"
-              initial={{ letterSpacing: "0.2em" }}
-              whileInView={{ letterSpacing: "normal" }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              style={{ y: logoIsotipoY }}
+              className="w-full h-auto opacity-95 transition-all duration-300"
             />
           </div>
         </motion.div>
