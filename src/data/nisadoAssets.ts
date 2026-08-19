@@ -1,5 +1,5 @@
-import logoV5 from "@/assets/branding/logo_final_oro_v5.png.asset.json";
-import logoPrincipalV2 from "@/assets/branding/logo_principal_v2.png.asset.json";
+import logoV5 from "@/assets/branding/logo_final_oro_v5.png";
+import logoPrincipalV2 from "@/assets/branding/logo_principal_v2.png";
 
 import heroMain from "@/assets/hero/a02_consultorio_premium_con_doctora.webp";
 import heroPremiumDoctora from "@/assets/hero/a02_consultorio_premium_con_doctora.webp";
@@ -37,20 +37,20 @@ import iconSalud from "@/assets/icons/01_salud_primero.webp";
 import iconEstetica from "@/assets/icons/02_estetica_natural.webp";
 import iconAtencion from "@/assets/icons/03_atencion_personalizada.webp";
 
-import serviceUrgencias from "@/assets/servicios/01_urgencias_dentales.webp.asset.json";
-import serviceCirugia from "@/assets/servicios/02_cirugia_dental.webp.asset.json";
-import serviceAlinear from "@/assets/servicios/03_alinear_mejorar_mordida.webp.asset.json";
-import serviceRestaurar from "@/assets/servicios/04_restaurar_mis_dientes.webp.asset.json";
-import serviceMejorar from "@/assets/servicios/05_mejorar_mi_sonrisa.webp.asset.json";
-import serviceCuidar from "@/assets/servicios/06_cuidar_y_prevenir.webp.asset.json";
+import serviceUrgencias from "@/assets/servicios/01_urgencias_dentales.webp";
+import serviceCirugia from "@/assets/servicios/02_cirugia_dental.webp";
+import serviceAlinear from "@/assets/servicios/03_alinear_mejorar_mordida.webp";
+import serviceRestaurar from "@/assets/servicios/04_restaurar_mis_dientes.webp";
+import serviceMejorar from "@/assets/servicios/05_mejorar_mi_sonrisa.webp";
+import serviceCuidar from "@/assets/servicios/06_cuidar_y_prevenir.webp";
 
-import designSillon from "@/assets/recortes/01_doctora_paciente_sillon.webp.asset.json";
-import designConversando from "@/assets/recortes/02_doctora_conversando_paciente.webp.asset.json";
+import designSillon from "@/assets/recortes/01_doctora_paciente_sillon.webp";
+import designConversando from "@/assets/recortes/02_doctora_conversando_paciente.webp";
 
 export const nisadoAssets = {
   branding: {
-    logoPng: logoV5.url,
-    logoPrincipal: logoPrincipalV2.url,
+    logoPng: logoV5,
+    logoPrincipal: logoPrincipalV2,
   },
   hero: {
     main: heroMain,
@@ -105,15 +105,15 @@ export const nisadoAssets = {
     atencion: iconAtencion,
   },
   services: {
-    urgencias: serviceUrgencias.url,
-    cirugia: serviceCirugia.url,
-    alinear: serviceAlinear.url,
-    restaurar: serviceRestaurar.url,
-    mejorar: serviceMejorar.url,
-    cuidar: serviceCuidar.url,
+    urgencias: serviceUrgencias,
+    cirugia: serviceCirugia,
+    alinear: serviceAlinear,
+    restaurar: serviceRestaurar,
+    mejorar: serviceMejorar,
+    cuidar: serviceCuidar,
   },
   customDesign: {
-    sillon: designSillon.url,
-    conversando: designConversando.url,
+    sillon: designSillon,
+    conversando: designConversando,
   }
 };
