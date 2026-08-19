@@ -34,23 +34,26 @@ export const Route = createFileRoute("/")({
           "address": [
             {
               "@type": "PostalAddress",
-              "streetAddress": "Polanco",
+              "streetAddress": "Emerson 111, Polanco V Sección",
               "addressLocality": "Ciudad de México",
               "addressRegion": "CDMX",
+              "postalCode": "11550",
               "addressCountry": "MX"
             },
             {
               "@type": "PostalAddress",
-              "streetAddress": "Del Valle",
+              "streetAddress": "Av. Insurgentes Sur 1188, Tlacoquemécatl del Valle",
               "addressLocality": "Ciudad de México",
               "addressRegion": "CDMX",
+              "postalCode": "03200",
               "addressCountry": "MX"
             },
             {
               "@type": "PostalAddress",
-              "streetAddress": "Roma Sur",
+              "streetAddress": "Tlaxcala 84, Roma Sur",
               "addressLocality": "Ciudad de México",
               "addressRegion": "CDMX",
+              "postalCode": "06760",
               "addressCountry": "MX"
             }
           ],
@@ -296,8 +299,8 @@ function Index() {
                   <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
                   <div className="flex flex-row gap-2 w-full justify-center">
                     {[
-                      { name: "Polanco", url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" },
-                      { name: "Del Valle", url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" },
+                      { name: "Polanco", url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" },
+                      { name: "Del Valle", url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" },
                       { name: "Roma Sur", url: "https://www.google.com/maps/search/?api=1&query=19.4076004%2C-99.1645355" }
                     ].map(loc => (
                       <a 
@@ -928,12 +931,12 @@ function Index() {
                   { 
                     name: "Polanco Studio", 
                     address: "Emerson 111, Polanco V Sección, Miguel Hidalgo, C.P. 11550, Ciudad de México", 
-                    url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" 
+                    url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" 
                   },
                   { 
                     name: "Del Valle Studio", 
                     address: "Av. Insurgentes Sur 1188, Tlacoquemécatl del Valle, Benito Juárez, C.P. 03200, Ciudad de México", 
-                    url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" 
+                    url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" 
                   },
                   { 
                     name: "Roma Sur Gallery", 
