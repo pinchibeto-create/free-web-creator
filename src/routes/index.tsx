@@ -794,7 +794,7 @@ function Index() {
       </section>
 
       {/* La profundidad detrás de una sonrisa (Nueva Sección Institucional) */}
-      <section id="profundidad" className="py-32 px-8 lg:px-24 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
+      <section id="profundidad" className="py-32 px-8 lg:px-24 bg-soft-black text-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           {/* Cabecera de la sección */}
           <div className="flex flex-col items-center text-center space-y-8 mb-24">
