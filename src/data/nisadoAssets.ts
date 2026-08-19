@@ -1,5 +1,5 @@
 import logoV5 from "@/assets/branding/logo_final_oro_v5.png.asset.json";
-import logoPrincipal from "@/assets/branding/a01_logo_transparente_principal.webp";
+import logoPrincipalV2 from "@/assets/branding/logo_principal_v2.png.asset.json";
 
 import heroMain from "@/assets/hero/a02_consultorio_premium_con_doctora.webp";
 import heroPremiumDoctora from "@/assets/hero/a02_consultorio_premium_con_doctora.webp";
@@ -50,7 +50,7 @@ import designConversando from "@/assets/recortes/02_doctora_conversando_paciente
 export const nisadoAssets = {
   branding: {
     logoPng: logoV5.url,
-    logoPrincipal: logoPrincipal,
+    logoPrincipal: logoPrincipalV2.url,
   },
   hero: {
     main: heroMain,
