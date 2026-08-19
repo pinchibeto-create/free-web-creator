@@ -37,6 +37,13 @@ import iconSalud from "@/assets/icons/01_salud_primero.webp";
 import iconEstetica from "@/assets/icons/02_estetica_natural.webp";
 import iconAtencion from "@/assets/icons/03_atencion_personalizada.webp";
 
+import serviceUrgencias from "@/assets/servicios/01_urgencias_dentales.webp.asset.json";
+import serviceCirugia from "@/assets/servicios/02_cirugia_dental.webp.asset.json";
+import serviceAlinear from "@/assets/servicios/03_alinear_mejorar_mordida.webp.asset.json";
+import serviceRestaurar from "@/assets/servicios/04_restaurar_mis_dientes.webp.asset.json";
+import serviceMejorar from "@/assets/servicios/05_mejorar_mi_sonrisa.webp.asset.json";
+import serviceCuidar from "@/assets/servicios/06_cuidar_y_prevenir.webp.asset.json";
+
 export const nisadoAssets = {
   branding: {
     logoPng: logoPng,
@@ -93,5 +100,13 @@ export const nisadoAssets = {
     salud: iconSalud,
     estetica: iconEstetica,
     atencion: iconAtencion,
+  },
+  services: {
+    urgencias: serviceUrgencias.url,
+    cirugia: serviceCirugia.url,
+    alinear: serviceAlinear.url,
+    restaurar: serviceRestaurar.url,
+    mejorar: serviceMejorar.url,
+    cuidar: serviceCuidar.url,
   }
 };
