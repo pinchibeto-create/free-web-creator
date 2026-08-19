@@ -775,14 +775,14 @@ function Index() {
       </section>
 
       {/* 03 / RESULTADO - Resultados que hablan por sí mismos */}
-      <section id="resultados" className="pt-48 pb-12 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
+      <section id="resultados" className="pt-48 pb-12 bg-soft-black text-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto px-8 lg:px-24">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
             <div className="space-y-6">
-              <p className="text-[10px] uppercase tracking-[0.6em] text-warm-gray font-bold">03 / RESULTADO</p>
-              <h2 className="text-6xl lg:text-7xl font-serif text-soft-black">Resultados reales en diseño de sonrisa</h2>
+              <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">03 / RESULTADO</p>
+              <h2 className="text-6xl lg:text-7xl font-serif">Resultados reales en diseño de sonrisa</h2>
             </div>
-            <p className="text-warm-gray leading-relaxed text-lg font-light max-w-sm">
+            <p className="text-ivory/60 leading-relaxed text-lg font-light max-w-sm">
               Cada caso es diferente. Cada transformación comienza con diagnóstico, planeación y un trabajo personalizado de alta precisión.
             </p>
           </div>
@@ -794,7 +794,7 @@ function Index() {
       </section>
 
       {/* La profundidad detrás de una sonrisa (Nueva Sección Institucional) */}
-      <section id="profundidad" className="py-32 px-8 lg:px-24 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
+      <section id="profundidad" className="py-32 px-8 lg:px-24 bg-soft-black text-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           {/* Cabecera de la sección */}
           <div className="flex flex-col items-center text-center space-y-8 mb-24">
@@ -813,7 +813,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-7xl text-soft-black font-serif italic max-w-4xl"
+              className="text-4xl md:text-5xl lg:text-7xl font-serif italic max-w-4xl"
             >
               La profundidad detrás de una sonrisa
             </motion.h2>
@@ -825,10 +825,10 @@ function Index() {
               transition={{ duration: 1, delay: 0.4 }}
               className="max-w-2xl space-y-6"
             >
-              <p className="text-warm-gray leading-relaxed text-lg font-light font-sans">
+              <p className="text-ivory/60 leading-relaxed text-lg font-light font-sans">
                 En Nisado Baani creemos que una sonrisa bonita comienza con una sonrisa sana, pero también debe reflejar quién eres. Unimos salud, estética y atención personalizada para crear tratamientos pensados alrededor de cada persona.
               </p>
-              <p className="text-warm-gray leading-relaxed text-lg font-light font-sans">
+              <p className="text-ivory/60 leading-relaxed text-lg font-light font-sans">
                 Estudiamos cada sonrisa desde su origen para lograr resultados estéticos, funcionales y naturales, siempre con un enfoque honesto, cuidadoso y responsable. Porque detrás de cada sonrisa hay más que un tratamiento: hay escucha, criterio y dedicación en cada detalle.
               </p>
             </motion.div>
@@ -850,8 +850,8 @@ function Index() {
                 className="w-[70px] md:w-[80px] lg:w-[90px] h-auto object-contain"
               />
               <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-soft-black">Salud primero</h3>
-                <p className="text-warm-gray text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
+                <h3 className="text-2xl font-serif">Salud primero</h3>
+                <p className="text-ivory/60 text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
                   La base de toda sonrisa hermosa es una sonrisa sana.
                 </p>
               </div>
@@ -874,8 +874,8 @@ function Index() {
                 className="w-[70px] md:w-[80px] lg:w-[90px] h-auto object-contain"
               />
               <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-soft-black">Estética natural</h3>
-                <p className="text-warm-gray text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
+                <h3 className="text-2xl font-serif">Estética natural</h3>
+                <p className="text-ivory/60 text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
                   Buscamos resultados que respeten tu esencia y se vean auténticos.
                 </p>
               </div>
@@ -898,8 +898,8 @@ function Index() {
                 className="w-[70px] md:w-[80px] lg:w-[90px] h-auto object-contain"
               />
               <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-soft-black">Atención personalizada</h3>
-                <p className="text-warm-gray text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
+                <h3 className="text-2xl font-serif">Atención personalizada</h3>
+                <p className="text-ivory/60 text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
                   Cada tratamiento se diseña de acuerdo con la historia, necesidades y objetivos de cada paciente.
                 </p>
               </div>
