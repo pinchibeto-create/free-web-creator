@@ -429,23 +429,29 @@ function Index() {
               {/* Imagen 01 (Sillón) */}
               <motion.div
                 onMouseEnter={() => setActiveEssenceImage('sillon')}
-                onTouchStart={() => setActiveEssenceImage('sillon')}
+                onClick={() => setActiveEssenceImage('sillon')}
+                onTouchStart={(e) => {
+                  e.stopPropagation();
+                  setActiveEssenceImage('sillon');
+                }}
                 animate={{
                   scale: activeEssenceImage === 'sillon' ? 1.08 : 0.82,
-                  x: activeEssenceImage === 'sillon' ? -30 : -90,
-                  z: activeEssenceImage === 'sillon' ? 120 : 0,
-                  rotateY: activeEssenceImage === 'sillon' ? 0 : -5,
-                  opacity: activeEssenceImage === 'sillon' ? 1 : 0.65,
-                  zIndex: activeEssenceImage === 'sillon' ? 20 : 10,
+                  x: activeEssenceImage === 'sillon' ? -20 : -80,
+                  z: activeEssenceImage === 'sillon' ? 150 : 0,
+                  rotateY: activeEssenceImage === 'sillon' ? 0 : -8,
+                  opacity: activeEssenceImage === 'sillon' ? 1 : 0.60,
+                  zIndex: activeEssenceImage === 'sillon' ? 30 : 10,
                   filter: activeEssenceImage === 'sillon' 
-                    ? 'drop-shadow(0 25px 50px rgba(0,0,0,0.18)) brightness(1.05) contrast(1.05)' 
-                    : 'drop-shadow(0 10px 20px rgba(0,0,0,0.05)) brightness(0.9) contrast(0.95)'
+                    ? 'drop-shadow(0 30px 60px rgba(0,0,0,0.22)) brightness(1.05) contrast(1.05)' 
+                    : 'drop-shadow(0 10px 20px rgba(0,0,0,0.05)) brightness(0.85) contrast(0.95)'
                 }}
                 transition={{
-                  duration: 0.75,
-                  ease: [0.22, 1, 0.36, 1]
+                  transform: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
+                  opacity: { duration: 0.65, ease: "linear" },
+                  filter: { duration: 0.65, ease: "linear" }
                 }}
-                className="absolute left-[8%] w-[55%] md:w-[50%] cursor-pointer"
+                className="absolute left-[5%] w-[58%] md:w-[52%] cursor-pointer touch-manipulation z-20"
+                style={{ transformStyle: 'preserve-3d', transformOrigin: 'center center' }}
               >
                 <img 
                   src={nisadoAssets.customDesign.sillon} 
@@ -457,23 +463,29 @@ function Index() {
               {/* Imagen 02 (Conversando) */}
               <motion.div
                 onMouseEnter={() => setActiveEssenceImage('conversando')}
-                onTouchStart={() => setActiveEssenceImage('conversando')}
+                onClick={() => setActiveEssenceImage('conversando')}
+                onTouchStart={(e) => {
+                  e.stopPropagation();
+                  setActiveEssenceImage('conversando');
+                }}
                 animate={{
                   scale: activeEssenceImage === 'conversando' ? 1.08 : 0.82,
-                  x: activeEssenceImage === 'conversando' ? 30 : 90,
-                  z: activeEssenceImage === 'conversando' ? 120 : 0,
-                  rotateY: activeEssenceImage === 'conversando' ? 0 : 5,
-                  opacity: activeEssenceImage === 'conversando' ? 1 : 0.65,
-                  zIndex: activeEssenceImage === 'conversando' ? 20 : 10,
+                  x: activeEssenceImage === 'conversando' ? 20 : 80,
+                  z: activeEssenceImage === 'conversando' ? 150 : 0,
+                  rotateY: activeEssenceImage === 'conversando' ? 0 : 8,
+                  opacity: activeEssenceImage === 'conversando' ? 1 : 0.60,
+                  zIndex: activeEssenceImage === 'conversando' ? 30 : 10,
                   filter: activeEssenceImage === 'conversando' 
-                    ? 'drop-shadow(0 25px 50px rgba(0,0,0,0.18)) brightness(1.05) contrast(1.05)' 
-                    : 'drop-shadow(0 10px 20px rgba(0,0,0,0.05)) brightness(0.9) contrast(0.95)'
+                    ? 'drop-shadow(0 30px 60px rgba(0,0,0,0.22)) brightness(1.05) contrast(1.05)' 
+                    : 'drop-shadow(0 10px 20px rgba(0,0,0,0.05)) brightness(0.85) contrast(0.95)'
                 }}
                 transition={{
-                  duration: 0.75,
-                  ease: [0.22, 1, 0.36, 1]
+                  transform: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
+                  opacity: { duration: 0.65, ease: "linear" },
+                  filter: { duration: 0.65, ease: "linear" }
                 }}
-                className="absolute right-[5%] w-[60%] md:w-[55%] cursor-pointer"
+                className="absolute right-[2%] w-[62%] md:w-[56%] cursor-pointer touch-manipulation z-20"
+                style={{ transformStyle: 'preserve-3d', transformOrigin: 'center center' }}
               >
                 <img 
                   src={nisadoAssets.customDesign.conversando} 
