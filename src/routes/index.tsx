@@ -476,6 +476,225 @@ function Index() {
           </div>
         </div>
       </section>
+      
+      {/* NUEVA SECCIÓN: TRATAMIENTOS - ¿Cómo te podemos ayudar? */}
+      <section id="tratamientos" className="py-32 md:py-48 px-8 lg:px-24 bg-ivory scroll-mt-24 md:scroll-mt-32">
+        <div className="max-w-7xl mx-auto">
+          {/* Header de la sección */}
+          <div className="flex flex-col items-center text-center space-y-8 mb-24 md:mb-32">
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-[10px] md:text-[11px] uppercase tracking-[0.6em] text-champagne font-bold font-[family-name:var(--font-julius)]"
+            >
+              TRATAMIENTOS
+            </motion.p>
+            
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-5xl md:text-6xl lg:text-7xl text-soft-black font-serif italic"
+            >
+              ¿Cómo te podemos ayudar?
+            </motion.h2>
+
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-warm-gray leading-relaxed text-lg font-light font-sans max-w-2xl mx-auto"
+            >
+              Cada sonrisa necesita algo diferente. Cuéntanos qué quieres mejorar y encontraremos contigo la alternativa más adecuada.
+            </motion.p>
+          </div>
+
+          {/* Grid de Categorías con Composición Editorial */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+            
+            {/* 1. Cuidar y Prevenir */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-6 flex flex-col space-y-6 group"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden rounded-[2px] bg-charcoal/5">
+                <img 
+                  src={nisadoAssets.services.cuidar} 
+                  alt="Cuidar y prevenir" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-serif text-soft-black">Cuidar y prevenir</h3>
+                <p className="text-warm-gray text-sm font-light max-w-sm">Para quien quiere revisar su salud dental o mantenerla.</p>
+                <ul className="grid grid-cols-1 gap-2 pt-4">
+                  {["Valoración y diagnóstico dental", "Limpieza dental / profilaxis", "Odontología preventiva", "Periodoncia / tratamiento de encías"].map((item) => (
+                    <li key={item} className="text-[10px] uppercase tracking-widest text-soft-black/60 flex items-center gap-3">
+                      <span className="w-1.5 h-[1px] bg-champagne" /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* 2. MEJORAR MI SONRISA (Protagonista) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="md:col-span-6 flex flex-col space-y-6 group md:mt-12"
+            >
+              <div className="relative aspect-[16/11] overflow-hidden rounded-[2px] bg-charcoal/5 border-l-4 border-champagne/10">
+                <img 
+                  src={nisadoAssets.services.mejorar} 
+                  alt="Mejorar mi sonrisa" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+                <div className="absolute top-6 right-6">
+                  <span className="text-[8px] tracking-[0.4em] bg-champagne text-ivory px-3 py-1 rounded-full font-bold uppercase">Especialidad</span>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-3xl font-serif text-soft-black">Mejorar mi sonrisa</h3>
+                <p className="text-warm-gray text-base font-light max-w-sm italic">Tratamientos enfocados en mejorar la armonía, apariencia y naturalidad de tu sonrisa.</p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 pt-4">
+                  {["Diseño de sonrisa", "Carillas de resina", "Carillas de porcelana / cerámica", "Blanqueamiento dental", "Rehabilitación estética"].map((item) => (
+                    <li key={item} className="text-[10px] uppercase tracking-widest text-soft-black/80 font-bold flex items-center gap-3">
+                      <span className="w-2 h-[1px] bg-champagne" /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* 3. Restaurar mis dientes */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-4 flex flex-col space-y-6 group"
+            >
+              <div className="relative aspect-square overflow-hidden rounded-[2px] bg-charcoal/5">
+                <img 
+                  src={nisadoAssets.services.restaurar} 
+                  alt="Restaurar mis dientes" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-serif text-soft-black">Restaurar mis dientes</h3>
+                <p className="text-warm-gray text-sm font-light">Para recuperar dientes dañados o comprometidos.</p>
+                <ul className="space-y-2 pt-2">
+                  {["Restauraciones dentales: resinas e incrustaciones", "Endodoncia", "Prótesis dentales: coronas y puentes", "Implantes dentales"].map((item) => (
+                    <li key={item} className="text-[9px] uppercase tracking-widest text-soft-black/60 flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-champagne/40" /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* 4. Alinear y Mejorar mi Mordida */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="md:col-span-8 flex flex-col space-y-6 group"
+            >
+              <div className="relative aspect-[21/9] overflow-hidden rounded-[2px] bg-charcoal/5">
+                <img 
+                  src={nisadoAssets.services.alinear} 
+                  alt="Alinear y mejorar mi mordida" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-serif text-soft-black">Alinear y mejorar mi mordida</h3>
+                <p className="text-warm-gray text-sm font-light max-w-xl">Soluciones para mejorar la posición dental, la mordida y el equilibrio funcional.</p>
+                <ul className="grid grid-cols-2 md:grid-cols-3 gap-y-3 gap-x-8 pt-2">
+                  {["Ortodoncia", "Alineadores transparentes", "Brackets", "Tratamiento de bruxismo", "Guardas", "Electroestimulación"].map((item) => (
+                    <li key={item} className="text-[9px] uppercase tracking-widest text-soft-black/60 flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-champagne/40" /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* 5. Resolver una Cirugía Dental */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-7 flex flex-col space-y-6 group"
+            >
+              <div className="relative aspect-[16/9] overflow-hidden rounded-[2px] bg-charcoal/5">
+                <img 
+                  src={nisadoAssets.services.cirugia} 
+                  alt="Resolver una cirugía dental" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-serif text-soft-black">Resolver una cirugía dental</h3>
+                <p className="text-warm-gray text-sm font-light">Atención quirúrgica cuando el tratamiento lo requiere.</p>
+                <ul className="flex flex-wrap gap-x-8 gap-y-2 pt-2">
+                  {["Extracciones dentales", "Cirugía de terceros molares", "Implantes dentales"].map((item) => (
+                    <li key={item} className="text-[9px] uppercase tracking-widest text-soft-black/60 flex items-center gap-2">
+                      <span className="w-4 h-[1px] bg-champagne/30" /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* 6. NECESITO ATENCIÓN AHORA (Urgencias - Elegante) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="md:col-span-5 flex flex-col space-y-6 group"
+            >
+              <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-[2px] bg-soft-black shadow-2xl">
+                <img 
+                  src={nisadoAssets.services.urgencias} 
+                  alt="Urgencias dentales" 
+                  className="w-full h-full object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-soft-black/40 backdrop-blur-[2px]">
+                  <span className="text-[10px] uppercase tracking-[0.4em] text-champagne font-bold mb-4">Soporte Inmediato</span>
+                  <h3 className="text-3xl font-serif text-ivory mb-6">Necesito atención ahora</h3>
+                  <a 
+                    href="https://wa.me/5215585265697" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] uppercase tracking-[0.3em] font-bold border border-champagne/40 text-champagne px-8 py-4 rounded-full hover:bg-champagne hover:text-ivory transition-all duration-500"
+                  >
+                    Contactar Urgencias
+                  </a>
+                </div>
+              </div>
+              <div className="space-y-4 px-4">
+                <p className="text-warm-gray text-sm font-light">Atención para situaciones que requieren valoración dental lo antes posible.</p>
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-champagne animate-pulse" />
+                  <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-soft-black">Servicio: Urgencias dentales</span>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
 
       {/* 03 / RESULTADO - Resultados que hablan por sí mismos */}
       <section id="resultados" className="pt-48 pb-12 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
