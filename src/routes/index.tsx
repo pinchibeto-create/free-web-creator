@@ -928,12 +928,12 @@ function Index() {
                   { 
                     name: "Polanco Studio", 
                     address: "Emerson 111, Polanco V Sección, Miguel Hidalgo, C.P. 11550, Ciudad de México", 
-                    url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" 
+                    url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" 
                   },
                   { 
                     name: "Del Valle Studio", 
                     address: "Av. Insurgentes Sur 1188, Tlacoquemécatl del Valle, Benito Juárez, C.P. 03200, Ciudad de México", 
-                    url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" 
+                    url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" 
                   },
                   { 
                     name: "Roma Sur Gallery", 
