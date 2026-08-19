@@ -309,7 +309,7 @@ function Index() {
                     {[
                       { name: "Polanco", url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" },
                       { name: "Del Valle", url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" },
-                      { name: "Roma Sur", url: "https://www.google.com/maps/search/?api=1&query=19.4076004%2C-99.1645355" }
+                      { name: "Roma Sur", url: "https://www.google.com/maps/search/?api=1&query=Tlaxcala+84%2C+Roma+Sur%2C+Cuauht%C3%A9moc%2C+06760+Ciudad+de+M%C3%A9xico%2C+CDMX" }
                     ].map(loc => (
                       <a 
                         key={loc.name} 
@@ -945,7 +945,7 @@ function Index() {
                   { 
                     name: "Roma Sur Gallery", 
                     address: "Tlaxcala 84, Roma Sur, Cuauhtémoc, C.P. 06760, Ciudad de México", 
-                    url: "https://www.google.com/maps/search/?api=1&query=19.4076004%2C-99.1645355" 
+                    url: "https://www.google.com/maps/search/?api=1&query=Tlaxcala+84%2C+Roma+Sur%2C+Cuauht%C3%A9moc%2C+06760+Ciudad+de+M%C3%A9xico%2C+CDMX" 
                   }
                 ].map((loc) => (
                   <li key={loc.name} className="space-y-3">
