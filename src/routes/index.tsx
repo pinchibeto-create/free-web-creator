@@ -83,6 +83,8 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const heroRef = useRef<HTMLDivElement>(null);
+  const locationsRef = useRef<HTMLDivElement>(null);
+  const isLocationsInView = useInView(locationsRef, { margin: "-10% 0px -10% 0px" });
   const manifestoRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
