@@ -8,12 +8,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Nisado Baani | Diseño de Sonrisa y Odontología Estética de Lujo CDMX" },
-      { name: "description", content: "Expertos en diseño de sonrisa, carillas de porcelana y odontología estética premium en Polanco, Del Valle y Roma Sur. Tecnología avanzada y precisión artística para una sonrisa natural." },
+      { name: "description", content: "Clínica dental premium en Polanco, Del Valle y Roma Sur. Especialistas en carillas de porcelana, diseño de sonrisa 3D y odontología estética de alta precisión en CDMX." },
       { property: "og:title", content: "Nisado Baani | Luxury Dental & Smile Design CDMX" },
       { property: "og:description", content: "Transformamos sonrisas con precisión tecnológica y alma artesanal. Visítanos en nuestras clínicas boutique en la Ciudad de México." },
       { property: "og:image", content: "https://budget-web-studio.lovable.app/og-image.png" },
-      { name: "twitter:title", content: "Nisado Baani | Diseño de Sonrisa de Lujo" },
-      { name: "twitter:description", content: "Odontología estética de alta precisión en CDMX. Diseño de sonrisa personalizado con tecnología 3D." },
+      { name: "twitter:title", content: "Nisado Baani | Diseño de Sonrisa de Lujo en CDMX" },
+      { name: "twitter:description", content: "Odontología estética de alta precisión en Polanco, Del Valle y Roma Sur. Diseño de sonrisa personalizado con tecnología 3D." },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "https://budget-web-studio.lovable.app/og-image.png" },
     ],
