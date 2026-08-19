@@ -521,9 +521,9 @@ function Index() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="col-span-1 md:col-span-6 flex flex-col space-y-3 md:space-y-6 group"
+              className="col-span-1 md:col-span-4 flex flex-col space-y-3 md:space-y-6 group"
             >
-              <div className="relative aspect-[16/10] overflow-hidden rounded-[2px] bg-charcoal/5">
+              <div className="relative aspect-square overflow-hidden rounded-[2px] bg-charcoal/5">
                 <img 
                   src={nisadoAssets.services.cuidar} 
                   alt="Cuidar y prevenir" 
@@ -549,9 +549,9 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="col-span-1 md:col-span-6 flex flex-col space-y-3 md:space-y-6 group md:mt-12"
+              className="col-span-1 md:col-span-4 flex flex-col space-y-3 md:space-y-6 group"
             >
-              <div className="relative aspect-[16/11] overflow-hidden rounded-[2px] bg-charcoal/5 border-l-4 border-champagne/10">
+              <div className="relative aspect-square overflow-hidden rounded-[2px] bg-charcoal/5 border-l-4 border-champagne/10">
                 <img 
                   src={nisadoAssets.services.mejorar} 
                   alt="Mejorar mi sonrisa" 
@@ -607,9 +607,9 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="col-span-1 md:col-span-8 flex flex-col space-y-3 md:space-y-6 group"
+              className="col-span-1 md:col-span-4 flex flex-col space-y-3 md:space-y-6 group"
             >
-              <div className="relative aspect-[21/9] overflow-hidden rounded-[2px] bg-charcoal/5">
+              <div className="relative aspect-square overflow-hidden rounded-[2px] bg-charcoal/5">
                 <img 
                   src={nisadoAssets.services.alinear} 
                   alt="Alinear y mejorar mi mordida" 
@@ -634,9 +634,9 @@ function Index() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="col-span-1 md:col-span-7 flex flex-col space-y-3 md:space-y-6 group"
+              className="col-span-1 md:col-span-4 flex flex-col space-y-3 md:space-y-6 group"
             >
-              <div className="relative aspect-[16/9] overflow-hidden rounded-[2px] bg-charcoal/5">
+              <div className="relative aspect-square overflow-hidden rounded-[2px] bg-charcoal/5">
                 <img 
                   src={nisadoAssets.services.cirugia} 
                   alt="Resolver una cirugía dental" 
@@ -662,9 +662,9 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="col-span-1 md:col-span-5 flex flex-col space-y-3 md:space-y-6 group"
+              className="col-span-1 md:col-span-4 flex flex-col space-y-3 md:space-y-6 group"
             >
-              <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-[2px] bg-soft-black shadow-2xl">
+              <div className="relative aspect-square overflow-hidden rounded-[2px] bg-soft-black shadow-2xl">
                 <img 
                   src={nisadoAssets.services.urgencias} 
                   alt="Urgencias dentales" 
