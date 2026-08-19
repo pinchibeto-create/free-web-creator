@@ -813,7 +813,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-7xl text-soft-black font-serif italic max-w-4xl"
+              className="text-4xl md:text-5xl lg:text-7xl font-serif italic max-w-4xl"
             >
               La profundidad detrás de una sonrisa
             </motion.h2>
