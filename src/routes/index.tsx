@@ -369,7 +369,7 @@ function Index() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-                  className="text-4xl md:text-5xl lg:text-7xl text-soft-black leading-[1.1] font-serif"
+                  className="text-5xl md:text-6xl lg:text-8xl text-soft-black leading-[1.1] font-serif"
                 >
                   Diseño que se construye contigo
                 </motion.h2>
@@ -387,35 +387,37 @@ function Index() {
             </div>
 
             {/* Zona Visual (Composición orgánica escalonada) */}
-            <div className="lg:col-span-7 relative flex justify-center lg:justify-end items-center min-h-[500px] md:min-h-[650px]">
+            <div className="lg:col-span-7 relative flex flex-row items-center justify-center lg:justify-end gap-4 md:gap-8 min-h-[400px] md:min-h-[600px]">
               
-              {/* Imagen Secundaria (01_doctora_paciente_sillon.webp) - Colocada parcialmente detrás/desplazada */}
+              {/* Imagen 01 (01_doctora_paciente_sillon.webp) */}
               <motion.div
-                initial={{ opacity: 0, x: 40, y: 20 }}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                initial={{ opacity: 0, y: 40, rotate: -2 }}
+                whileInView={{ opacity: 1, y: 0, rotate: -3 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute left-0 top-1/2 -translate-y-[40%] w-[65%] md:w-[60%] z-10"
+                transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: -10, rotate: -1, scale: 1.02 }}
+                className="relative w-[48%] md:w-[45%] z-10"
               >
                 <img 
                   src={nisadoAssets.customDesign.sillon} 
                   alt="Diseño de sonrisa en proceso" 
-                  className="w-full h-auto drop-shadow-[0_20px_50px_rgba(184,145,69,0.15)]"
+                  className="w-full h-auto drop-shadow-[0_20px_50px_rgba(184,145,69,0.12)]"
                 />
               </motion.div>
 
-              {/* Imagen Principal (02_doctora_conversando_paciente.webp) - Más grande y al frente */}
+              {/* Imagen 02 (02_doctora_conversando_paciente.webp) */}
               <motion.div
-                initial={{ opacity: 0, x: 20, y: 40 }}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                initial={{ opacity: 0, y: 60, rotate: 2 }}
+                whileInView={{ opacity: 1, y: 20, rotate: 3 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="relative w-[85%] md:w-[80%] z-20"
+                transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: 10, rotate: 1, scale: 1.02 }}
+                className="relative w-[52%] md:w-[50%] z-20 -ml-8 md:-ml-12"
               >
                 <img 
                   src={nisadoAssets.customDesign.conversando} 
                   alt="Consulta personalizada Nisado Baani" 
-                  className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.08)]"
+                  className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.06)]"
                 />
               </motion.div>
 
