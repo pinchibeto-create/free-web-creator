@@ -850,8 +850,8 @@ function Index() {
                 className="w-[70px] md:w-[80px] lg:w-[90px] h-auto object-contain"
               />
               <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-soft-black">Salud primero</h3>
-                <p className="text-warm-gray text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
+                <h3 className="text-2xl font-serif">Salud primero</h3>
+                <p className="text-ivory/60 text-sm md:text-base font-light font-sans max-w-[280px] mx-auto">
                   La base de toda sonrisa hermosa es una sonrisa sana.
                 </p>
               </div>
