@@ -423,12 +423,6 @@ function Index() {
           </div>
         </div>
       </section>
-                Una sonrisa bonita comienza con una sonrisa sana, pero también debe reflejar quién eres. En Nisado Baani unimos salud, estética y atención personalizada para crear tratamientos pensados alrededor de cada persona.
-              </motion.p>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       {/* 02 / ARTESANÍA - El Arte detrás de tu Sonrisa */}
