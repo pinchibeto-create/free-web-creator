@@ -34,23 +34,26 @@ export const Route = createFileRoute("/")({
           "address": [
             {
               "@type": "PostalAddress",
-              "streetAddress": "Polanco",
+              "streetAddress": "Emerson 111, Polanco V Sección",
               "addressLocality": "Ciudad de México",
               "addressRegion": "CDMX",
+              "postalCode": "11550",
               "addressCountry": "MX"
             },
             {
               "@type": "PostalAddress",
-              "streetAddress": "Del Valle",
+              "streetAddress": "Av. Insurgentes Sur 1188, Tlacoquemécatl del Valle",
               "addressLocality": "Ciudad de México",
               "addressRegion": "CDMX",
+              "postalCode": "03200",
               "addressCountry": "MX"
             },
             {
               "@type": "PostalAddress",
-              "streetAddress": "Roma Sur",
+              "streetAddress": "Tlaxcala 84, Roma Sur",
               "addressLocality": "Ciudad de México",
               "addressRegion": "CDMX",
+              "postalCode": "06760",
               "addressCountry": "MX"
             }
           ],
