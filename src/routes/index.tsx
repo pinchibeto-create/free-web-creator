@@ -84,6 +84,7 @@ function Index() {
   const shouldReduceMotion = useReducedMotion();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeEssenceImage, setActiveEssenceImage] = useState<'conversando' | 'sillon'>('conversando');
   
   const { scrollY } = useScroll();
   
@@ -387,37 +388,90 @@ function Index() {
             </div>
 
             {/* Zona Visual (Composición orgánica escalonada) */}
-            <div className="lg:col-span-7 relative flex flex-row items-center justify-center lg:justify-end gap-4 md:gap-8 min-h-[400px] md:min-h-[600px]">
-              
+            <div 
+              className="lg:col-span-7 relative flex items-center justify-center min-h-[500px] md:min-h-[700px] select-none"
+              style={{ perspective: '1200px' }}
+            >
+              {/* Microtextos Interactivos */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 z-30 pointer-events-none w-full text-center">
+                <AnimatePresence mode="wait">
+                  {activeEssenceImage === 'conversando' ? (
+                    <motion.p
+                      key="escuchamos"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="text-[10px] md:text-[12px] uppercase tracking-[0.8em] text-champagne font-bold font-[family-name:var(--font-julius)]"
+                    >
+                      ESCUCHAMOS
+                    </motion.p>
+                  ) : (
+                    <motion.p
+                      key="construimos"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="text-[10px] md:text-[12px] uppercase tracking-[0.8em] text-champagne font-bold font-[family-name:var(--font-julius)]"
+                    >
+                      CONSTRUIMOS CONTIGO
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </div>
+
               {/* Imagen 01 (01_doctora_paciente_sillon.webp) */}
               <motion.div
-                initial={{ opacity: 0, y: 40, rotate: -2 }}
-                whileInView={{ opacity: 1, y: 0, rotate: -3 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -10, rotate: -1, scale: 1.02 }}
-                className="relative w-[48%] md:w-[45%] z-10"
+                onMouseEnter={() => setActiveEssenceImage('sillon')}
+                animate={{
+                  scale: activeEssenceImage === 'sillon' ? 1.06 : 0.85,
+                  x: activeEssenceImage === 'sillon' ? -20 : -80,
+                  z: activeEssenceImage === 'sillon' ? 100 : 0,
+                  rotateY: activeEssenceImage === 'sillon' ? 0 : -4,
+                  opacity: activeEssenceImage === 'sillon' ? 1 : 0.7,
+                  zIndex: activeEssenceImage === 'sillon' ? 20 : 10,
+                  filter: activeEssenceImage === 'sillon' 
+                    ? 'drop-shadow(0 20px 40px rgba(0,0,0,0.12)) brightness(1.05)' 
+                    : 'drop-shadow(0 10px 20px rgba(0,0,0,0.05)) brightness(0.95)'
+                }}
+                transition={{
+                  transform: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
+                  opacity: { duration: 0.65, ease: "linear" },
+                  filter: { duration: 0.65, ease: "linear" }
+                }}
+                className="absolute left-[10%] w-[55%] md:w-[50%] cursor-pointer"
               >
                 <img 
                   src={nisadoAssets.customDesign.sillon} 
                   alt="Diseño de sonrisa en proceso" 
-                  className="w-full h-auto drop-shadow-[0_20px_50px_rgba(184,145,69,0.12)]"
+                  className="w-full h-auto"
                 />
               </motion.div>
 
               {/* Imagen 02 (02_doctora_conversando_paciente.webp) */}
               <motion.div
-                initial={{ opacity: 0, y: 60, rotate: 2 }}
-                whileInView={{ opacity: 1, y: 20, rotate: 3 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: 10, rotate: 1, scale: 1.02 }}
-                className="relative w-[52%] md:w-[50%] z-20 -ml-8 md:-ml-12"
+                onMouseEnter={() => setActiveEssenceImage('conversando')}
+                animate={{
+                  scale: activeEssenceImage === 'conversando' ? 1.03 : 0.82,
+                  x: activeEssenceImage === 'conversando' ? 20 : 80,
+                  z: activeEssenceImage === 'conversando' ? 100 : 0,
+                  rotateY: activeEssenceImage === 'conversando' ? 0 : 4,
+                  opacity: activeEssenceImage === 'conversando' ? 1 : 0.65,
+                  zIndex: activeEssenceImage === 'conversando' ? 20 : 10,
+                  filter: activeEssenceImage === 'conversando' 
+                    ? 'drop-shadow(0 20px 40px rgba(0,0,0,0.12)) brightness(1.05)' 
+                    : 'drop-shadow(0 10px 20px rgba(0,0,0,0.05)) brightness(0.95)'
+                }}
+                transition={{
+                  transform: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
+                  opacity: { duration: 0.65, ease: "linear" },
+                  filter: { duration: 0.65, ease: "linear" }
+                }}
+                className="absolute right-[5%] w-[60%] md:w-[55%] cursor-pointer"
               >
                 <img 
                   src={nisadoAssets.customDesign.conversando} 
                   alt="Consulta personalizada Nisado Baani" 
-                  className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.06)]"
+                  className="w-full h-auto"
                 />
               </motion.div>
 
