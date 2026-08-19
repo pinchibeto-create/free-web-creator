@@ -450,13 +450,13 @@ function Index() {
                   opacity: { duration: 0.65, ease: "linear" },
                   filter: { duration: 0.65, ease: "linear" }
                 }}
-                className="absolute left-[5%] w-[58%] md:w-[52%] cursor-pointer touch-manipulation"
+                className="absolute left-[5%] w-[58%] md:w-[52%] cursor-pointer touch-manipulation z-20"
                 style={{ transformStyle: 'preserve-3d', transformOrigin: 'center center' }}
               >
                 <img 
                   src={nisadoAssets.customDesign.sillon} 
                   alt="Construimos contigo" 
-                  className="w-full h-auto pointer-events-none"
+                  className="w-full h-auto"
                 />
               </motion.div>
 
@@ -484,13 +484,13 @@ function Index() {
                   opacity: { duration: 0.65, ease: "linear" },
                   filter: { duration: 0.65, ease: "linear" }
                 }}
-                className="absolute right-[2%] w-[62%] md:w-[56%] cursor-pointer touch-manipulation"
+                className="absolute right-[2%] w-[62%] md:w-[56%] cursor-pointer touch-manipulation z-20"
                 style={{ transformStyle: 'preserve-3d', transformOrigin: 'center center' }}
               >
                 <img 
                   src={nisadoAssets.customDesign.conversando} 
                   alt="Escuchamos" 
-                  className="w-full h-auto pointer-events-none"
+                  className="w-full h-auto"
                 />
               </motion.div>
 
