@@ -343,58 +343,86 @@ function Index() {
         </motion.div>
       </section>
 
-      {/* 01 / INSTITUCIONAL - Nuestra Esencia */}
-      <section id="esencia" className="py-24 md:py-32 px-8 lg:px-24 bg-ivory overflow-hidden scroll-mt-24 md:scroll-mt-32">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
-            {/* Desktop: 55% Photo / 45% Text | Mobile: Order defined by flex direction and order classes */}
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              className="w-full lg:w-[55%] order-4 lg:order-1"
-            >
-              <div className="relative aspect-[4/3] md:aspect-auto md:h-[600px] w-full overflow-hidden rounded-[4px]">
-                <img 
-                  src={nisadoAssets.references.esenciaPrincipal} 
-                  alt="Atención personalizada en Nisado Baani" 
-                  className="w-full h-full object-cover object-[center_30%]"
-                  loading="eager"
-                />
-              </div>
-            </motion.div>
-
-            <div className="w-full lg:w-[45%] flex flex-col space-y-8 md:space-y-12 order-1 lg:order-2">
+      {/* 01 / INSTITUCIONAL - Diseño que se construye contigo */}
+      <section id="esencia" className="py-24 md:py-40 px-8 lg:px-24 bg-[#F9F7F2] overflow-hidden scroll-mt-24 md:scroll-mt-32 relative">
+        {/* Organic background shape */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-champagne/5 rounded-full blur-[120px] pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
+            
+            {/* Zona de texto (40-45%) */}
+            <div className="lg:col-span-5 flex flex-col space-y-8 md:space-y-10">
               <div className="space-y-6">
                 <motion.p 
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
                   className="text-[10px] md:text-[11px] uppercase tracking-[0.6em] text-champagne font-bold font-[family-name:var(--font-julius)]"
                 >
-                  NUESTRA ESENCIA
+                  DISEÑO PERSONALIZADO
                 </motion.p>
                 
                 <motion.h2 
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-4xl md:text-5xl lg:text-6xl text-soft-black leading-[1.2] font-light font-[family-name:var(--font-julius)]"
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+                  className="text-4xl md:text-5xl lg:text-7xl text-soft-black leading-[1.1] font-serif"
                 >
-                  Donde la odontología se encuentra con la belleza natural.
+                  Diseño que se construye contigo
                 </motion.h2>
               </div>
 
               <motion.p 
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 className="text-warm-gray leading-relaxed text-lg font-light max-w-lg font-sans"
               >
+                Cada sonrisa responde de manera diferente. Por eso trabajamos de forma personalizada, observando proporciones, rasgos y necesidades para construir un resultado que se adapte a ti. En técnicas como la resina a mano alzada, el diseño cobra forma directamente sobre tu sonrisa, permitiéndonos perfeccionar cada detalle durante el proceso.
+              </motion.p>
+            </div>
+
+            {/* Zona Visual (Composición orgánica escalonada) */}
+            <div className="lg:col-span-7 relative flex justify-center lg:justify-end items-center min-h-[500px] md:min-h-[650px]">
+              
+              {/* Imagen Secundaria (01_doctora_paciente_sillon.webp) - Colocada parcialmente detrás/desplazada */}
+              <motion.div
+                initial={{ opacity: 0, x: 40, y: 20 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute left-0 top-1/2 -translate-y-[40%] w-[65%] md:w-[60%] z-10"
+              >
+                <img 
+                  src={nisadoAssets.customDesign.sillon} 
+                  alt="Diseño de sonrisa en proceso" 
+                  className="w-full h-auto drop-shadow-[0_20px_50px_rgba(184,145,69,0.15)]"
+                />
+              </motion.div>
+
+              {/* Imagen Principal (02_doctora_conversando_paciente.webp) - Más grande y al frente */}
+              <motion.div
+                initial={{ opacity: 0, x: 20, y: 40 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="relative w-[85%] md:w-[80%] z-20"
+              >
+                <img 
+                  src={nisadoAssets.customDesign.conversando} 
+                  alt="Consulta personalizada Nisado Baani" 
+                  className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.08)]"
+                />
+              </motion.div>
+
+            </div>
+          </div>
+        </div>
+      </section>
                 Una sonrisa bonita comienza con una sonrisa sana, pero también debe reflejar quién eres. En Nisado Baani unimos salud, estética y atención personalizada para crear tratamientos pensados alrededor de cada persona.
               </motion.p>
             </div>

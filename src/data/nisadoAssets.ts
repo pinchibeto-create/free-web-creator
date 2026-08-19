@@ -44,6 +44,9 @@ import serviceRestaurar from "@/assets/servicios/04_restaurar_mis_dientes.webp.a
 import serviceMejorar from "@/assets/servicios/05_mejorar_mi_sonrisa.webp.asset.json";
 import serviceCuidar from "@/assets/servicios/06_cuidar_y_prevenir.webp.asset.json";
 
+import designSillon from "@/assets/recortes/01_doctora_paciente_sillon.webp.asset.json";
+import designConversando from "@/assets/recortes/02_doctora_conversando_paciente.webp.asset.json";
+
 export const nisadoAssets = {
   branding: {
     logoPng: logoPng,
@@ -108,5 +111,9 @@ export const nisadoAssets = {
     restaurar: serviceRestaurar.url,
     mejorar: serviceMejorar.url,
     cuidar: serviceCuidar.url,
+  },
+  customDesign: {
+    sillon: designSillon.url,
+    conversando: designConversando.url,
   }
 };
