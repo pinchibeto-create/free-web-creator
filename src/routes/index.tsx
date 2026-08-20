@@ -181,19 +181,14 @@ function Index() {
 
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`relative z-[60] flex flex-col items-center justify-center w-8 h-8 focus:outline-none group`}
+          className={`relative z-[10002] flex flex-col items-center justify-center w-8 h-8 focus:outline-none group ${isMenuOpen ? "hidden" : ""}`}
           aria-label="Menú"
         >
-          <span className={`block w-6 h-[1.5px] bg-soft-black transition-all duration-300 ease-out ${
-            isMenuOpen ? "rotate-45 translate-y-[1.5px]" : "-translate-y-1"
-          }`} />
-          <span className={`block w-6 h-[1.5px] bg-soft-black transition-all duration-300 ease-out ${
-            isMenuOpen ? "opacity-0" : "opacity-100"
-          }`} />
-          <span className={`block w-6 h-[1.5px] bg-soft-black transition-all duration-300 ease-out ${
-            isMenuOpen ? "-rotate-45 -translate-y-[1.5px]" : "translate-y-1"
-          }`} />
+          <span className={`block w-6 h-[1.5px] bg-soft-black transition-all duration-300 ease-out -translate-y-1`} />
+          <span className={`block w-6 h-[1.5px] bg-soft-black transition-all duration-300 ease-out opacity-100`} />
+          <span className={`block w-6 h-[1.5px] bg-soft-black transition-all duration-300 ease-out translate-y-1`} />
         </button>
+
 
         {/* Side Menu Overlay */}
         <AnimatePresence>
