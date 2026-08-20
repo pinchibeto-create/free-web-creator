@@ -315,7 +315,7 @@ function Index() {
                 className="flex flex-col gap-6 items-center pt-4 w-full max-w-md"
               >
                 <a 
-                  href="https://wa.me/5215585265697"
+                  href="https://wa.me/5215615308630"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[10px] text-center uppercase tracking-[0.4em] font-bold bg-soft-black text-ivory px-12 py-5 rounded-full hover:bg-champagne transition-all duration-500 shadow-xl"
@@ -1030,7 +1030,7 @@ function Index() {
       <div className="fixed bottom-8 right-0 md:right-8 z-50 flex flex-col items-end gap-4 pointer-events-none">
         {/* WhatsApp Button */}
         <motion.a 
-          href="https://wa.me/5215585265697"
+          href="https://wa.me/5215542139276"
           target="_blank"
           rel="noopener noreferrer"
           initial={false}
@@ -1052,7 +1052,7 @@ function Index() {
         {/* Agendar Button */}
         <motion.a 
           id="agendar"
-          href="https://wa.me/5215585265697"
+          href="https://wa.me/5215615308630"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
