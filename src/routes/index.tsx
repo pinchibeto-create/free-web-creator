@@ -157,7 +157,7 @@ function Index() {
       <nav 
         className={`fixed w-full z-50 px-8 flex items-center justify-between transition-all duration-500 h-[70px] md:h-[85px] ${
           isMenuOpen 
-            ? "bg-ivory/60 backdrop-blur-2xl" 
+            ? "bg-ivory/95 backdrop-blur-3xl" 
             : isScrolled 
               ? "bg-ivory/80 backdrop-blur-[14px] border-b border-soft-black/5 shadow-sm" 
               : "bg-ivory/20 backdrop-blur-[14px]"
@@ -196,14 +196,14 @@ function Index() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setIsMenuOpen(false)}
-                className="fixed inset-0 bg-soft-black/20 backdrop-blur-md z-[55]"
+                className="fixed inset-0 bg-soft-black/60 backdrop-blur-2xl z-[55]"
               />
               <motion.div
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed top-0 right-0 h-full w-full md:w-[45%] bg-ivory/95 backdrop-blur-2xl z-[58] shadow-2xl flex flex-col p-12 md:p-24"
+                className="fixed top-0 right-0 h-full w-full md:w-[45%] bg-ivory/99 backdrop-blur-3xl z-[58] shadow-2xl flex flex-col p-12 md:p-24"
               >
                 <div className="flex-1 flex flex-col justify-center space-y-8 md:space-y-12">
                   <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Navegación</p>
