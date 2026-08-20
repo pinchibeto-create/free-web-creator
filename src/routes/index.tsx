@@ -188,7 +188,6 @@ function Index() {
           <span className={`block w-6 h-[1.5px] bg-soft-black transition-all duration-300 ease-out translate-y-1`} />
         </button>
 
-
         {/* Side Menu Overlay */}
         <AnimatePresence>
           {isMenuOpen && (
