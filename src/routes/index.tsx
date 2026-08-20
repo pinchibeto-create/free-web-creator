@@ -204,8 +204,9 @@ function Index() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4 }}
-                className="fixed inset-0 w-full h-[100dvh] z-[9999] flex flex-col overflow-y-auto overscroll-behavior-contain"
+                className="fixed inset-0 w-full h-[100dvh] z-[9999] flex flex-col overflow-y-auto overscroll-behavior-contain scrollbar-hide"
               >
+
                 <div className="flex-1 flex flex-col justify-center items-center text-center px-8 py-[clamp(24px,5vh,64px)] gap-[clamp(10px,2vh,28px)]">
                   {/* Navegación Label */}
                   <motion.p 
