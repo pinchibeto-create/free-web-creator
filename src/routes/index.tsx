@@ -169,7 +169,6 @@ function Index() {
               ? "bg-ivory/80 backdrop-blur-[14px] border-b border-soft-black/5 shadow-sm" 
               : "bg-ivory/20 backdrop-blur-[14px]"
         }`}
-
       >
         <div className="flex items-center">
           <img 
