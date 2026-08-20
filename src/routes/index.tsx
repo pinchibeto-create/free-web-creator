@@ -102,10 +102,17 @@ function Index() {
   const { scrollY } = useScroll();
   
   useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    
     return scrollY.onChange((latest) => {
       setIsScrolled(latest > 50);
     });
-  }, [scrollY]);
+  }, [scrollY, isMenuOpen]);
+
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
