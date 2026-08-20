@@ -157,7 +157,7 @@ function Index() {
       <nav 
         className={`fixed w-full z-50 px-8 flex items-center justify-between transition-all duration-500 h-[70px] md:h-[85px] ${
           isMenuOpen 
-            ? "bg-ivory/60 backdrop-blur-2xl" 
+            ? "bg-ivory/80 backdrop-blur-3xl" 
             : isScrolled 
               ? "bg-ivory/80 backdrop-blur-[14px] border-b border-soft-black/5 shadow-sm" 
               : "bg-ivory/20 backdrop-blur-[14px]"
