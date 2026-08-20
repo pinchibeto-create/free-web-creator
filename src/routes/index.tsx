@@ -272,7 +272,6 @@ function Index() {
                   </div>
                 </button>
               </motion.div>
-
             </>
           )}
         </AnimatePresence>
