@@ -197,55 +197,82 @@ function Index() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setIsMenuOpen(false)}
-                className="fixed inset-0 bg-soft-black/60 backdrop-blur-2xl z-[55]"
+                className="fixed inset-0 bg-[#F8F4EC]/94 backdrop-blur-[36px] saturate-[110%] z-[9998]"
               />
               <motion.div
-                initial={{ x: "100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "100%" }}
-                transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed top-0 right-0 h-full w-full md:w-[45%] bg-ivory/99 backdrop-blur-3xl z-[58] shadow-2xl flex flex-col p-12 md:p-24"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="fixed inset-0 w-full h-[100dvh] z-[9999] flex flex-col overflow-y-auto overscroll-behavior-contain"
               >
-                <div className="flex-1 flex flex-col justify-center space-y-8 md:space-y-12">
-                  <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Navegación</p>
-                  <nav className="flex flex-col space-y-6 md:space-y-8">
+                <div className="flex-1 flex flex-col justify-center items-center text-center px-8 py-[clamp(24px,5vh,64px)] gap-[clamp(10px,2vh,28px)]">
+                  {/* Navegación Label */}
+                  <motion.p 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold mb-4"
+                  >
+                    Navegación
+                  </motion.p>
+                  
+                  {/* Menu Links */}
+                  <nav className="flex flex-col items-center gap-[clamp(10px,2vh,28px)]">
                     {menuItems.map((item, index) => (
                       <motion.a
                         key={item.name}
                         href={item.href}
                         onClick={() => setIsMenuOpen(false)}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 + index * 0.05 }}
-                        className="text-3xl md:text-5xl font-serif text-soft-black hover:text-champagne transition-colors duration-300 w-fit"
+                        style={{ 
+                          fontSize: "clamp(1.7rem, 4.2vh, 3.5rem)",
+                          lineHeight: 0.95
+                        }}
+                        className="font-serif text-soft-black hover:text-champagne transition-colors duration-300 block"
                       >
                         {item.name}
                       </motion.a>
                     ))}
                   </nav>
-                </div>
-                
-                <div className="pt-12 border-t border-soft-black/5">
-                  <p className="text-[10px] uppercase tracking-[0.4em] text-soft-black/40 font-bold mb-6">Redes sociales</p>
-                  <div className="flex gap-8">
-                    {[
-                      { label: "IG", url: "https://www.instagram.com/nisadobaani/" },
-                      { label: "FB", url: "https://www.facebook.com/nisadobaani/" },
-                      { label: "LN", url: "#" }
-                    ].map(social => (
-                      <a 
-                        key={social.label} 
-                        href={social.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-[10px] uppercase tracking-[0.4em] font-bold text-soft-black hover:text-champagne transition-colors"
-                      >
-                        {social.label}
-                      </a>
-                    ))}
+
+                  {/* Social Links */}
+                  <div className="mt-8 pt-8 border-t border-soft-black/5 w-full max-w-xs mx-auto">
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-soft-black/40 font-bold mb-6 text-center">Redes sociales</p>
+                    <div className="flex justify-center gap-8">
+                      {[
+                        { label: "IG", url: "https://www.instagram.com/nisadobaani/" },
+                        { label: "FB", url: "https://www.facebook.com/nisadobaani/" },
+                        { label: "LN", url: "#" }
+                      ].map(social => (
+                        <a 
+                          key={social.label} 
+                          href={social.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-[10px] uppercase tracking-[0.4em] font-bold text-soft-black hover:text-champagne transition-colors"
+                        >
+                          {social.label}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
+
+                {/* Close Button UI duplication for logic: z-index superior handled by nav but keeping X in place */}
+                <button 
+                  onClick={() => setIsMenuOpen(false)}
+                  className="absolute top-[clamp(20px,3vh,36px)] right-[clamp(20px,3vw,40px)] w-10 h-10 flex items-center justify-center z-[10001]"
+                  aria-label="Cerrar menú"
+                >
+                  <div className="relative w-6 h-6">
+                    <span className="absolute block w-6 h-[1.5px] bg-soft-black rotate-45 top-1/2 left-0" />
+                    <span className="absolute block w-6 h-[1.5px] bg-soft-black -rotate-45 top-1/2 left-0" />
+                  </div>
+                </button>
               </motion.div>
+
             </>
           )}
         </AnimatePresence>
