@@ -155,13 +155,14 @@ function Index() {
     <div className="min-h-screen bg-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden scroll-smooth">
       {/* Editorial Navigation */}
       <nav 
-        className={`fixed w-full z-50 px-8 flex items-center justify-between transition-all duration-500 h-[70px] md:h-[85px] ${
+        className={`fixed w-full z-[100] px-8 flex items-center justify-between transition-all duration-500 h-[70px] md:h-[85px] ${
           isMenuOpen 
-            ? "bg-ivory/95 backdrop-blur-3xl" 
+            ? "bg-transparent" 
             : isScrolled 
               ? "bg-ivory/80 backdrop-blur-[14px] border-b border-soft-black/5 shadow-sm" 
               : "bg-ivory/20 backdrop-blur-[14px]"
         }`}
+
       >
         <div className="flex items-center">
           <img 
