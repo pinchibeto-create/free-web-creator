@@ -141,6 +141,14 @@
     border-radius: 50% / 100% 100% 0 0;
     opacity: 0.6;
   }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
+
 
 
