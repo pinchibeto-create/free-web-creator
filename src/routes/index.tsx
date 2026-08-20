@@ -196,14 +196,14 @@ function Index() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setIsMenuOpen(false)}
-                className="fixed inset-0 bg-soft-black/20 backdrop-blur-md z-[55]"
+                className="fixed inset-0 bg-soft-black/40 backdrop-blur-xl z-[55]"
               />
               <motion.div
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed top-0 right-0 h-full w-full md:w-[45%] bg-ivory/95 backdrop-blur-2xl z-[58] shadow-2xl flex flex-col p-12 md:p-24"
+                className="fixed top-0 right-0 h-full w-full md:w-[45%] bg-ivory/98 backdrop-blur-3xl z-[58] shadow-2xl flex flex-col p-12 md:p-24"
               >
                 <div className="flex-1 flex flex-col justify-center space-y-8 md:space-y-12">
                   <p className="text-[10px] uppercase tracking-[0.6em] text-champagne font-bold">Navegación</p>
