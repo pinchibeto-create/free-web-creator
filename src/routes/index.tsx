@@ -952,8 +952,20 @@ function Index() {
             <div className="space-y-8">
               <p className="text-2xl font-serif text-ivory/80 leading-relaxed italic">"Tu sonrisa merece el rigor de la ciencia y el alma del arte."</p>
               <div className="flex gap-12">
-                {["IG", "FB", "LN"].map(social => (
-                  <a key={social} href="#" className="text-[10px] uppercase tracking-[0.4em] font-bold hover:text-champagne transition-colors">{social}</a>
+                {[
+                  { label: "IG", url: "https://www.instagram.com/nisadobaani/" },
+                  { label: "FB", url: "https://www.facebook.com/nisadobaani/" },
+                  { label: "LN", url: "#" }
+                ].map(social => (
+                  <a 
+                    key={social.label} 
+                    href={social.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[10px] uppercase tracking-[0.4em] font-bold hover:text-champagne transition-colors"
+                  >
+                    {social.label}
+                  </a>
                 ))}
               </div>
             </div>
