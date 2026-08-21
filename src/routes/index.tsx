@@ -160,7 +160,7 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-soft-black font-sans selection:bg-champagne/30 overflow-x-hidden scroll-smooth">
-      <span className="hidden">\u2063</span>
+      <span className="hidden">{"\u2063"}</span>
       {/* Editorial Navigation */}
       <nav 
         className={`fixed w-full z-[100] px-8 flex items-center justify-between transition-all duration-500 h-[70px] md:h-[85px] ${
