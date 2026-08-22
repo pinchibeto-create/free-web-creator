@@ -149,13 +149,13 @@ function Index() {
   const xPos = useTransform(manifestoScroll, [0, 1], [-100, 100]);
 
   const menuItems = [
-    { name: "Inicio", href: "#" },
-    { name: "Nuestra esencia", href: "#esencia" },
-    { name: "La profundidad Detrás", href: "#profundidad" },
-    { name: "El arte detrás de tu sonrisa", href: "#atelier" },
-    { name: "Resultados", href: "#resultados" },
-    { name: "Ubicaciones", href: "#footer" },
-    { name: "Agendar valoración", href: "#agendar" },
+    { name: "Inicio", href: "/" },
+    { name: "Nuestra esencia", href: "/#esencia" },
+    { name: "Diseño de Sonrisa", href: "/diseno-de-sonrisa-cdmx" },
+    { name: "La profundidad Detrás", href: "/#profundidad" },
+    { name: "El arte detrás de tu sonrisa", href: "/#atelier" },
+    { name: "Resultados", href: "/#resultados" },
+    { name: "Ubicaciones", href: "/#footer" },
   ];
 
   return (
@@ -371,15 +371,13 @@ function Index() {
                   <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
                   <div className="flex flex-row gap-2 w-full justify-center">
                     {[
-                      { name: "Polanco", url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" },
-                      { name: "Del Valle", url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" },
-                      { name: "Roma Sur", url: "https://www.google.com/maps/search/?api=1&query=Tlaxcala+84%2C+Roma+Sur%2C+Cuauht%C3%A9moc%2C+06760+Ciudad+de+M%C3%A9xico%2C+CDMX" }
+                      { name: "Polanco", url: "/dentista-polanco" },
+                      { name: "Del Valle", url: "/dentista-del-valle" },
+                      { name: "Roma Sur", url: "/dentista-roma-sur" }
                     ].map(loc => (
                       <a 
                         key={loc.name} 
                         href={loc.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="flex-1 flex items-center justify-center border border-soft-black/10 px-2 py-3 text-[8px] md:text-[9px] uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm text-soft-black whitespace-nowrap"
                       >
                         {loc.name}
@@ -1021,17 +1019,17 @@ function Index() {
                   { 
                     name: "Polanco Studio", 
                     address: "Emerson 111, Polanco V Sección, Miguel Hidalgo, C.P. 11550, Ciudad de México", 
-                    url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" 
+                    url: "/dentista-polanco" 
                   },
                   { 
                     name: "Del Valle Studio", 
                     address: "Av. Insurgentes Sur 1188, Tlacoquemécatl del Valle, Benito Juárez, C.P. 03200, Ciudad de México", 
-                    url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" 
+                    url: "/dentista-del-valle" 
                   },
                   { 
                     name: "Roma Sur Gallery", 
                     address: "Tlaxcala 84, Roma Sur, Cuauhtémoc, C.P. 06760, Ciudad de México", 
-                    url: "https://www.google.com/maps/search/?api=1&query=Tlaxcala+84%2C+Roma+Sur%2C+Cuauht%C3%A9moc%2C+06760+Ciudad+de+M%C3%A9xico%2C+CDMX" 
+                    url: "/dentista-roma-sur" 
                   }
                 ].map((loc) => (
                   <li key={loc.name} className="space-y-3">
@@ -1039,8 +1037,6 @@ function Index() {
                     <p className="max-w-[200px] leading-relaxed">{loc.address}</p>
                     <a 
                       href={loc.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
                       className="inline-block text-[9px] uppercase tracking-[0.2em] text-champagne hover:text-ivory transition-colors font-bold"
                     >
                       Ver ubicación →

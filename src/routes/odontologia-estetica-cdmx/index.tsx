@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/odontologia-estetica-cdmx')({
+export const Route = createFileRoute('/odontologia-estetica-cdmx/')({
   head: () => ({
     meta: [
       { title: "Odontología estética en CDMX | Nisado Baani" },

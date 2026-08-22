@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/carillas-de-porcelana-cdmx')({
+export const Route = createFileRoute('/carillas-de-porcelana-cdmx/')({
   head: () => ({
     meta: [
       { title: "Carillas de porcelana en CDMX | Nisado Baani" },

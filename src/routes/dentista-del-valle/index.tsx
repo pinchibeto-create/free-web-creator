@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/dentista-del-valle')({
+export const Route = createFileRoute('/dentista-del-valle/')({
   head: () => ({
     meta: [
       { title: "Dentista en Del Valle CDMX | Nisado Baani Luxury Dental" },

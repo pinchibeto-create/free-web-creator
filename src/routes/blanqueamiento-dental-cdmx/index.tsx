@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/blanqueamiento-dental-cdmx')({
+export const Route = createFileRoute('/blanqueamiento-dental-cdmx/')({
   head: () => ({
     meta: [
       { title: "Blanqueamiento dental en CDMX | Nisado Baani" },
