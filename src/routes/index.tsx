@@ -817,9 +817,7 @@ function Index() {
                   <span className="text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] text-champagne font-bold mb-2 md:mb-4">Soporte</span>
                   <h3 className="text-sm md:text-3xl font-serif text-ivory mb-4 md:mb-6">Atención ahora</h3>
                   <a 
-                    href="https://wa.me/5215585265697" 
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="tel:+525615308633" 
                     className="text-[8px] md:text-[10px] uppercase tracking-[0.1em] md:tracking-[0.3em] font-bold border border-champagne/40 text-champagne px-4 md:px-8 py-2 md:py-4 rounded-full hover:bg-champagne hover:text-ivory transition-all duration-500"
                   >
                     Urgencias
