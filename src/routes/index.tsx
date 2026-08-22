@@ -407,6 +407,21 @@ function Index() {
           </div>
         </motion.div>
       </section>
+      
+      {/* Nueva Sección Informativa SEO (Visible pero integrada) */}
+      <section className="bg-ivory py-20 px-8 border-b border-soft-black/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-soft-black/70 leading-relaxed text-base md:text-lg font-light font-sans"
+          >
+            En Nisado Baani combinamos salud dental, estética y atención personalizada para crear sonrisas naturales. Ofrecemos diseño de sonrisa, carillas de resina y porcelana, blanqueamiento, ortodoncia, rehabilitación e implantología en Ciudad de México.
+          </motion.p>
+        </div>
+      </section>
+
 
       {/* 01 / INSTITUCIONAL - Diseño que se construye contigo */}
       <section id="esencia" className="py-24 md:py-40 px-8 lg:px-24 bg-[#F9F7F2] overflow-hidden scroll-mt-24 md:scroll-mt-32 relative">
