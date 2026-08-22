@@ -315,13 +315,18 @@ function Index() {
               className="flex flex-col items-center justify-center space-y-8"
             >
               <div className="space-y-6">
-                 <motion.p 
+                 <motion.div 
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-[10px] tracking-[0.6em] text-champagne uppercase font-bold"
+                  className="flex flex-col items-center gap-2"
                  >
-                   Luxury Dental · Studio
-                 </motion.p>
+                   <p className="text-[10px] tracking-[0.6em] text-champagne uppercase font-bold">
+                     Luxury Dental · Studio
+                   </p>
+                   <p className="text-[11px] md:text-[12px] tracking-[0.3em] text-soft-black/40 uppercase font-light">
+                     Odontología estética y diseño de sonrisa en CDMX
+                   </p>
+                 </motion.div>
                  
                  <div className="flex flex-col items-center">
                    <h1 className="sr-only">Diseño de sonrisa personalizado en CDMX</h1>
@@ -340,16 +345,6 @@ function Index() {
                  </div>
               </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="max-w-xl mx-auto text-center"
-              >
-                <p className="text-soft-black/70 leading-relaxed text-sm md:text-base font-light font-sans">
-                  En **Nisado Baani** combinamos salud dental, estética y atención personalizada para crear sonrisas naturales. Ofrecemos diseño de sonrisa, carillas de resina y porcelana, blanqueamiento, ortodoncia, rehabilitación e implantología en Ciudad de México.
-                </p>
-              </motion.div>
               
               <motion.div 
 
