@@ -7,12 +7,12 @@ import { ResultsSlider } from "@/components/ResultsSlider";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nisado Baani | Odontología Estética y Diseño de Sonrisa CDMX" },
-      { name: "description", content: "Odontología estética y general en CDMX. Diseño de sonrisa, carillas, blanqueamiento, rehabilitación, ortodoncia y más. Atención en Polanco, Del Valle y Roma Sur." },
+      { title: "Diseño de sonrisa en CDMX | Nisado Baani" },
+      { name: "description", content: "Diseño de sonrisa y odontología estética en CDMX. Carillas, blanqueamiento, ortodoncia y atención personalizada en Nisado Baani Luxury Dental." },
       { name: "robots", content: "index, follow" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Nisado Baani | Odontología Estética y Diseño de Sonrisa" },
-      { property: "og:description", content: "Diseño de sonrisa, carillas, blanqueamiento, odontología estética y tratamientos personalizados en CDMX. Polanco, Del Valle y Roma Sur." },
+      { property: "og:title", content: "Diseño de sonrisa en CDMX | Nisado Baani" },
+      { property: "og:description", content: "Diseño de sonrisa y odontología estética en CDMX. Carillas, blanqueamiento, ortodoncia y atención personalizada en Nisado Baani Luxury Dental." },
       { property: "og:url", content: "https://odontologianisadobaani.com/" },
       { property: "og:site_name", content: "Nisado Baani Luxury Dental" },
       { property: "og:locale", content: "es_MX" },
@@ -149,13 +149,13 @@ function Index() {
   const xPos = useTransform(manifestoScroll, [0, 1], [-100, 100]);
 
   const menuItems = [
-    { name: "Inicio", href: "#" },
-    { name: "Nuestra esencia", href: "#esencia" },
-    { name: "La profundidad Detrás", href: "#profundidad" },
-    { name: "El arte detrás de tu sonrisa", href: "#atelier" },
-    { name: "Resultados", href: "#resultados" },
-    { name: "Ubicaciones", href: "#footer" },
-    { name: "Agendar valoración", href: "#agendar" },
+    { name: "Inicio", href: "/" },
+    { name: "Nuestra esencia", href: "/#esencia" },
+    { name: "Diseño de Sonrisa", href: "/diseno-de-sonrisa-cdmx" },
+    { name: "La profundidad Detrás", href: "/#profundidad" },
+    { name: "El arte detrás de tu sonrisa", href: "/#atelier" },
+    { name: "Resultados", href: "/#resultados" },
+    { name: "Ubicaciones", href: "/#footer" },
   ];
 
   return (
@@ -323,21 +323,36 @@ function Index() {
                    Luxury Dental · Studio
                  </motion.p>
                  
-                 <motion.h1 
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="text-6xl md:text-7xl lg:text-9xl font-serif leading-[0.85] text-soft-black flex flex-col items-center"
-                 >
-                  <span className="block">Diseñamos sonrisas</span>
-                  <span className="italic relative block">
-                    para ti.
-                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-champagne/40" />
-                  </span>
-                 </motion.h1>
+                 <div className="flex flex-col items-center">
+                   <h1 className="sr-only">Diseño de sonrisa personalizado en CDMX</h1>
+                   <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="text-6xl md:text-7xl lg:text-9xl font-serif leading-[0.85] text-soft-black flex flex-col items-center"
+                   >
+                    <span className="block">Diseñamos sonrisas</span>
+                    <span className="italic relative block">
+                      para ti.
+                      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-champagne/40" />
+                    </span>
+                   </motion.div>
+                 </div>
               </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="max-w-xl mx-auto text-center"
+              >
+                <p className="text-soft-black/70 leading-relaxed text-sm md:text-base font-light font-sans">
+                  En **Nisado Baani** combinamos salud dental, estética y atención personalizada para crear sonrisas naturales. Ofrecemos diseño de sonrisa, carillas de resina y porcelana, blanqueamiento, ortodoncia, rehabilitación e implantología en Ciudad de México.
+                </p>
+              </motion.div>
               
               <motion.div 
+
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
@@ -356,15 +371,13 @@ function Index() {
                   <span className="text-[9px] uppercase tracking-[0.3em] text-soft-black/40 font-bold">Elige tu ubicación</span>
                   <div className="flex flex-row gap-2 w-full justify-center">
                     {[
-                      { name: "Polanco", url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" },
-                      { name: "Del Valle", url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" },
-                      { name: "Roma Sur", url: "https://www.google.com/maps/search/?api=1&query=Tlaxcala+84%2C+Roma+Sur%2C+Cuauht%C3%A9moc%2C+06760+Ciudad+de+M%C3%A9xico%2C+CDMX" }
+                      { name: "Polanco", url: "/dentista-polanco" },
+                      { name: "Del Valle", url: "/dentista-del-valle" },
+                      { name: "Roma Sur", url: "/dentista-roma-sur" }
                     ].map(loc => (
                       <a 
                         key={loc.name} 
                         href={loc.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="flex-1 flex items-center justify-center border border-soft-black/10 px-2 py-3 text-[8px] md:text-[9px] uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold hover:bg-soft-black hover:text-ivory transition-all duration-500 rounded-full bg-ivory/30 backdrop-blur-sm text-soft-black whitespace-nowrap"
                       >
                         {loc.name}
@@ -1006,17 +1019,17 @@ function Index() {
                   { 
                     name: "Polanco Studio", 
                     address: "Emerson 111, Polanco V Sección, Miguel Hidalgo, C.P. 11550, Ciudad de México", 
-                    url: "https://maps.app.goo.gl/U7SbErGsMU7E9QsPA?g_st=iw" 
+                    url: "/dentista-polanco" 
                   },
                   { 
                     name: "Del Valle Studio", 
                     address: "Av. Insurgentes Sur 1188, Tlacoquemécatl del Valle, Benito Juárez, C.P. 03200, Ciudad de México", 
-                    url: "https://maps.app.goo.gl/c3mQaaiNhKvDhLEF7?g_st=iw" 
+                    url: "/dentista-del-valle" 
                   },
                   { 
                     name: "Roma Sur Gallery", 
                     address: "Tlaxcala 84, Roma Sur, Cuauhtémoc, C.P. 06760, Ciudad de México", 
-                    url: "https://www.google.com/maps/search/?api=1&query=Tlaxcala+84%2C+Roma+Sur%2C+Cuauht%C3%A9moc%2C+06760+Ciudad+de+M%C3%A9xico%2C+CDMX" 
+                    url: "/dentista-roma-sur" 
                   }
                 ].map((loc) => (
                   <li key={loc.name} className="space-y-3">
@@ -1024,8 +1037,6 @@ function Index() {
                     <p className="max-w-[200px] leading-relaxed">{loc.address}</p>
                     <a 
                       href={loc.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
                       className="inline-block text-[9px] uppercase tracking-[0.2em] text-champagne hover:text-ivory transition-colors font-bold"
                     >
                       Ver ubicación →

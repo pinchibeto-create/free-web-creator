@@ -10,33 +10,146 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlanqueamientoDentalCdmxIndexRouteImport } from './routes/blanqueamiento-dental-cdmx/index'
+import { Route as CarillasDePorcelanaCdmxIndexRouteImport } from './routes/carillas-de-porcelana-cdmx/index'
+import { Route as CarillasDeResinaCdmxIndexRouteImport } from './routes/carillas-de-resina-cdmx/index'
+import { Route as DentistaDelValleIndexRouteImport } from './routes/dentista-del-valle/index'
+import { Route as DentistaPolancoIndexRouteImport } from './routes/dentista-polanco/index'
+import { Route as DentistaRomaSurIndexRouteImport } from './routes/dentista-roma-sur/index'
+import { Route as DisenoDeSonrisaCdmxIndexRouteImport } from './routes/diseno-de-sonrisa-cdmx/index'
+import { Route as OdontologiaEsteticaCdmxIndexRouteImport } from './routes/odontologia-estetica-cdmx/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlanqueamientoDentalCdmxIndexRoute =
+  BlanqueamientoDentalCdmxIndexRouteImport.update({
+    id: '/blanqueamiento-dental-cdmx/',
+    path: '/blanqueamiento-dental-cdmx/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CarillasDePorcelanaCdmxIndexRoute =
+  CarillasDePorcelanaCdmxIndexRouteImport.update({
+    id: '/carillas-de-porcelana-cdmx/',
+    path: '/carillas-de-porcelana-cdmx/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CarillasDeResinaCdmxIndexRoute =
+  CarillasDeResinaCdmxIndexRouteImport.update({
+    id: '/carillas-de-resina-cdmx/',
+    path: '/carillas-de-resina-cdmx/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentistaDelValleIndexRoute = DentistaDelValleIndexRouteImport.update({
+  id: '/dentista-del-valle/',
+  path: '/dentista-del-valle/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentistaPolancoIndexRoute = DentistaPolancoIndexRouteImport.update({
+  id: '/dentista-polanco/',
+  path: '/dentista-polanco/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentistaRomaSurIndexRoute = DentistaRomaSurIndexRouteImport.update({
+  id: '/dentista-roma-sur/',
+  path: '/dentista-roma-sur/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisenoDeSonrisaCdmxIndexRoute =
+  DisenoDeSonrisaCdmxIndexRouteImport.update({
+    id: '/diseno-de-sonrisa-cdmx/',
+    path: '/diseno-de-sonrisa-cdmx/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const OdontologiaEsteticaCdmxIndexRoute =
+  OdontologiaEsteticaCdmxIndexRouteImport.update({
+    id: '/odontologia-estetica-cdmx/',
+    path: '/odontologia-estetica-cdmx/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blanqueamiento-dental-cdmx/': typeof BlanqueamientoDentalCdmxIndexRoute
+  '/carillas-de-porcelana-cdmx/': typeof CarillasDePorcelanaCdmxIndexRoute
+  '/carillas-de-resina-cdmx/': typeof CarillasDeResinaCdmxIndexRoute
+  '/dentista-del-valle/': typeof DentistaDelValleIndexRoute
+  '/dentista-polanco/': typeof DentistaPolancoIndexRoute
+  '/dentista-roma-sur/': typeof DentistaRomaSurIndexRoute
+  '/diseno-de-sonrisa-cdmx/': typeof DisenoDeSonrisaCdmxIndexRoute
+  '/odontologia-estetica-cdmx/': typeof OdontologiaEsteticaCdmxIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blanqueamiento-dental-cdmx': typeof BlanqueamientoDentalCdmxIndexRoute
+  '/carillas-de-porcelana-cdmx': typeof CarillasDePorcelanaCdmxIndexRoute
+  '/carillas-de-resina-cdmx': typeof CarillasDeResinaCdmxIndexRoute
+  '/dentista-del-valle': typeof DentistaDelValleIndexRoute
+  '/dentista-polanco': typeof DentistaPolancoIndexRoute
+  '/dentista-roma-sur': typeof DentistaRomaSurIndexRoute
+  '/diseno-de-sonrisa-cdmx': typeof DisenoDeSonrisaCdmxIndexRoute
+  '/odontologia-estetica-cdmx': typeof OdontologiaEsteticaCdmxIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blanqueamiento-dental-cdmx/': typeof BlanqueamientoDentalCdmxIndexRoute
+  '/carillas-de-porcelana-cdmx/': typeof CarillasDePorcelanaCdmxIndexRoute
+  '/carillas-de-resina-cdmx/': typeof CarillasDeResinaCdmxIndexRoute
+  '/dentista-del-valle/': typeof DentistaDelValleIndexRoute
+  '/dentista-polanco/': typeof DentistaPolancoIndexRoute
+  '/dentista-roma-sur/': typeof DentistaRomaSurIndexRoute
+  '/diseno-de-sonrisa-cdmx/': typeof DisenoDeSonrisaCdmxIndexRoute
+  '/odontologia-estetica-cdmx/': typeof OdontologiaEsteticaCdmxIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/blanqueamiento-dental-cdmx/'
+    | '/carillas-de-porcelana-cdmx/'
+    | '/carillas-de-resina-cdmx/'
+    | '/dentista-del-valle/'
+    | '/dentista-polanco/'
+    | '/dentista-roma-sur/'
+    | '/diseno-de-sonrisa-cdmx/'
+    | '/odontologia-estetica-cdmx/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/blanqueamiento-dental-cdmx'
+    | '/carillas-de-porcelana-cdmx'
+    | '/carillas-de-resina-cdmx'
+    | '/dentista-del-valle'
+    | '/dentista-polanco'
+    | '/dentista-roma-sur'
+    | '/diseno-de-sonrisa-cdmx'
+    | '/odontologia-estetica-cdmx'
+  id:
+    | '__root__'
+    | '/'
+    | '/blanqueamiento-dental-cdmx/'
+    | '/carillas-de-porcelana-cdmx/'
+    | '/carillas-de-resina-cdmx/'
+    | '/dentista-del-valle/'
+    | '/dentista-polanco/'
+    | '/dentista-roma-sur/'
+    | '/diseno-de-sonrisa-cdmx/'
+    | '/odontologia-estetica-cdmx/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlanqueamientoDentalCdmxIndexRoute: typeof BlanqueamientoDentalCdmxIndexRoute
+  CarillasDePorcelanaCdmxIndexRoute: typeof CarillasDePorcelanaCdmxIndexRoute
+  CarillasDeResinaCdmxIndexRoute: typeof CarillasDeResinaCdmxIndexRoute
+  DentistaDelValleIndexRoute: typeof DentistaDelValleIndexRoute
+  DentistaPolancoIndexRoute: typeof DentistaPolancoIndexRoute
+  DentistaRomaSurIndexRoute: typeof DentistaRomaSurIndexRoute
+  DisenoDeSonrisaCdmxIndexRoute: typeof DisenoDeSonrisaCdmxIndexRoute
+  OdontologiaEsteticaCdmxIndexRoute: typeof OdontologiaEsteticaCdmxIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +161,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blanqueamiento-dental-cdmx/': {
+      id: '/blanqueamiento-dental-cdmx/'
+      path: '/blanqueamiento-dental-cdmx'
+      fullPath: '/blanqueamiento-dental-cdmx/'
+      preLoaderRoute: typeof BlanqueamientoDentalCdmxIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carillas-de-porcelana-cdmx/': {
+      id: '/carillas-de-porcelana-cdmx/'
+      path: '/carillas-de-porcelana-cdmx'
+      fullPath: '/carillas-de-porcelana-cdmx/'
+      preLoaderRoute: typeof CarillasDePorcelanaCdmxIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carillas-de-resina-cdmx/': {
+      id: '/carillas-de-resina-cdmx/'
+      path: '/carillas-de-resina-cdmx'
+      fullPath: '/carillas-de-resina-cdmx/'
+      preLoaderRoute: typeof CarillasDeResinaCdmxIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dentista-del-valle/': {
+      id: '/dentista-del-valle/'
+      path: '/dentista-del-valle'
+      fullPath: '/dentista-del-valle/'
+      preLoaderRoute: typeof DentistaDelValleIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dentista-polanco/': {
+      id: '/dentista-polanco/'
+      path: '/dentista-polanco'
+      fullPath: '/dentista-polanco/'
+      preLoaderRoute: typeof DentistaPolancoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dentista-roma-sur/': {
+      id: '/dentista-roma-sur/'
+      path: '/dentista-roma-sur'
+      fullPath: '/dentista-roma-sur/'
+      preLoaderRoute: typeof DentistaRomaSurIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/diseno-de-sonrisa-cdmx/': {
+      id: '/diseno-de-sonrisa-cdmx/'
+      path: '/diseno-de-sonrisa-cdmx'
+      fullPath: '/diseno-de-sonrisa-cdmx/'
+      preLoaderRoute: typeof DisenoDeSonrisaCdmxIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/odontologia-estetica-cdmx/': {
+      id: '/odontologia-estetica-cdmx/'
+      path: '/odontologia-estetica-cdmx'
+      fullPath: '/odontologia-estetica-cdmx/'
+      preLoaderRoute: typeof OdontologiaEsteticaCdmxIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlanqueamientoDentalCdmxIndexRoute: BlanqueamientoDentalCdmxIndexRoute,
+  CarillasDePorcelanaCdmxIndexRoute: CarillasDePorcelanaCdmxIndexRoute,
+  CarillasDeResinaCdmxIndexRoute: CarillasDeResinaCdmxIndexRoute,
+  DentistaDelValleIndexRoute: DentistaDelValleIndexRoute,
+  DentistaPolancoIndexRoute: DentistaPolancoIndexRoute,
+  DentistaRomaSurIndexRoute: DentistaRomaSurIndexRoute,
+  DisenoDeSonrisaCdmxIndexRoute: DisenoDeSonrisaCdmxIndexRoute,
+  OdontologiaEsteticaCdmxIndexRoute: OdontologiaEsteticaCdmxIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
