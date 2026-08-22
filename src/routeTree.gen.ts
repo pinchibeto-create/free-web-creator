@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DentistaRomaSurIndexRouteImport } from './routes/dentista-roma-sur/index'
 import { Route as DisenoDeSonrisaCdmxIndexRouteImport } from './routes/diseno-de-sonrisa-cdmx/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentistaRomaSurIndexRoute = DentistaRomaSurIndexRouteImport.update({
+  id: '/dentista-roma-sur/',
+  path: '/dentista-roma-sur/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DisenoDeSonrisaCdmxIndexRoute =
@@ -26,27 +32,31 @@ const DisenoDeSonrisaCdmxIndexRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/dentista-roma-sur/': typeof DentistaRomaSurIndexRoute
   '/diseno-de-sonrisa-cdmx/': typeof DisenoDeSonrisaCdmxIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/dentista-roma-sur': typeof DentistaRomaSurIndexRoute
   '/diseno-de-sonrisa-cdmx': typeof DisenoDeSonrisaCdmxIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/dentista-roma-sur/': typeof DentistaRomaSurIndexRoute
   '/diseno-de-sonrisa-cdmx/': typeof DisenoDeSonrisaCdmxIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/diseno-de-sonrisa-cdmx/'
+  fullPaths: '/' | '/dentista-roma-sur/' | '/diseno-de-sonrisa-cdmx/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/diseno-de-sonrisa-cdmx'
-  id: '__root__' | '/' | '/diseno-de-sonrisa-cdmx/'
+  to: '/' | '/dentista-roma-sur' | '/diseno-de-sonrisa-cdmx'
+  id: '__root__' | '/' | '/dentista-roma-sur/' | '/diseno-de-sonrisa-cdmx/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DentistaRomaSurIndexRoute: typeof DentistaRomaSurIndexRoute
   DisenoDeSonrisaCdmxIndexRoute: typeof DisenoDeSonrisaCdmxIndexRoute
 }
 
@@ -57,6 +67,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dentista-roma-sur/': {
+      id: '/dentista-roma-sur/'
+      path: '/dentista-roma-sur'
+      fullPath: '/dentista-roma-sur/'
+      preLoaderRoute: typeof DentistaRomaSurIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/diseno-de-sonrisa-cdmx/': {
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DentistaRomaSurIndexRoute: DentistaRomaSurIndexRoute,
   DisenoDeSonrisaCdmxIndexRoute: DisenoDeSonrisaCdmxIndexRoute,
 }
 export const routeTree = rootRouteImport
