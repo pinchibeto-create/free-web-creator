@@ -7,12 +7,12 @@ import { ResultsSlider } from "@/components/ResultsSlider";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nisado Baani | Odontología Estética y Diseño de Sonrisa CDMX" },
-      { name: "description", content: "Odontología estética y general en CDMX. Diseño de sonrisa, carillas, blanqueamiento, rehabilitación, ortodoncia y más. Atención en Polanco, Del Valle y Roma Sur." },
+      { title: "Diseño de sonrisa en CDMX | Nisado Baani" },
+      { name: "description", content: "Diseño de sonrisa y odontología estética en CDMX. Carillas, blanqueamiento, ortodoncia y atención personalizada en Nisado Baani Luxury Dental." },
       { name: "robots", content: "index, follow" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Nisado Baani | Odontología Estética y Diseño de Sonrisa" },
-      { property: "og:description", content: "Diseño de sonrisa, carillas, blanqueamiento, odontología estética y tratamientos personalizados en CDMX. Polanco, Del Valle y Roma Sur." },
+      { property: "og:title", content: "Diseño de sonrisa en CDMX | Nisado Baani" },
+      { property: "og:description", content: "Diseño de sonrisa y odontología estética en CDMX. Carillas, blanqueamiento, ortodoncia y atención personalizada en Nisado Baani Luxury Dental." },
       { property: "og:url", content: "https://odontologianisadobaani.com/" },
       { property: "og:site_name", content: "Nisado Baani Luxury Dental" },
       { property: "og:locale", content: "es_MX" },
@@ -323,21 +323,36 @@ function Index() {
                    Luxury Dental · Studio
                  </motion.p>
                  
-                 <motion.h1 
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="text-6xl md:text-7xl lg:text-9xl font-serif leading-[0.85] text-soft-black flex flex-col items-center"
-                 >
-                  <span className="block">Diseñamos sonrisas</span>
-                  <span className="italic relative block">
-                    para ti.
-                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-champagne/40" />
-                  </span>
-                 </motion.h1>
+                 <div className="flex flex-col items-center">
+                   <h1 className="sr-only">Diseño de sonrisa personalizado en CDMX</h1>
+                   <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="text-6xl md:text-7xl lg:text-9xl font-serif leading-[0.85] text-soft-black flex flex-col items-center"
+                   >
+                    <span className="block">Diseñamos sonrisas</span>
+                    <span className="italic relative block">
+                      para ti.
+                      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-champagne/40" />
+                    </span>
+                   </motion.div>
+                 </div>
               </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="max-w-xl mx-auto text-center"
+              >
+                <p className="text-soft-black/70 leading-relaxed text-sm md:text-base font-light font-sans">
+                  En **Nisado Baani** combinamos salud dental, estética y atención personalizada para crear sonrisas naturales. Ofrecemos diseño de sonrisa, carillas de resina y porcelana, blanqueamiento, ortodoncia, rehabilitación e implantología en Ciudad de México.
+                </p>
+              </motion.div>
               
               <motion.div 
+
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
