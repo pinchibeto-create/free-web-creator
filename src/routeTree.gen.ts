@@ -10,33 +10,44 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DisenoDeSonrisaCdmxIndexRouteImport } from './routes/diseno-de-sonrisa-cdmx/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DisenoDeSonrisaCdmxIndexRoute =
+  DisenoDeSonrisaCdmxIndexRouteImport.update({
+    id: '/diseno-de-sonrisa-cdmx/',
+    path: '/diseno-de-sonrisa-cdmx/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/diseno-de-sonrisa-cdmx/': typeof DisenoDeSonrisaCdmxIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/diseno-de-sonrisa-cdmx': typeof DisenoDeSonrisaCdmxIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/diseno-de-sonrisa-cdmx/': typeof DisenoDeSonrisaCdmxIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/diseno-de-sonrisa-cdmx/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/diseno-de-sonrisa-cdmx'
+  id: '__root__' | '/' | '/diseno-de-sonrisa-cdmx/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DisenoDeSonrisaCdmxIndexRoute: typeof DisenoDeSonrisaCdmxIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +59,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/diseno-de-sonrisa-cdmx/': {
+      id: '/diseno-de-sonrisa-cdmx/'
+      path: '/diseno-de-sonrisa-cdmx'
+      fullPath: '/diseno-de-sonrisa-cdmx/'
+      preLoaderRoute: typeof DisenoDeSonrisaCdmxIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DisenoDeSonrisaCdmxIndexRoute: DisenoDeSonrisaCdmxIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
